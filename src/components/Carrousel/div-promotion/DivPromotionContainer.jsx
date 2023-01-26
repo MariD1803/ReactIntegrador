@@ -16,14 +16,11 @@ const StyledDivPromotionContainer = styled.div `
 const StyledH2PromotionContainer = styled.h2 `
     color: white;
     font-family: "cursiva";
-    font-size: 0.9vw;
+    font-size: 1.3vw;
     align-items: center;
     display: flex;
     justify-content: center;
 
-    @media (max-width: 638px){
-        font-size: 0.8vw;
-    }
 `
 
 const PromotionContainer = ( ) => {
@@ -34,8 +31,6 @@ const PromotionContainer = ( ) => {
             <StyledH2PromotionContainer>🔥 ¡¡SUPER DESCUENTOS!! 🔥</StyledH2PromotionContainer>
             <StyledH2PromotionContainer>💫| RENUEVA TUS LOOKS CON LA MODA |💫</StyledH2PromotionContainer>
             <StyledH2PromotionContainer>🔥 ¡¡SUPER DESCUENTOS!! 🔥</StyledH2PromotionContainer>
-            <StyledH2PromotionContainer>💫| RENUEVA TUS LOOKS CON LA MODA |💫</StyledH2PromotionContainer>
-            <StyledH2PromotionContainer>🔥¡¡SUPER DESCUENTOS!! 🔥</StyledH2PromotionContainer>
         </StyledDivPromotionContainer>
         
         </>

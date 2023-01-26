@@ -6,6 +6,10 @@ const StyledPromotion = styled.div `
     overflow: hidden; 
     width: 100%;
 
+    @media (max-width: 360px){
+        height: 30px;
+    }
+
 `
 const StyledPromotionMove = styled.div `
     animation: slider-promotion 40s infinite alternate linear;

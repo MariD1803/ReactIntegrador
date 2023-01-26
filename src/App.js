@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import ReactPlayer from "react-player";
-import Video from "./Nuevo.mp4";
+import Video from "./video.webm";
 import Formulario from "./components/clase-04/Formulario";
 import GeneralWrapper from "./components/clase-05/GeneralWrapper";
 import { CtxProvider } from "./components/clase-05/MiContexto";
