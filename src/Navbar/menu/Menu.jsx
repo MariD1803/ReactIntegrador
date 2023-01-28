@@ -128,11 +128,12 @@ const StyledDivHover = styled.div`
   position: absolute;
   background-color: white;
   top: 103px;
-    left: -30px;
+    left: 0px;
     width: 100%;
     height: 475px;
     padding: 1rem;
     border-bottom: 2px grey solid;
+    z-index: 2;
 `;
 
 const StyledH2Animation = styled.h2`
@@ -192,13 +193,14 @@ const StyledUl = styled.ul`
     position: absolute;
     padding: 2rem;
     width: 20%;
-    height: 200vh;
-    top: -13px;
+    height: 100vh;
+    top: 0;
     background-color: white;
     color: black;
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
+    z-index: 2;
   }
 
   
@@ -228,6 +230,11 @@ const StyledUlActive = styled.ul`
 const StyledLink = styled.a`
   list-style: none;
   cursor: pointer;
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: black;
+  }
 `;
 const StyledLi = styled.li`
   list-style: none;
