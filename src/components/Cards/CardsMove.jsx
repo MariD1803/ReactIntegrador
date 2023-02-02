@@ -1,31 +1,27 @@
-import React from "react";
-import styled from "styled-components";
+import "./CardsMove.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Product from "./Product";
+import { productData, responsive } from "./data";
+import "../../App.css"
 
 
-const StyledDivCardsMove = styled.div `
-    width: 90%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5vw;
-    padding: 0 3rem;
-    height: 100%;
-    display: flex;
-    
-`
+export default function CardsMove() {
+  const product = productData.map((item) => (
+    <Product
+      bc={item.color}
+      name={item.name}
+      url={item.imageurl}
+      price={item.price}
+      description={item.description}
+    />
+  ));
 
-const CardsMove = ( props) => {
-    return (
-        <>
-        
-        <StyledDivCardsMove>  {props.children}  </StyledDivCardsMove>
-        
-        </>
-        
-        
-        
-    )
+  return (
+    <div className="App">
+      <Carousel showDots={true} responsive={responsive}>
+        {product}
+      </Carousel>
+    </div>
+  );
 }
-
-export default CardsMove

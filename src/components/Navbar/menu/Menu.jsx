@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import styled from "styled-components";
-import imagen from "../../utils/assets/soporte.png";
 import {
   Accordion,
   AccordionItem,
@@ -10,6 +9,7 @@ import {
   AccordionIcon,
   Box,
 } from "@chakra-ui/react";
+import "../../../App.css"
 
 const AccordionButtonStyled = styled(AccordionButton)`
   background: none;
@@ -31,6 +31,7 @@ display: flex;
   justify-content: center;
   gap: 80px;
   flex-direction: column;
+  padding-bottom: 3rem;
 `;
 
 const StyledButton = styled.button`
@@ -76,7 +77,7 @@ const StyledDivResponsive = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding-top: 4px;
+  padding-top: 1rem;
 
   @media (max-width: 767px) {
     display: none;
@@ -130,10 +131,10 @@ const StyledDivHover = styled.div`
   top: 103px;
     left: 0px;
     width: 100%;
-    height: 475px;
+    height: 800px;
     padding: 1rem;
     border-bottom: 2px grey solid;
-    z-index: 2;
+    z-index: 3;
 `;
 
 const StyledH2Animation = styled.h2`
@@ -155,7 +156,7 @@ const StyledDivMenu = styled.div`
   align-items: flex-start;
   flex-direction: column;
   width: 260px;
-  font-size: 21px;
+  font-size: 25px;
 `;
 
 const StyledUlHover = styled.div`
@@ -165,15 +166,6 @@ const StyledUlHover = styled.div`
   padding-left: 0.5rem;
 `;
 
-const StyledImagen = styled.img`
-  height: 10em;
-  width: 10em;
-  transition: 1s;
-  &:hover {
-    transform: scale(150%);
-    transition: 1s;
-  }
-`;
 
 const StyledUl = styled.ul`
   display: flex;
@@ -192,16 +184,18 @@ const StyledUl = styled.ul`
     left: 0;
     position: absolute;
     padding: 2rem;
-    width: 20%;
+    width: 42%;
     height: 100vh;
-    top: 0;
+    top: 3px;
     background-color: white;
     color: black;
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
-    z-index: 2;
-  }
+    z-index: 1001;
+    overflow-y: scroll;
+    -webkit-scrollbar: 10px;
+}
 
   
   @media (max-width: 480px) {
@@ -252,6 +246,7 @@ const StyledMenu = (props) => {
   const handleClick = () => {
     setIsToggle((prevState) => (prevState ? false : true));
   };
+  
 
   return (
     <>
@@ -270,7 +265,7 @@ const StyledMenu = (props) => {
               <StyledDivHover>
                 <StyledDivMenu>
                   <StyledLink>
-                    <StyledLi style={fontBold}>TOPS</StyledLi>
+                    <StyledLi style={fontBold} className="font-size-up">TOPS</StyledLi>
                     <StyledUlHover>
                       <StyledLi>Remeras</StyledLi>
                       <StyledLi>Bodys</StyledLi>
@@ -278,11 +273,11 @@ const StyledMenu = (props) => {
                     <div style={space}> </div>
                   </StyledLink>
                   <StyledLink>
-                    <StyledLi style={fontBold}>VESTIDOS</StyledLi>
+                    <StyledLi style={fontBold} className="font-size-up">VESTIDOS</StyledLi>
                   </StyledLink>
                   <div style={space}></div>
                   <StyledLink>
-                    <StyledLi style={fontBold}> BOTTOMS </StyledLi>
+                    <StyledLi style={fontBold} className="font-size-up"> BOTTOMS </StyledLi>
                     <StyledUlHover>
                       <StyledLi>Shorts</StyledLi>
                       <StyledLi>Pantalones</StyledLi>
@@ -290,20 +285,24 @@ const StyledMenu = (props) => {
                   </StyledLink>
                   <div style={space}></div>
                   <StyledLink>
-                    <StyledLi style={fontBold}>BIKINIS </StyledLi>
+                    <StyledLi style={fontBold} className="font-size-up">BIKINIS </StyledLi>
                   </StyledLink>
                   <div style={space}> </div>
                   <StyledLink>
-                    <StyledLi style={fontBold}> ACCESORIOS </StyledLi>
+                    <StyledLi style={fontBold} className="font-size-up"> ACCESORIOS </StyledLi>
                     <StyledUlHover>
                       <StyledLi>Sombreros</StyledLi>
                       <StyledLi>Pareos</StyledLi>
                     </StyledUlHover>
                   </StyledLink>
                 </StyledDivMenu>
-                <div>
-                  <StyledImagen src={imagen} alt="IMAGEN" />
-                  <StyledH2Animation>Hola</StyledH2Animation>
+                <div className="position-relative">
+                  <div  className="imagen-navbar"  alt="IMAGEN" />
+                  <div className="position-absolute">
+                    <StyledH2Animation>SALE</StyledH2Animation>
+                    <StyledH2Animation>SALE</StyledH2Animation>
+                    <StyledH2Animation>SALE</StyledH2Animation>
+                  </div>
                 </div>
               </StyledDivHover>
             )}

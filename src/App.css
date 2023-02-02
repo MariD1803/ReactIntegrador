@@ -17,6 +17,7 @@
   --xsmall: 10px;
   --turquoise: #45b2ae;
   --pink: #f397a9;
+  --hoverpink: #f397a99c;
   --blue: #181c3b;
   --yellow: #ffdf9e;
   --darkyellow:hwb(43 42% 0%);
@@ -156,8 +157,42 @@ html {
 }
 
 .carouselheight {
-  height: 700px;
+  height: 800px;
   width: 100%;
+}
+
+.background-red {
+  background-color: red;
+}
+.background-white {
+  background-color: rgb(240, 236, 236);
+}
+.background-black {
+  background-color: black;
+}
+.background-green {
+  background-color: green;
+}
+.background-grey {
+  background-color: grey;
+}
+.background-yellow {
+  background-color: yellow;
+}
+.background-pink {
+  background-color: pink;
+}
+.background-nute {
+  background-color: rgb(202, 152, 152);
+}
+.background-red-wine {
+  background-color: rgb(117, 18, 18);
+}
+.background-brown {
+  background-color: #c29b61;
+}
+.background-jean {
+  background-color: #467fa8;
 }
 
 
@@ -188,6 +223,24 @@ html {
   font-size: 20px;
 }
 
+
+
+.position-relative {
+  position: relative;
+  align-items: center;
+  height: 100%;
+  width: 400px;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 440px;
+  align-items: center;
+}
+
+.font-size-up {  
+  font-size: 25px !important;
+}
 .font-style-up{
   font-size: 30px;
   cursor: pointer;  
@@ -208,29 +261,62 @@ html {
 
 }
 
-.carousel-control-prev-icon {
-  background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3e%3c/svg%3e');
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+  background-color: pink;
+  border-radius: 5rem;
 }
 
-
-.carousel-indicators [data-bs-target] {
-  box-sizing: content-box;
-  flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
   padding: 0;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: black;
-  background-clip: padding-box;
-  border: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: .5;
-  transition: opacity .6s ease;
+  margin-right: 40% !important;
+  margin-bottom: 1rem;
+  margin-left: 40% !important;
+  list-style: none;
+  background-color: var(--hoverpink);
+  border-radius: 1rem;
 }
+
+
+.imagen-navbar {
+  transition: 0.5s;
+  background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  height: 100%;
+  width: 450px;
+
+}
+.imagen-navbar:hover {
+  background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  
+}
+
+ul::-webkit-scrollbar {
+  width: 12px;               
+}
+
+ul::-webkit-scrollbar-track {
+  background: white;       
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: var(--hoverpink);    
+  border-radius: 20px;     
+  height: 8px; 
+}
+
+
 @media (max-width: 1100px) {
 
   .gradient-color {
@@ -243,6 +329,7 @@ html {
   .fontStyleTitle {
     font-size: 15px;
   }
+
 }
 
 @media (max-width: 480px) {
