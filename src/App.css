@@ -144,9 +144,24 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;  
+  -webkit-scrollbar: 10px;
 
+}
 
+html::-webkit-scrollbar {
+  width: 12px;               
+}
 
+html::-webkit-scrollbar-track {
+  background: white;       
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--hoverpink);    
+  border-radius: 20px;     
+  height: 8px; 
 }
 
 .fontStyleTitle {
