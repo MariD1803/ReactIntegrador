@@ -363,6 +363,19 @@ ul::-webkit-scrollbar-thumb {
   .font-style2{
     font-size: 33px; 
   }
+
+  .react-multi-carousel-track {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform,transition;
+    margin-left: 0.2rem;
+  }
   
 }
 /* 
