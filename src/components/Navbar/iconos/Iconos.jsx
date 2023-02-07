@@ -7,6 +7,8 @@ import { Link} from "react-router-dom"
 
 const StyledDiv = styled.div`
   color: white;
+  align-items: flex-start;
+  display: flex;
 `;
 
   

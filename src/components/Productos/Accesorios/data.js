@@ -1,24 +1,4 @@
-export const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 4,
-      slidesToSlide: 2,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 800 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 800, min: 480 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 480, min: 0 },
-      items: 1,
-    },
-  };
-  
-  export const productData = [
+export const productDataAccesorios = [
     {
       id: 1,
       imageurl:
@@ -26,8 +6,7 @@ export const responsive = {
       name: "Bikini 2 piezas",
       price: "$19.99",
       description: "Bikini",
-      color: "black",      
-      IsTalla: "Talla",
+      color: "black",
       tallas: [ 1,2 ]
     },
     {

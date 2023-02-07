@@ -1,24 +1,4 @@
-export const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 4,
-      slidesToSlide: 2,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 800 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 800, min: 480 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 480, min: 0 },
-      items: 1,
-    },
-  };
-  
-  export const productData = [
+export const productDataBottoms = [
     {
       id: 1,
       imageurl:
@@ -26,8 +6,7 @@ export const responsive = {
       name: "Bikini 2 piezas",
       price: "$19.99",
       description: "Bikini",
-      color: "black",      
-      IsTalla: "Talla",
+      color: "black",
       tallas: [ 1,2 ]
     },
     {
@@ -84,26 +63,5 @@ export const responsive = {
       color: "black",       
       IsTalla: "Talla",
       tallas: [ 1,2 ]
-    },
-    {
-      id: 7,
-      imageurl:
-        "https://http2.mlstatic.com/D_NQ_NP_745482-MLA48632045940_122021-W.webp",
-      name: "Sombrero playero",
-      price: "$38.99",
-      description: "Accesorios",
-      color: 'brown',
-      tallas: [ ]
-    },
-    {
-      id: 8,
-      imageurl:
-        "https://http2.mlstatic.com/D_NQ_NP_990049-MLA53210605030_012023-W.webp",
-      name: "Vestido playero ",
-      price: "$49.99",
-      description: "Accesorios",
-      color: "white",
-      IsTalla: "Talla",
-      tallas: [ 2,3,4 ]
     },
   ];

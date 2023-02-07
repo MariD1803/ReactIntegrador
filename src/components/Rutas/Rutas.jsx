@@ -7,6 +7,10 @@ import Logo from "../Navbar/logo/Logo";
 import Home from "../pages/home.js";
 import Registro from "../pages/registro";
 import Tops from "../pages/tops";
+import Bottoms from "../pages/bottoms";
+import Bikinis from "../pages/bikinis";
+import Accesorios from "../pages/accesorios";
+import Vestidos from "../pages/vestidos";
 
 const Rutas = () => {
   return (
@@ -40,6 +44,10 @@ const Rutas = () => {
             <Route  path='/' element={<Home />} />            
             <Route  path='registro' element={<Registro />}></Route>
             <Route  path='tops' element={<Tops />}></Route>
+            <Route  path='bottoms' element={<Bottoms />}></Route>
+            <Route  path='accesorios' element={<Accesorios />}></Route>
+            <Route  path='bikinis' element={<Bikinis />}></Route>
+            <Route  path='vestidos' element={<Vestidos />}></Route>
         </Routes>
       </Router>
     </div>

@@ -1,11 +1,11 @@
 import React from "react"
-import { productDataTops } from "./data";
+import { productDataAccesorios } from "./data";
 import Productos from "../Productos";
 
 
 
-const TopsContainer = ( ) => {
-    const productos = productDataTops.map((item) => (
+const AccesoriosContainer = ( ) => {
+    const productos = productDataAccesorios.map((item) => (
             
           <Productos
           bc={item.color}
@@ -32,4 +32,4 @@ const TopsContainer = ( ) => {
     )
 }
 
-export default TopsContainer
+export default AccesoriosContainer

@@ -1,0 +1,54 @@
+
+  
+  .cardProductImagen {
+    width: 18em;
+    height: 20em;
+    object-fit: cover top;
+  }
+  
+  .cardProduct .h3 {
+    font-family: "cursive";
+    font-size: 2.5vh;
+  }
+  .cartProductP {
+    margin: 0;
+    color: black !important; 
+    height: 2rem;
+    width: 2rem;
+    margin: 0 0 1rem 1rem;
+    cursor: pointer;
+  }
+  .cardProduct {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    margin: auto 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .priceProduct {
+    color: grey;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .div-principal {
+    margin: 5% 2%;
+  }
+  .p-buttons {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+  }
+
+  .product-button-talla {
+    border: #b6b6b6b9 solid 1px;
+
+    
+  }
+
+.product-button-talla:focus {
+    background-color: var(--pink);
+    color: white;
+}

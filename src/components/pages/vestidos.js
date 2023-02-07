@@ -1,16 +1,16 @@
 import React from "react"
 import DivContainerProducts from "../Productos/DivContainerProducts"
-import TopsContainer from "../Productos/Tops/TopsContainer"
+import VestidosContainer from "../Productos/Vestidos/VestidosContainer"
 import "../Productos/Productos.css"
 
 
-const Tops = ( ) => {
+const Vestidos = ( ) => {
     return (
         <div className="div-principal">
             
-            <DivContainerProducts section="Tops">
+            <DivContainerProducts section="Vestidos">
 
-            <TopsContainer></TopsContainer>
+            <VestidosContainer></VestidosContainer>
 
             </DivContainerProducts>
         </div>
@@ -18,4 +18,4 @@ const Tops = ( ) => {
     )
 }
 
-export default Tops
+export default Vestidos

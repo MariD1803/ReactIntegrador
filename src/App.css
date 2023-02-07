@@ -332,6 +332,12 @@ h2 {
   font-size: 20px;
 }
 
+.TopsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 
 .position-relative {

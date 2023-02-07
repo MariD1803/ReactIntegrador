@@ -160,12 +160,6 @@ const StyledDivMenu = styled.div`
   font-size: 25px;
 `;
 
-const StyledUlHover = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding-left: 0.5rem;
-`;
 
 
 const StyledUl = styled.ul`
@@ -268,35 +262,28 @@ const StyledMenu = (props) => {
                 <StyledDivMenu>
                   <StyledLink>
                     <Link to="/tops" style={fontBold}> <StyledLi style={fontBold} className="font-size-up">TOPS</StyledLi></Link>
-                    <StyledUlHover>
-                      <StyledLi>Remeras</StyledLi>
-                      <StyledLi>Bodys</StyledLi>
-                    </StyledUlHover>
+                    
                     <div style={space}> </div>
                   </StyledLink>
                   <StyledLink>
-                    <StyledLi style={fontBold} className="font-size-up">VESTIDOS</StyledLi>
+                  <Link to="/vestidos" style={fontBold}> <StyledLi style={fontBold} className="font-size-up">VESTIDOS</StyledLi></Link>  
                   </StyledLink>
                   <div style={space}></div>
                   <StyledLink>
-                    <StyledLi style={fontBold} className="font-size-up"> BOTTOMS </StyledLi>
-                    <StyledUlHover>
-                      <StyledLi>Shorts</StyledLi>
-                      <StyledLi>Pantalones</StyledLi>
-                    </StyledUlHover>
+                  <Link to="/bottoms" style={fontBold}><StyledLi style={fontBold} className="font-size-up"> BOTTOMS </StyledLi></Link>
+                    
                   </StyledLink>
                   <div style={space}></div>
                   <StyledLink>
-                    <StyledLi style={fontBold} className="font-size-up">BIKINIS </StyledLi>
+                  <Link to="/bikinis" style={fontBold}> <StyledLi style={fontBold} className="font-size-up">BIKINIS </StyledLi></Link>
                   </StyledLink>
                   <div style={space}> </div>
                   <StyledLink>
-                    <StyledLi style={fontBold} className="font-size-up"> ACCESORIOS </StyledLi>
-                    <StyledUlHover>
-                      <StyledLi>Sombreros</StyledLi>
-                      <StyledLi>Pareos</StyledLi>
-                    </StyledUlHover>
+                  <Link to="/accesorios" style={fontBold}> <StyledLi style={fontBold} className="font-size-up"> ACCESORIOS </StyledLi></Link> 
+                    
                   </StyledLink>
+                  {/* 
+                  <StyledLi style={fontBold}>VER TODO </StyledLi> */}
                 </StyledDivMenu>
                 <div className="position-relative">
                   <div  className="imagen-navbar"  alt="IMAGEN" />
@@ -343,11 +330,8 @@ const StyledMenu = (props) => {
                     <AccordionPanel pb={4} pl={10}>
                       <div style={space}> </div>
                       <StyledLink>
-                        <StyledLi style={fontBold}>TOPS</StyledLi>
-                        <StyledUlHover>
-                          <StyledLi>Remeras</StyledLi>
-                          <StyledLi>Bodys</StyledLi>
-                        </StyledUlHover>
+                      <Link to="/tops" style={fontBold}> <StyledLi style={fontBold}>TOPS</StyledLi></Link>
+                        
                         <div style={space}> </div>
                       </StyledLink>
                       <StyledLink>
@@ -356,10 +340,7 @@ const StyledMenu = (props) => {
                       <div style={space}></div>
                       <StyledLink>
                         <StyledLi style={fontBold}> BOTTOMS </StyledLi>
-                        <StyledUlHover>
-                          <StyledLi>Shorts</StyledLi>
-                          <StyledLi>Pantalones</StyledLi>
-                        </StyledUlHover>
+                        
                       </StyledLink>
                       <div style={space}></div>
                       <StyledLink>
@@ -368,14 +349,10 @@ const StyledMenu = (props) => {
                       <div style={space}> </div>
                       <StyledLink>
                         <StyledLi style={fontBold}> ACCESORIOS </StyledLi>
-                        <StyledUlHover>
-                          <StyledLi>Sombreros</StyledLi>
-                          <StyledLi>Pareos</StyledLi>
-                          
-                      <div style={space}> </div>
-                        </StyledUlHover>
-                        <StyledLink>
-                        <StyledLi style={fontBold}>VER TODO </StyledLi>
+                        
+                        <StyledLink>{/* 
+                        <div style={space}> </div>
+                        <StyledLi style={fontBold}>VER TODO </StyledLi> */}
                       </StyledLink>
                         <div style={space}></div>
                       </StyledLink>

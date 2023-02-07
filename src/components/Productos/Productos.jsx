@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import { IconCart } from "../Navbar/iconos/Iconos";
+import "./Productos.css"
 
 const StyledButton = styled.button `
     width: 1.5rem;
@@ -10,12 +11,6 @@ const StyledButton = styled.button `
     border: grey solid 1px;
 
 `
-const StyledDivTalla = styled.div `
-  gap: 10px;
-  display: flex;
-  flex-direction: row;
-`
-
 
 const StyledDiv = styled.div `
     flex-direction: row;    
@@ -23,18 +18,31 @@ const StyledDiv = styled.div `
     display: flex;
     margin-top: 1rem;
     width: 100%;
-    padding: 1rem;
 
 `
+const StyledDivTalla = styled.div `
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`
+
+const StyledDivContent = styled.div `
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+
+`
+export default function Productos(props) {
 
 
-export default function Product(props) {
-  
   return (
-    <div className="card">
-      <img className="product--image" src={props.url} alt="product img" />
+    <div className="cardProduct">
+      <img className="cardProductImagen" src={props.url} alt="product img" />
+      <StyledDivContent>
       <h3 className="h3">{props.name}</h3>
-      <p className="price">{props.price}</p>
       
       <StyledDiv> 
         <StyledDivTalla>
@@ -43,10 +51,12 @@ export default function Product(props) {
         </StyledDivTalla>
         <StyledButton className={"background-"+props.bc}>  </StyledButton>
       </StyledDiv>
+     
+      <StyledDiv><p className="priceProduct">{props.price}</p> <IconCart className="cartProductP"></IconCart></StyledDiv>
 
-      <p className="p" >
-        <button className="button">Comprar</button>
-      </p>
+
+
+      </StyledDivContent>
     </div>
   );
 }

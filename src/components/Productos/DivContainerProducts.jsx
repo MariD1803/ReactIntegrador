@@ -58,6 +58,10 @@ const StyledButton = styled(AccordionButton) `
     border: none;
     border-top: grey solid 1px !important;
     border-bottom: grey solid 1px !important;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
 `
 
 const StyledButtonColor = styled.button `
@@ -66,16 +70,28 @@ const StyledButtonColor = styled.button `
     border-radius: 50%;
     margin-bottom: 1rem;
     border: grey solid 1px;
+    cursor: pointer;
+
+    @media (max-width: 480px) {
+      width: 1rem;
+      height: 1rem;
+      margin-bottom: 0.5rem;
+    }
 
 `
 const StyledButtonSize = styled.button `
     width: 2rem;
     height: 2rem;
-    border: grey solid 1px;
+    border: #b6b6b6b9 solid 1px;
 
     &:focus{
-        background-color: GREY;
+        background-color: var(--pink);
         color: white;
+    }
+
+    @media (max-width: 480px) {
+      width: 1.5rem;
+    height: 1.5rem;
     }
 
 `
@@ -110,6 +126,7 @@ const DivContainerProducts = (props) => {
                <StyledButtonSize>2</StyledButtonSize>
                <StyledButtonSize>3</StyledButtonSize>
                <StyledButtonSize>4</StyledButtonSize>
+               <StyledButtonSize>5</StyledButtonSize>
               </StyledAccordionPanel>
             </AccordionItem>
             <AccordionItem>
@@ -120,7 +137,7 @@ const DivContainerProducts = (props) => {
                   <AccordionIcon />
                 </StyledButton>
               <StyledAccordionPanel pb={4}>
-              <StyledButtonColor  className={"background-black"}>  </StyledButtonColor>
+              <StyledButtonColor  className={"background-black"} >  </StyledButtonColor>
               <StyledButtonColor  className={"background-red"}>  </StyledButtonColor>
               <StyledButtonColor  className={"background-white"}>  </StyledButtonColor>
               <StyledButtonColor  className={"background-jean"}>  </StyledButtonColor>
