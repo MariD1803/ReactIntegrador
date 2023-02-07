@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from 'styled-components'
-import { ChakraProvider, Heading } from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react'
 import {
     FormControl,
     FormLabel,

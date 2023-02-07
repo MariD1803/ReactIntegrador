@@ -10,6 +10,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import "../../../App.css"
+import { Link } from "react-router-dom";
 
 const AccordionButtonStyled = styled(AccordionButton)`
   background: none;
@@ -136,7 +137,7 @@ const StyledDivHover = styled.div`
     border-bottom: 2px grey solid;
     z-index: 3;
 `;
-
+/* 
 const StyledH2Animation = styled.h2`
   text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
     9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
@@ -149,7 +150,7 @@ const StyledH2Animation = styled.h2`
   color: #f6aca2;
   animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
   letter-spacing: 0.4rem;
-`;
+`; */
 
 const StyledDivMenu = styled.div`
   display: flex;
@@ -232,6 +233,7 @@ const StyledLink = styled.a`
 `;
 const StyledLi = styled.li`
   list-style: none;
+  color: black;
   transition: 0s;
   &:hover {
     transform: translate(20px);
@@ -265,7 +267,7 @@ const StyledMenu = (props) => {
               <StyledDivHover>
                 <StyledDivMenu>
                   <StyledLink>
-                    <StyledLi style={fontBold} className="font-size-up">TOPS</StyledLi>
+                    <Link to="/tops" style={fontBold}> <StyledLi style={fontBold} className="font-size-up">TOPS</StyledLi></Link>
                     <StyledUlHover>
                       <StyledLi>Remeras</StyledLi>
                       <StyledLi>Bodys</StyledLi>
@@ -298,11 +300,6 @@ const StyledMenu = (props) => {
                 </StyledDivMenu>
                 <div className="position-relative">
                   <div  className="imagen-navbar"  alt="IMAGEN" />
-                  <div className="position-absolute">
-                    <StyledH2Animation>SALE</StyledH2Animation>
-                    <StyledH2Animation>SALE</StyledH2Animation>
-                    <StyledH2Animation>SALE</StyledH2Animation>
-                  </div>
                 </div>
               </StyledDivHover>
             )}

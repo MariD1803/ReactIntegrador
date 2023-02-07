@@ -18,7 +18,7 @@ const Counter = () => {
 
     /* const [state1, dispatch] = useReducer(counterReducer, counterInitialState) */
 
-    const {state, dispatch} = useCountContext();
+    const {state} = useCountContext();
 
     
     

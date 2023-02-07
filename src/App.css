@@ -83,6 +83,91 @@
     text-shadow: none;
   }
 }
+@keyframes change {
+  0% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+ 
+  5% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+
+  10% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+ 
+  15% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  20% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  25% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  30% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+ 
+  35% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+
+  40% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+ 
+  45% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  50% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  55% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  60% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+ 
+  65% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+
+  70% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+ 
+  75% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  80% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  85% {
+    background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+  }
+
+  90% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+ 
+  95% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+
+  100% {
+    background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+  }
+}
 
 @keyframes move {
   0% {
@@ -164,6 +249,16 @@ html::-webkit-scrollbar-thumb {
   height: 8px; 
 }
 
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+h2 {
+  font-family: "cursive";
+  font-size: 2.5vh;
+}
+
 .fontStyleTitle {
   font-size: 20px;
   font-weight: 900;
@@ -209,7 +304,6 @@ html::-webkit-scrollbar-thumb {
 .background-jean {
   background-color: #467fa8;
 }
-
 
 .gradient-color{ 
   height: 53px;
@@ -307,14 +401,11 @@ html::-webkit-scrollbar-thumb {
 
 .imagen-navbar {
   transition: 0.5s;
-  background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
   height: 100%;
   width: 450px;
+  animation: change 6s linear infinite;
+  transition-delay: 10s;
 
-}
-.imagen-navbar:hover {
-  background: url(../src//utils/images/Navbar/delado.png) no-repeat;
-  
 }
 
 ul::-webkit-scrollbar {
@@ -368,7 +459,7 @@ ul::-webkit-scrollbar-thumb {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
     max-width: 320px;
     text-align: center;
-    margin: 0 2rem 2rem 2rem !important;
+    margin: 0 1.5rem 2rem 2rem !important;
   }
   
 }
