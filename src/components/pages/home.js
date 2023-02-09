@@ -1,5 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player";
+import styled from "styled-components";
 import CardsMove from "../Cards/CardsMove";
 import CardTitulo from "../Cards/CardTitulo";
 import CarouselContainer from "../Carrousel/Carousel/Carousel";
@@ -12,20 +13,31 @@ import SmallWrapper from "../clase-05/SmallWrapper";
 import Counter from "../clase-06/components/Counter/Counter";
 import { CountContextProvider } from "../clase-06/context/countContext";
 
+const StyledDivAnimated = styled.div`
+  animation: opacity-html 2.2s linear;
+`;
+const StyledDivAnimatedCards = styled.div`
+  animation: slider-html 1s linear;
+`;
 
 const Home = () => {
   return (
     <div>
-      <CarouselContainer></CarouselContainer>
+      <StyledDivAnimated>
+        <CarouselContainer></CarouselContainer>
 
-      <DivPromotion>
-        <PromotionContainer></PromotionContainer>
-        <PromotionContainer></PromotionContainer>
-        <PromotionContainer></PromotionContainer>
-        <PromotionContainer></PromotionContainer>
-      </DivPromotion>
+        <DivPromotion>
+          <PromotionContainer></PromotionContainer>
+          <PromotionContainer></PromotionContainer>
+          <PromotionContainer></PromotionContainer>
+          <PromotionContainer></PromotionContainer>
+        </DivPromotion>
+      </StyledDivAnimated>
 
+      <StyledDivAnimatedCards>
       <CardTitulo title="Nuevos Ingresos"></CardTitulo>
+      </StyledDivAnimatedCards>
+
       <CardsMove></CardsMove>
 
       <ReactPlayer
@@ -52,7 +64,6 @@ const Home = () => {
           </SmallWrapper>
         </GeneralWrapper>
       </CtxProvider>
-
     </div>
   );
 };

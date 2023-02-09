@@ -14,6 +14,10 @@ const VestidosContainer = ( ) => {
           price={item.price}
           description={item.description}
           IsTalla={item.IsTalla}
+          itemcolorbc={item.colorbc}
+          IsSale={item.IsSale}
+          signo={item.signo}
+          pricebefore={item.pricebefore}
         >
             <p className="p-buttons">                                
                 {

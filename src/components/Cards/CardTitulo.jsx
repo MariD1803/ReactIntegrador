@@ -15,8 +15,8 @@ const StyledDivCont = styled.div `
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 3rem;
-    margin-top: 2rem;    
+    padding: 1rem;
+    margin: 2rem 0;    
     justify-content: center;
 `
 

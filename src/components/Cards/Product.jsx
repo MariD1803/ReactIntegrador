@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -45,7 +46,7 @@ export default function Product(props) {
       </StyledDiv>
 
       <p className="p" >
-        <button className="button">Comprar</button>
+      <Link to={"/"+props.description}><button className="button">Comprar</button></Link>
       </p>
     </div>
   );

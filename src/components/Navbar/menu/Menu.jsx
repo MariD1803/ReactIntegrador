@@ -67,7 +67,7 @@ const fontStyle = {
 
 const fontBold = {
   fontWeight: "900",
-  fontSize: "18px",
+  fontSize: "30px !important",
 };
 
 const space = {
@@ -156,8 +156,9 @@ const StyledDivMenu = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: 260px;
-  font-size: 25px;
+    width: 260px;
+    height: 60%;
+    justify-content: space-around;
 `;
 
 
@@ -261,7 +262,8 @@ const StyledMenu = (props) => {
               <StyledDivHover>
                 <StyledDivMenu>
                   <StyledLink>
-                    <Link to="/tops" style={fontBold}> <StyledLi style={fontBold} className="font-size-up">TOPS</StyledLi></Link>
+                    <Link to="/tops" style={fontBold}> <StyledLi
+                     className="font-size-up">TOPS</StyledLi></Link>
                     
                     <div style={space}> </div>
                   </StyledLink>
@@ -282,8 +284,6 @@ const StyledMenu = (props) => {
                   <Link to="/accesorios" style={fontBold}> <StyledLi style={fontBold} className="font-size-up"> ACCESORIOS </StyledLi></Link> 
                     
                   </StyledLink>
-                  {/* 
-                  <StyledLi style={fontBold}>VER TODO </StyledLi> */}
                 </StyledDivMenu>
                 <div className="position-relative">
                   <div  className="imagen-navbar"  alt="IMAGEN" />
@@ -335,24 +335,22 @@ const StyledMenu = (props) => {
                         <div style={space}> </div>
                       </StyledLink>
                       <StyledLink>
-                        <StyledLi style={fontBold}>VESTIDOS</StyledLi>
+                      <Link to="/vestidos" style={fontBold}> <StyledLi style={fontBold}>VESTIDOS</StyledLi></Link>
                       </StyledLink>
                       <div style={space}></div>
                       <StyledLink>
-                        <StyledLi style={fontBold}> BOTTOMS </StyledLi>
+                      <Link to="/bottoms" style={fontBold}><StyledLi style={fontBold}> BOTTOMS </StyledLi></Link>
                         
                       </StyledLink>
                       <div style={space}></div>
                       <StyledLink>
-                        <StyledLi style={fontBold}>VIKINIS </StyledLi>
+                      <Link to="/bikinis" style={fontBold}><StyledLi style={fontBold}>BIKINIS </StyledLi></Link>
                       </StyledLink>
                       <div style={space}> </div>
                       <StyledLink>
-                        <StyledLi style={fontBold}> ACCESORIOS </StyledLi>
+                      <Link to="/accesorios" style={fontBold}><StyledLi style={fontBold}> ACCESORIOS </StyledLi></Link>
                         
-                        <StyledLink>{/* 
-                        <div style={space}> </div>
-                        <StyledLi style={fontBold}>VER TODO </StyledLi> */}
+                        <StyledLink>
                       </StyledLink>
                         <div style={space}></div>
                       </StyledLink>

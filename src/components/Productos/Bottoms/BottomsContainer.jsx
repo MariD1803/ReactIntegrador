@@ -14,6 +14,10 @@ const BottomsContainer = ( ) => {
           price={item.price}
           description={item.description}
           IsTalla={item.IsTalla}
+          itemcolorbc={item.colorbc}
+          IsSale={item.IsSale}
+          pricebefore={item.pricebefore}
+          signo={item.signo}
         >
             <p className="p-buttons">                                
                 {

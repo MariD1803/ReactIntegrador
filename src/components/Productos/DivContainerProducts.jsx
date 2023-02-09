@@ -148,6 +148,11 @@ const DivContainerProducts = (props) => {
               <StyledButtonColor  className={"background-pink"}>  </StyledButtonColor>
               <StyledButtonColor  className={"background-yellow"}>  </StyledButtonColor>
               <StyledButtonColor  className={"background-brown"}>  </StyledButtonColor>
+              <StyledButtonColor  className={"background-blue"}>  </StyledButtonColor>
+              <StyledButtonColor  className={"background-orange"}>  </StyledButtonColor>
+              <StyledButtonColor  className={"background-fucsia"}>  </StyledButtonColor>
+              <StyledButtonColor  className={"background-blue-sky"}>  </StyledButtonColor>
+              <StyledButtonColor  className={"background-blue-dark"}>  </StyledButtonColor>
               </StyledAccordionPanel>
             </AccordionItem>
 

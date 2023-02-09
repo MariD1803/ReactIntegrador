@@ -4,6 +4,8 @@ import { IconCart } from "../Navbar/iconos/Iconos";
 import "./Productos.css"
 
 const StyledButton = styled.button `
+
+    cursor: auto !important;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
@@ -35,11 +37,18 @@ const StyledDivContent = styled.div `
   width: 100%;
 
 `
+const StyledPrice = styled.div  `
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+`
+
 export default function Productos(props) {
 
 
   return (
     <div className="cardProduct">
+      <p className="product-sale" ><p className={"background-"+props.itemcolorbc} >{props.IsSale}</p></p>
       <img className="cardProductImagen" src={props.url} alt="product img" />
       <StyledDivContent>
       <h3 className="h3">{props.name}</h3>
@@ -52,7 +61,13 @@ export default function Productos(props) {
         <StyledButton className={"background-"+props.bc}>  </StyledButton>
       </StyledDiv>
      
-      <StyledDiv><p className="priceProduct">{props.price}</p> <IconCart className="cartProductP"></IconCart></StyledDiv>
+      <StyledDiv>
+        <StyledPrice>
+        <p className="priceProduct">${props.price}</p>      
+        <p className="priceDiscount" >{props.signo}{props.pricebefore}</p>
+        </StyledPrice>
+        <IconCart className="cartProductP"></IconCart>
+        </StyledDiv>
 
 
 
