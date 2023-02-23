@@ -16,10 +16,15 @@ const StyledDivPromotionContainer = styled.div `
 const StyledH2PromotionContainer = styled.h2 `
     color: white;
     font-family: "cursiva";
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     align-items: center;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 2700px) {
+    font-size: 1.3vw; 
+    }
+
 
 `
 

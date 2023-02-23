@@ -4,21 +4,21 @@
 
 .product--image {
   width: 100%;
-  height: 20em;
+  height: 25em;
   object-fit: cover top;
   animation: opacity-html 2.2s linear;
 }
 
 .card .h3 {
   font-family: "cursive";
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 .card .p {
   margin: 0;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 320px;
+  max-width: 500px;
   margin-left: 2.8rem !important;
   text-align: center;
   margin-bottom: 2rem;
@@ -26,7 +26,7 @@
 
 .price {
   color: grey;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .card .button {
@@ -38,9 +38,13 @@
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
 
+}
+
+.react-multi-carousel-list {
+  height: 800px;
 }
 
 .card .button:hover {
@@ -62,18 +66,73 @@
 }
 
 
-@media (min-width: 900px ) {
+@media (max-width:2700px ) {
+
+  .price {
+    color: grey;
+    font-size: 18px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 340px;
+    margin-left: 2rem !important;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .product--image {
+    width: 100%;
+    height: 18em;
+    object-fit: cover top;
+    animation: opacity-html 2.2s linear;
+  }
+
+  
+  
+ 
+}
+@media (max-width: 1700px ) {
+
+ 
   .react-multi-carousel-list {
+    height: 640px !important;
     margin-left: 3vw;
   }
+ 
+  .card {
+    margin: 0 2rem 0 2rem !important;
+  }
+  
+ 
 }
+@media (max-width: 1100px ) {
+
+ 
+  .card .h3 {
+    font-family: "cursive";
+    font-size: 1.5vh;
+  }
+  
+ 
+}
+
+
+
 
 
 @media (max-width: 480px) {
   .card .button {
     transform: translateY(-20%);
     transition: 1s;
-    background-color: var(--pink);
+    background-color: var(--pink) !important;
     margin: 0;
+  }
+
+  .card .h3 {
+    font-size: 2.5vh;
+  }
+  .react-multi-carousel-list {
+    height: 590px !important;
   }
 }

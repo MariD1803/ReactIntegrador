@@ -28,6 +28,18 @@ const StyledDiv = styled.div `
 
 `
 
+const StyledP = styled.p `
+
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 25px;  
+
+  @media (max-width: 2700px) {
+    font-size: 12px; 
+  }
+
+`
+
 
 export default function Product(props) {
   
@@ -39,15 +51,15 @@ export default function Product(props) {
       
       <StyledDiv> 
         <StyledDivTalla>
-          <p>{props.IsTalla}</p>
+          <StyledP>{props.IsTalla}</StyledP>
           {props.children}
         </StyledDivTalla>
         <StyledButton className={"background-"+props.bc}>  </StyledButton>
       </StyledDiv>
 
-      <p className="p" >
+      <div className="p" >
       <Link to={"/"+props.description}><button className="button">Comprar</button></Link>
-      </p>
+      </div>
     </div>
   );
 }

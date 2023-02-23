@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPromotion = styled.div `
-    height: 40px;
+    height: 42px;
     overflow: hidden; 
     width: 100%;
 
-    @media (max-width: 360px){
-        height: 30px;
+
+    
+    @media (max-width: 600px){
+        height: 25px;
     }
 
 `

@@ -10,6 +10,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import "../../../App.css"
+import "../../../animations.css"
 import { Link } from "react-router-dom";
 
 const AccordionButtonStyled = styled(AccordionButton)`
@@ -56,7 +57,7 @@ const StyledButton = styled.button`
 
   @media (max-width: 767px) {
     display: flex;
-    margin: 0;
+    margin: 0 0 0 1rem;
   }
 `;
 
@@ -78,7 +79,8 @@ const StyledDivResponsive = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding-top: 1rem;
+  padding: 1rem 0 0 1rem;
+  gap: 10px;
 
   @media (max-width: 767px) {
     display: none;
@@ -98,6 +100,7 @@ const StyledDiv = styled.div`
 
 const StyledDivContainer = styled.div`
   padding-left: 1rem;
+  width: 100%;
   transition: 3s;
   &:hover {
     transform: translate(0.1%);
@@ -129,28 +132,20 @@ const StyledDivHover = styled.div`
   flex-direction: row;
   position: absolute;
   background-color: white;
-  top: 103px;
-    left: 0px;
-    width: 100%;
-    height: 800px;
-    padding: 1rem;
+  top: 140px;
+  left: 0px;
+  width: 100%;
+  height: 800px;
+  padding: 1rem;
+  z-index: 3;
+  animation: slider-menu 0.7s linear;
+
+  @media (max-width: 2700px) {
+    top: 103px;    
     border-bottom: 2px grey solid;
-    z-index: 3;
+  }
 `;
-/* 
-const StyledH2Animation = styled.h2`
-  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
-    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
-  font-family: "cursiva";
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 40px;
-  text-align: center;
-  margin: 0;
-  color: #f6aca2;
-  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
-  letter-spacing: 0.4rem;
-`; */
+
 
 const StyledDivMenu = styled.div`
   display: flex;
@@ -169,8 +164,9 @@ const StyledUl = styled.ul`
   gap: 50px;
   color: white;
   align-items: center;
-  width: 100px;
+  width: 170px;
   height: 100%;
+  padding: 0;
 
   @media (max-width: 1100px) {
     width: 80px;
@@ -217,7 +213,7 @@ const StyledUlActive = styled.ul`
 
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.div`
   list-style: none;
   cursor: pointer;
   color: black;
@@ -227,9 +223,11 @@ const StyledLink = styled.a`
   }
 `;
 const StyledLi = styled.li`
+width: 100%;
   list-style: none;
   color: black;
   transition: 0s;
+  text-align: initial;
   &:hover {
     transform: translate(20px);
     transition: 1s;
@@ -247,6 +245,7 @@ const StyledMenu = (props) => {
 
   return (
     <>
+      
       <div>
         {/*  Aca comienza el menú antes de volverse menú hamburguesa */}
         <StyledDivResponsive>
@@ -294,19 +293,20 @@ const StyledMenu = (props) => {
 
           <StyledDivContainer>
             <StyledUl>
-              <StyledLink className={props.className}>SALE</StyledLink>
+            <StyledLink className={props.className}>SALE</StyledLink>
             </StyledUl>
           </StyledDivContainer>
 
           <StyledDivContainer>
             <StyledUl>
-              <StyledLink className={props.className}>2X1</StyledLink>
+            <Link to="/about"> <StyledLink className={props.className}>NOSOTROS</StyledLink></Link>
+             
             </StyledUl>
           </StyledDivContainer>
 
           <StyledDivContainer>
             <StyledUl>
-              <StyledLink className={props.className}>LOCALES</StyledLink>
+            <Link to="/contacto"> <StyledLink className={props.className}>CONTACTO</StyledLink></Link>
             </StyledUl>
           </StyledDivContainer>
         </StyledDivResponsive>
@@ -368,19 +368,22 @@ const StyledMenu = (props) => {
                   </AccordionItem>
                   <AccordionItem>
                     <AccordionButtonStyled>
-                      <Box as="span" flex="1" textAlign="left">
-                        2X1
-                      </Box>
+                      <Link to="/about">  <Box as="span" flex="1" textAlign="left">
+                        NOSOTROS
+                      </Box></Link>
+                     
                     </AccordionButtonStyled>
                     <AccordionPanel pb={4}>                      
                     </AccordionPanel>
                   </AccordionItem>
 
                   <AccordionItem>
-                    <AccordionButtonStyled>
-                      <Box as="span" flex="1" textAlign="left">
-                        LOCALES
+                    <AccordionButtonStyled> <Link to="/contacto">
+                    <Box as="span" flex="1" textAlign="left">
+                        CONTACTO
                       </Box>
+                    </Link>
+                      
                     </AccordionButtonStyled>
                     <AccordionPanel pb={4}>                      
                     </AccordionPanel>

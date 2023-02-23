@@ -1,7 +1,7 @@
 export const productDataBikinis = [
     
     {
-      id: 1,
+      id: "1Bikinidospiezascolaless",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_667786-MLA52596554678_112022-W.webp",
       name: "Bikini 2 piezas colaless",
@@ -13,10 +13,11 @@ export const productDataBikinis = [
       signo: "$",
       pricebefore: "4000",
       colorbc: "pink",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ], 
+      quantity: 0,
     },
     {
-      id: 2,
+      id: "2Bikinidospiezastirascruzadas",
       imageurl:
       'https://naifargb2b.vtexassets.com/arquivos/ids/177974-500-auto?v=1761567603&width=500&height=auto&aspect=true',
       name: "Bikini 2 piezas tiras cruzadas",
@@ -25,10 +26,11 @@ export const productDataBikinis = [
       color: "black",      
       IsSale: "Nuevo",
       colorbc: "pink",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ], 
+      quantity: 0,
     },
     {
-      id: 3,
+      id: "3Bikinidospiezastiroalto",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_717017-MLA52388704265_112022-W.webp",
       name: "Bikini 2 piezas tiro alto",
@@ -36,10 +38,11 @@ export const productDataBikinis = [
       description: "bikinis",
       color: "nute",      
       IsTalla: "Talla",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ], 
+      quantity: 0,
     },
     {
-      id: 4,
+      id: "4Bikinitrespiezasconpareo",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_676135-MLA48012810909_102021-W.webp",
       name: "Bikini 3 piezas con pareo",
@@ -47,10 +50,11 @@ export const productDataBikinis = [
       description: "bikinis",
       color: "jean",      
       IsTalla: "Talla",
-      tallas: [ 1,2, 3, 4 ]
+      tallas: [ 1,2, 3, 4 ], 
+      quantity: 0,
     },
     {
-      id: 5,
+      id: "5Enterizoconmedioestilomalla",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_698423-MLA52624938958_112022-W.webp",
       name: "Enterizo con medio estilo malla",
@@ -58,10 +62,11 @@ export const productDataBikinis = [
       description: "bikinis",
       color: "red",      
       IsTalla: "Talla",
-      tallas: [ 3, 4 , 5]
+      tallas: [ 3, 4 , 5], 
+      quantity: 0,
     },
     {
-      id: 6,
+      id: "6Bikinidospiezascinturaalta",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_731436-MLA52390556293_112022-O.webp",
       name: "Bikini 2 piezas cintura alta",
@@ -69,20 +74,22 @@ export const productDataBikinis = [
       description: "bikinis",
       color: "fucsia",       
       IsTalla: "Talla",
-      tallas: [ 3,4,5 ]
+      tallas: [ 3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 7,
+      id: "7Bikinidospiezascruzadoalhombro",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_674356-MLA51522207725_092022-W.webp",
       name: "Bikini 2 piezas cruzado al hombro",
       price: "6000",
       description: "bikinis",
       color: 'red',
-      tallas: [1,2,3 ]
+      tallas: [1,2,3 ],
+      quantity: 0,
     },
     {
-      id: 8,
+      id: "8Bikinitrespiezasconpareo",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_870584-MLA52466342030_112022-W.webp",
       name: "Bikini 3 piezas con pareo",
@@ -90,6 +97,7 @@ export const productDataBikinis = [
       description: "bikinis",
       color: "green-dark",
       IsTalla: "Talla",
-      tallas: [ 2,3,4 ]
+      tallas: [ 2,3,4 ],
+      quantity: 0,
     },
   ];

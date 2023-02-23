@@ -89,7 +89,6 @@ const Formulario = () => {
 
     //Muy util, para verificar que el email está correcto
     useEffect(() => {
-        console.log(email)
         const re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         if(!re.test(email) && email !== '') {
             inputRef.current.style.border = '3px solid red'

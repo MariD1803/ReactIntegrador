@@ -1,6 +1,6 @@
 export const productDataTops = [
     {
-      id: 1,
+      id: "1Musculosatejida",
       imageurl:
       'https://http2.mlstatic.com/D_NQ_NP_977246-MLA48930760191_012022-W.webp',
       name: "Musculosa tejida",
@@ -12,10 +12,12 @@ export const productDataTops = [
       signo: "$",
       pricebefore: "2500",
       colorbc: "pink",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ], 
+      quantity: 0,
+      isAddedFromCartButton: false
     },
     {
-      id: 2,
+      id: "2Musculosacuelloalto",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_776664-MLA52841947038_122022-W.webp",
       name: "Musculosa cuello alto",
@@ -25,10 +27,11 @@ export const productDataTops = [
       IsTalla: "Talla",
       IsSale: "Nuevo",
       colorbc: "pink",
-      tallas: [ 1,2,3,4 ]
+      tallas: [ 1,2,3,4 ],
+      quantity: 0,
     },
     {
-      id: 3,
+      id: "3Topnudodelantero",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_694696-MLA53116022414_012023-W.webp",
       name: "Top nudo delantero",
@@ -36,11 +39,12 @@ export const productDataTops = [
       description: " Top",
       color: "white",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3 ],      
+      tallas: [ 1,2,3 ],   
+      quantity: 0,   
     },
     
     {
-      id: 4,
+      id: "4Topcorset",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_880630-MLA52221388211_102022-W.webp",
       name: "Top corset",
@@ -48,10 +52,11 @@ export const productDataTops = [
       description: "Top",
       color: "black",      
       IsTalla: "Talla",
-      tallas: [ 1,2, 3 ]
+      tallas: [ 1,2, 3 ],
+      quantity: 0,
     },
     {
-      id: 5,
+      id:  "5Topestampado",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_634549-MLA53443717893_012023-W.webp",
       name: "Top estampado",
@@ -59,10 +64,11 @@ export const productDataTops = [
       description: "Top",
       color: "white",      
       IsTalla: "Talla",
-      tallas: [ 2, 3, 4 , 5]
+      tallas: [ 2, 3, 4 , 5],
+      quantity: 0,
     },
     {
-      id: 6,
+      id: "6Tophombrodescubierto",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_613074-MLA53604012962_022023-W.webp",
       name: "Top hombro descubierto",
@@ -70,20 +76,22 @@ export const productDataTops = [
       description: "Top",
       color: "yellow",       
       IsTalla: "Talla",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ],
+      quantity: 0,
     },
     {
-      id: 7,
+      id: "7Remeraconfrunce",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_803503-MLA53621405922_022023-W.webp",
       name: "Remera con frunce",
       price: "2800",
       description: "Top",
       color: 'black',
-      tallas: [1,2,3,4]
+      tallas: [1,2,3,4],
+      quantity: 0,
     },
     {
-      id: 8,
+      id: "8Remerarayada",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_940961-MLA51165027225_082022-W.webp",
       name: "Remera rayada",
@@ -91,10 +99,11 @@ export const productDataTops = [
       description: "Top",
       color: "blue",
       IsTalla: "Talla",
-      tallas: [ 4,5 ]
+      tallas: [ 4,5 ],
+      quantity: 0,
     },
     {
-      id: 9,
+      id: "9Topdecueroengomado",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_796976-MLA52751496665_122022-W.webp",
       name: "Top de cuero engomado",
@@ -102,10 +111,11 @@ export const productDataTops = [
       description: "Top",
       color: "black",
       IsTalla: "Talla",
-      tallas: [ 3,4,5 ]
+      tallas: [ 3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 10,
+      id: "10Topmangacorta",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_731518-MLA52512367483_112022-W.webp",
       name: "Top manga corta",
@@ -113,10 +123,11 @@ export const productDataTops = [
       description: "Top",
       color: "nute",
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 11,
+      id: "11Topestilotrianguloretro",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_603783-MLA53092564040_122022-W.webp",
       name: "Top estilo triangulo retro",
@@ -124,32 +135,35 @@ export const productDataTops = [
       description: "Top",
       color: "orange",
       IsTalla: "Talla",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ],
+      quantity: 0,
     },
     {
-      id: 12,
+      id: "12Remerascortadealgodon",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_776401-MLA53686471246_022023-W.webp",
-      name: "Remeras corta de algodon",
+      name: "Remera corta de algodon",
       price: "2500",
       description: "Top",
       color: "pink",
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 13,
+      id: "13Remeramusculosa",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_706152-MLA51167066192_082022-O.webp",
-      name: "Remeras musculosa",
+      name: "Remera musculosa",
       price: "2500",
       description: "Top",
       color: "green",
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 14,
+      id: "14Topstrapless",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_832720-MLA31116130379_062019-W.webp",
       name: "Top strapless",
@@ -157,10 +171,11 @@ export const productDataTops = [
       description: "Top",
       color: "red",
       IsTalla: "Talla",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ],
+      quantity: 0,
     },
     {
-      id: 15,
+      id:"15Corsetbengalina",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_851423-MLA52700826426_122022-O.webp",
       name: "Corset bengalina",
@@ -168,10 +183,11 @@ export const productDataTops = [
       description: "Top",
       color: "fucsia",
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4 ]
+      tallas: [ 1,2,3,4 ],
+      quantity: 0,
     },
     {
-      id: 16,
+      id: "16Topdetiras",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_847812-MLA51807151456_102022-W.webp",
       name: "Top de tiras",
@@ -179,6 +195,7 @@ export const productDataTops = [
       description: "Top",
       color: "red",
       IsTalla: "Talla",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ],
+      quantity: 0,
     },
   ];

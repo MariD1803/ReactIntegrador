@@ -1,6 +1,6 @@
 export const productDataVestidos = [
     {
-      id: 1,
+      id: "1Vestidomusculosa",
       imageurl:
       'https://http2.mlstatic.com/D_NQ_NP_811242-MLA49369636503_032022-W.webp',
       name: "Vestido musculosa",
@@ -11,10 +11,11 @@ export const productDataVestidos = [
       pricebefore: "3500",
       colorbc: "pink",
       color: "black",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ],
+      quantity: 0,
     },
     {
-      id: 2,
+      id: "2VestidoescoteenV",
       imageurl:
         "https://jbonita.vteximg.com.br/arquivos/ids/229676-1280-1707/E9496136_1.jpg?v=638049016079470000",
       name: "Vestido escote en V",
@@ -24,10 +25,11 @@ export const productDataVestidos = [
       IsTalla: "Talla",
       IsSale: "Nuevo",      
       colorbc: "pink",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ],
+      quantity: 0,
     },
     {
-      id: 3,
+      id: "3Vestidoestilomoño",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_801731-MLA48080804254_102021-W.webp",
       name: "Vestido estilo moño",
@@ -35,10 +37,11 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "white",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3]
+      tallas: [ 1,2,3],
+      quantity: 0,
     },
     {
-      id: 4,
+      id: "4Vestidomangacorta",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_621640-MLA51570515438_092022-W.webp",
       name: "Vestido manga corta",
@@ -46,10 +49,11 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "brown",      
       IsTalla: "Talla",
-      tallas: [ 1,2, 3, 4, 5 ]
+      tallas: [ 1,2, 3, 4, 5 ],
+      quantity: 0,
     },
     {
-      id: 5,
+      id: "5Vestidolargodelino",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_837272-MLA52942075831_122022-W.webp",
       name: "Vestido largo de lino",
@@ -57,10 +61,11 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "nute",      
       IsTalla: "Talla",
-      tallas: [ 3, 4 , 5]
+      tallas: [ 3, 4 , 5],
+      quantity: 0,
     },
     {
-      id: 6,
+      id: "6Vestidodoblefrunce",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_660800-MLA53151865237_012023-W.webp",
       name: "Vestido doble frunce",
@@ -68,20 +73,22 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "fucsia",       
       IsTalla: "Talla",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ],
+      quantity: 0,
     },
     {
-      id: 7,
+      id: "7Vestidolargotipocloque",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_945563-MLA53443832771_012023-W.webp",
       name: "Vestido largo tipo cloque",
       price: "$38.99",
       description: "vestidos",
       color: 'brown',
-      tallas: [ 1,2,3,4,5]
+      tallas: [ 1,2,3,4,5],
+      quantity: 0,
     },
     {
-      id: 8,
+      id: "8Vestidoplayerodeencaje",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_990049-MLA53210605030_012023-W.webp",
       name: "Vestido playero de encaje",
@@ -89,10 +96,11 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "white",
       IsTalla: "Talla",
-      tallas: [ 2,3,4 ]
+      tallas: [ 2,3,4 ],
+      quantity: 0,
     },
     {
-      id: 9,
+      id: "9Vestidocrusado",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_782578-MLA53398142760_012023-W.webp",
       name: "Vestido crusado ",
@@ -100,10 +108,11 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "black",
       IsTalla: "Talla",
-      tallas: [ 2,3,4,5 ]
+      tallas: [ 2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 10,
+      id: "10Vestidolargocrusado",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_780740-MLA48485312017_122021-W.webp",
       name: "Vestido largo crusado ",
@@ -111,10 +120,11 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "blue-dark",
       IsTalla: "Talla",
-      tallas: [ 3,4,5 ]
+      tallas: [ 3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 11,
+      id: "11Vestidocortomangaglobo",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_626844-MLA51623773242_092022-W.webp",
       name: "Vestido corto manga globo",
@@ -122,10 +132,11 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "red",
       IsTalla: "Talla",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ],
+      quantity: 0,
     },
     {
-      id: 12,
+      id: "12Vestidodelino",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_916976-MLA53430523755_012023-W.webp",
       name: "Vestido de lino",
@@ -133,6 +144,7 @@ export const productDataVestidos = [
       description: "vestidos",
       color: "blue-sky",
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
   ];

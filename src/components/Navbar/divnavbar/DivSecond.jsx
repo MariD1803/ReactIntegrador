@@ -7,9 +7,13 @@ const StyledDiv = styled.nav `
     flex-direction: row;
     height: 100%;
     align-items: center;
-    width: 132px;
+    width: 200px;
     justify-content: space-around;
     padding-right: 1rem;
+
+    @media (max-width: 2700px) {
+        width: 150px;
+    }
 `
 
  

@@ -1,0 +1,223 @@
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  
+  
+  @keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    20% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    30% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    40% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    50% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    60% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    70% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    80% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    90% {
+      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  @keyframes change {
+    0% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+   
+    5% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+  
+    10% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+   
+    15% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    20% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    25% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    30% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+   
+    35% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+  
+    40% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+   
+    45% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    50% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    55% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    60% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+   
+    65% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+  
+    70% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+   
+    75% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    80% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    85% {
+      background: url(../src//utils/images/Navbar/delado.png) no-repeat;
+    }
+  
+    90% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+   
+    95% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+  
+    100% {
+      background: url(../src//utils/images/Navbar/defrente.png) no-repeat;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    40% {
+      transform: translate(-8px, -8px);
+    }
+    50% {
+      transform: translate(-8px, -8px);
+    }
+    60% {
+      transform: translate(-8px, -8px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  @keyframes slider {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+  
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+  
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+  }
+  @keyframes slider-html {
+    0%{margin-left: -90%;}
+    20%{margin-left: -80%;}
+    40%{margin-left: -60%;}
+    60%{margin-left: -40%;}
+    80%{margin-left: -20%;}
+    100%{margin-left: 0%;}
+  }
+  @keyframes slider-menu {
+    0%{margin-left: -90%;}
+    40%{margin-left: -40%;}
+    
+    100%{margin-left: 0%;}
+  }
+  @keyframes opacity-html {
+    100%{opacity: 1;}  
+    90%{opacity: 0.9;}  
+    80%{opacity: 0.8;}  
+    70%{opacity: 0.7;} 
+    60%{opacity: 0.6;}  
+    50%{opacity: 0.5;}   
+    40%{opacity: 0.4;}  
+    30%{opacity: 0.3;} 
+    20%{opacity: 0.2;}  
+    10%{opacity: 0.1;} 
+    0%{opacity: 0;}
+  }
+  
+  @keyframes slider-promotion {
+    0%{margin-left: 0;}
+    5%{margin-left: -15%;}
+    10%{margin-left: -30%;}
+    15%{margin-left: -45%;}
+    20%{margin-left: -60%;}
+    25%{margin-left: -75%;}
+    30%{margin-left: -90%;}
+    35%{margin-left: -105%;}
+    40%{margin-left: -120%;}
+    45%{margin-left: -135%;}  
+    50%{margin-left: -150%;} 
+    55%{margin-left: -165%;} 
+    60%{margin-left: -180%;}
+    65%{margin-left: -195%;}
+    70%{margin-left: -210%;}
+    75%{margin-left: -225%;}
+    80%{margin-left: -240%;}
+    85%{margin-left: -255%;}
+    90%{margin-left: -270%;}
+    95%{margin-left: -285%;}
+    100%{margin-left: -300%;}
+  }
+  

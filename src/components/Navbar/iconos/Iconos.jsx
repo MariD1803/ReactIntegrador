@@ -3,25 +3,23 @@ import styled from "styled-components";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
-import { Link} from "react-router-dom"
 
 const StyledDiv = styled.div`
-  color: white;
+  color: black;
   align-items: flex-start;
   display: flex;
 `;
 
+
+
   
 export const IconLogin = (props) => {
-  return (
-    
+  return (  
       
-    <Link to="/registro">
+      
         <StyledDiv>
           <BiUserCircle className={props.className} />
         </StyledDiv>
-    </Link>
-      
      
   );
 };

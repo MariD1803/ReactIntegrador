@@ -7,10 +7,19 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import styled from 'styled-components';
+
+const StyledDivContent = styled.div `
+    display: flex;
+    justify-content: center;
+    background: url(${prop => prop.url}) top/cover ;
+    
+`
 
 const items = [
   {
     src: require('../../../utils/images/Hero/First.png'),
+    src1: require('../../../utils/images/Hero/First1.png'),
     altText: 'Slide 1',
     height:'100%',
     width:'100%',
@@ -18,6 +27,7 @@ const items = [
   },
   {
     src:  require('../../../utils/images/Hero/Second.png'),
+    src1:  require('../../../utils/images/Hero/Second.png'),
     altText: 'Slide 2',
     height:'100%',
     width:'100%',
@@ -25,6 +35,7 @@ const items = [
   },
   {
     src:  require('../../../utils/images/Hero/Three.png'),
+    src1:  require('../../../utils/images/Hero/Fourth1.png'),
     height:'100%',
     width:'100%',
     altText: 'Slide 3',
@@ -32,6 +43,7 @@ const items = [
   },
   {
     src:  require('../../../utils/images/Hero/Fourth.png'),
+    src1:  require('../../../utils/images/Hero/Fourth1.png'),
     height:'100%',
     width:'100%',
     altText: 'Slide 4',
@@ -67,8 +79,8 @@ function CarouselContainer(args) {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} className="carouselheight"/>
-        <CarouselCaption
+        <StyledDivContent url = {item.src1} ><img src={item.src} alt={item.altText} className="carouselheight"/></StyledDivContent>
+        <CarouselCaption captionText=""
         />
       </CarouselItem>
     );
@@ -80,7 +92,6 @@ function CarouselContainer(args) {
       next={next}
       previous={previous}
       {...args}      
-      height="65vh"
     >
       <CarouselIndicators
         items={items}

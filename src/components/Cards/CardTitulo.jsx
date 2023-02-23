@@ -4,7 +4,8 @@ import styled from "styled-components"
 
 const StyledH2 = styled.h2 `
 font-family: "cursive";
-font-size: 6vh;
+font-size: 4vh;
+text-align: center;
 
 @media (max-width: 480px) {
     font-size: 4vh;
@@ -18,6 +19,11 @@ const StyledDivCont = styled.div `
     padding: 1rem;
     margin: 2rem 0;    
     justify-content: center;
+
+    @media (max-width: 480px) {
+    margin: 1rem 0; 
+    padding-bottom: 0;
+}
 `
 
 const CardTitulo = ( props) => {

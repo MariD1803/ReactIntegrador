@@ -1,6 +1,6 @@
 export const productDataBottoms = [
     {
-      id: 1,
+      id: "1Faldasemicuero",
       imageurl:
       'https://http2.mlstatic.com/D_NQ_NP_964087-MLA51472730797_092022-W.webp',
       name: "Falda semi cuero",
@@ -11,11 +11,12 @@ export const productDataBottoms = [
       pricebefore: "3800",
       colorbc: "pink",
       color: "black",
-      tallas: [ 1,2,3 ]
+      tallas: [ 1,2,3 ],
+      quantity: 0,
     },
     
     {
-      id: 2,
+      id: "2Faldadejeanconbolsillos",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_739178-MLA52161304862_102022-W.webp",
       name: "Falda de jean con bolsillos",
@@ -25,10 +26,11 @@ export const productDataBottoms = [
       IsTalla: "Talla",
       IsSale: "Nuevo",      
       colorbc: "pink",
-      tallas: [ 2,3,4]
+      tallas: [ 2,3,4],
+      quantity: 0,
     },
     {
-      id: 3,
+      id: "3Faldaconcortelateral",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_825458-MLA52700978401_122022-W.webp",
       name: "Falda con corte lateral",
@@ -38,10 +40,11 @@ export const productDataBottoms = [
       IsTalla: "Talla",
       IsSale: "Nuevo",      
       colorbc: "pink",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ],
+      quantity: 0,
     },
     {
-      id: 4,
+      id: "4Faldadejeans",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_746406-MLA44082684409_112020-W.webp",
       name: "Falda de jeans",
@@ -49,10 +52,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "white",      
       IsTalla: "Talla",
-      tallas: [ 4,5 ]
+      tallas: [ 4,5 ],
+      quantity: 0,
     },
     {
-      id: 5,
+      id: "5Faldashortdejeans",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_858868-MLA52858728361_122022-W.webp",
       name: "Falda short de jeans",
@@ -60,10 +64,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "jean",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4 ]
+      tallas: [ 1,2,3,4 ],
+      quantity: 0,
     },
     {
-      id: 6,
+      id: "6Shortjeansengomado",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_712378-MLA52863296277_122022-W.webp",
       name: "Short jeans engomado",
@@ -71,10 +76,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "black",      
       IsTalla: "Talla",
-      tallas: [ 1,2, 3, 4 ]
+      tallas: [ 1,2, 3, 4 ],
+      quantity: 0,
     },
     {
-      id: 7,
+      id: "7Shortsemicuero",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_642479-MLA52270227991_112022-W.webp",
       name: "Short semi cuero",
@@ -82,10 +88,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "black",      
       IsTalla: "Talla",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ],
+      quantity: 0,
     },
     {
-      id: 8,
+      id: "8Shortestampadodelino",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_742624-MLA53456135135_012023-W.webp",
       name: "Short estampado de lino",
@@ -93,10 +100,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "white",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 9,
+      id: "9Bermudalarga",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_642170-MLA53338923005_012023-W.webp",
       name: "Bermuda larga",
@@ -104,10 +112,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "black",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 10,
+      id: "10Shortdefibrana",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_894151-MLA52579992758_112022-W.webp",
       name: "Short de fibrana",
@@ -115,10 +124,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "brown",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 11,
+      id: "11Pantalonbaggy",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_899571-MLA53235100733_012023-W.webp",
       name: "Pantalon baggy",
@@ -126,10 +136,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "brown",      
       IsTalla: "Talla",
-      tallas: [ 3,4,5 ]
+      tallas: [ 3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 12,
+      id: "12Pantaloncuerinatiroalto",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_783894-MLA47075044400_082021-W.webp",
       name: "Pantalon cuerina tiro alto",
@@ -137,10 +148,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "black",      
       IsTalla: "Talla",
-      tallas: [ 1,2 ]
+      tallas: [ 1,2 ],
+      quantity: 0,
     },
     {
-      id: 13,
+      id: "13Joggercasual",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_695085-MLA47122756681_082021-W.webp",
       name: "Jogger casual",
@@ -148,10 +160,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "pink",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4 ]
+      tallas: [ 1,2,3,4 ],
+      quantity: 0,
     },
     {
-      id: 14,
+      id: "14Pantalonpalazzo",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_649842-MLA53513364377_012023-W.webp",
       name: "Pantalon palazzo",
@@ -159,10 +172,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "black",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     {
-      id: 15,
+      id: "15Jeanconroturas",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_822590-MLA44271105704_122020-W.webp",
       name: "Jean con roturas",
@@ -170,10 +184,11 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "jean",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3]
+      tallas: [ 1,2,3],
+      quantity: 0,
     },
     {
-      id: 16,
+      id: "16Pantalonpalazzotiroalto",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_773020-MLA51787615178_102022-W.webp",
       name: "Pantalon palazzo tiro alto",
@@ -181,6 +196,7 @@ export const productDataBottoms = [
       description: "bottoms",
       color: "orange",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
   ];

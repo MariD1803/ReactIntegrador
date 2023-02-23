@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { IconCart } from "../Navbar/iconos/Iconos";
 import "./Productos.css"
 
 const StyledButton = styled.button `
@@ -65,8 +64,7 @@ export default function Productos(props) {
         <StyledPrice>
         <p className="priceProduct">${props.price}</p>      
         <p className="priceDiscount" >{props.signo}{props.pricebefore}</p>
-        </StyledPrice>
-        <IconCart className="cartProductP"></IconCart>
+        </StyledPrice>        
         </StyledDiv>
 
 

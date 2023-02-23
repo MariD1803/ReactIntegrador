@@ -1,6 +1,6 @@
 export const productDataAccesorios = [
     {
-      id: 1,
+      id: "1Sombrerocapelina",
       imageurl:
       'https://http2.mlstatic.com/D_NQ_NP_931743-MLA53070744837_122022-W.webp',
       name: "Sombrero capelina",
@@ -11,10 +11,11 @@ export const productDataAccesorios = [
       pricebefore: "2000",
       colorbc: "pink",
       color: "blue-dark",
-      tallas: [ ]
+      tallas: [],
+      quantity: 0,
     },
     {
-      id: 2,
+      id: "2Sombreroplayero",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_745482-MLA48632045940_122021-W.webp",
       name: "Sombrero playero",
@@ -23,10 +24,11 @@ export const productDataAccesorios = [
       color: "brown",      
       IsSale: "Nuevo",
       colorbc: "pink",
-      tallas: [  ]
+      tallas: [],
+      quantity: 0,
     },
     {
-      id: 3,
+      id: "3Pareoplayero",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_688780-MLA51824963867_102022-W.webp",
       name: "Pareo playero",
@@ -34,10 +36,11 @@ export const productDataAccesorios = [
       description: "accesorios",
       color: "red",      
       IsTalla: "Talla",
-      tallas: [ 1,2,3, 4 , 5]
+      tallas: [ 1,2,3, 4 , 5],
+      quantity: 0,
     },
     {
-      id: 4,
+      id: "4Camisonkimonoplayero",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_980263-MLA53651245084_022023-W.webp",
       name: "Camison kimono playero",
@@ -45,27 +48,30 @@ export const productDataAccesorios = [
       description: "accesorios",
       color: "pink",       
       IsTalla: "Talla",
-      tallas: [ 1,2,3,4,5 ]
+      tallas: [ 1,2,3,4,5 ],
+      quantity: 0,
     },
     
     {
-      id: 5,
+      id: "5Pareoplayerocrochet",
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_781850-MLA53351742011_012023-W.webp",
       name: "Pareo playero crochet",
       price: "4500",
       description: "accesorios",
       color: "white",      
-      tallas: [ 1,2,3]
+      tallas: [ 1,2,3],
+      quantity: 0,
     },
     {
-      id: 6,
+      id: "6Remeradetulconmariposas",
       imageurl:
       'https://http2.mlstatic.com/D_NQ_NP_798302-MLA52432745739_112022-W.webp',
       name: "Remera de tul con mariposas",
       price: "8000",
       description: "accesorios",
       color: "jean",
-      tallas: [ 1,2,3,4]
+      tallas: [ 1,2,3,4],
+      quantity: 0,
     },
   ];
