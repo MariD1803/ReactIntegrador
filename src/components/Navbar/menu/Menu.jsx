@@ -233,6 +233,11 @@ width: 100%;
     transition: 1s;
     text-decoration: underline;
   }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
+    margin: 0 0 1rem 0;
+  }
 `;
 
 const StyledMenu = (props) => {
@@ -242,6 +247,7 @@ const StyledMenu = (props) => {
     setIsToggle((prevState) => (prevState ? false : true));
   };
   
+  const closeToggle = () =>  setIsToggle(false);
 
   return (
     <>
@@ -261,7 +267,7 @@ const StyledMenu = (props) => {
               <StyledDivHover>
                 <StyledDivMenu>
                   <StyledLink>
-                    <Link to="/tops" style={fontBold}> <StyledLi
+                    <Link to="/tops" style={fontBold} > <StyledLi
                      className="font-size-up">TOPS</StyledLi></Link>
                     
                     <div style={space}> </div>
@@ -330,25 +336,25 @@ const StyledMenu = (props) => {
                     <AccordionPanel pb={4} pl={10}>
                       <div style={space}> </div>
                       <StyledLink>
-                      <Link to="/tops" style={fontBold}> <StyledLi style={fontBold}>TOPS</StyledLi></Link>
+                      <Link to="/tops" style={fontBold}> <StyledLi style={fontBold} onClick={closeToggle}>TOPS</StyledLi></Link>
                         
                         <div style={space}> </div>
                       </StyledLink>
                       <StyledLink>
-                      <Link to="/vestidos" style={fontBold}> <StyledLi style={fontBold}>VESTIDOS</StyledLi></Link>
+                      <Link to="/vestidos" style={fontBold}> <StyledLi style={fontBold} onClick={closeToggle}>VESTIDOS</StyledLi></Link>
                       </StyledLink>
                       <div style={space}></div>
                       <StyledLink>
-                      <Link to="/bottoms" style={fontBold}><StyledLi style={fontBold}> BOTTOMS </StyledLi></Link>
+                      <Link to="/bottoms" style={fontBold}><StyledLi style={fontBold} onClick={closeToggle}> BOTTOMS </StyledLi></Link>
                         
                       </StyledLink>
                       <div style={space}></div>
                       <StyledLink>
-                      <Link to="/bikinis" style={fontBold}><StyledLi style={fontBold}>BIKINIS </StyledLi></Link>
+                      <Link to="/bikinis" style={fontBold}><StyledLi style={fontBold} onClick={closeToggle}>BIKINIS </StyledLi></Link>
                       </StyledLink>
                       <div style={space}> </div>
                       <StyledLink>
-                      <Link to="/accesorios" style={fontBold}><StyledLi style={fontBold}> ACCESORIOS </StyledLi></Link>
+                      <Link to="/accesorios" style={fontBold}><StyledLi style={fontBold} onClick={closeToggle}> ACCESORIOS </StyledLi></Link>
                         
                         <StyledLink>
                       </StyledLink>
@@ -368,7 +374,7 @@ const StyledMenu = (props) => {
                   </AccordionItem>
                   <AccordionItem>
                     <AccordionButtonStyled>
-                      <Link to="/about">  <Box as="span" flex="1" textAlign="left">
+                      <Link to="/about" onClick={closeToggle}>  <Box as="span" flex="1" textAlign="left">
                         NOSOTROS
                       </Box></Link>
                      
@@ -378,7 +384,7 @@ const StyledMenu = (props) => {
                   </AccordionItem>
 
                   <AccordionItem>
-                    <AccordionButtonStyled> <Link to="/contacto">
+                    <AccordionButtonStyled> <Link to="/contacto" onClick={closeToggle}>
                     <Box as="span" flex="1" textAlign="left">
                         CONTACTO
                       </Box>

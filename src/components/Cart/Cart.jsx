@@ -48,6 +48,9 @@ export const Cart = ({
 }) => {
 
   
+  let cartCont = localStorage.getItem('cartContainer')
+  let countCon = localStorage.getItem('countContainer')
+  let totalCon = JSON.parse(localStorage.getItem('totalContainer'))
   const onCleanCart = () => {
     setAllProducts([]);
     setTotal(0);
@@ -62,10 +65,13 @@ export const Cart = ({
     alert("Desea eliminar el producto?");
     setTotal(total - product.price * product.quantity);
     setCountProducts(countProducts - product.quantity);
-
     delete product.selectedTalla;
-    setAllProducts(results);
-    updateLsCart();
+    setAllProducts(results)
+    let resultsCount = countCon - product.quantity
+    let resultsTotal = totalCon - (product.price * product.quantity)
+    localStorage.setItem("cartContainer", JSON.stringify(results))
+    localStorage.setItem("countContainer", JSON.stringify(resultsCount))
+    localStorage.setItem("totalContainer", JSON.stringify(resultsTotal))
   };
 
   const [count, setCount] = useState(0);
@@ -74,7 +80,11 @@ export const Cart = ({
     if (allProducts.find((item) => item.id === product.id)) {
       product.quantity = product.quantity + 1;
       setCount(count + 1);
-      setTotal(parseInt(total) + parseInt(product.price));
+      setTotal(parseInt(total) + parseInt(product.price));      
+      let resultsCount =  parseInt(countCon) + 1
+      let resultsTotal =  parseInt(totalCon) +  parseInt(product.price)
+      localStorage.setItem("countContainer", JSON.stringify(resultsCount))
+      localStorage.setItem("totalContainer", JSON.stringify(resultsTotal))
     }
 
     setCountProducts(countProducts + 1);
@@ -89,7 +99,11 @@ export const Cart = ({
     setCount(count - 1);
     setCountProducts(countProducts - 1);
     setTotal(total - product.price);
-    updateLsCart();
+    let resultsCount =  parseInt(countCon) - 1
+    let resultsTotal =  parseInt(totalCon) -  parseInt(product.price)
+    localStorage.setItem("countContainer", JSON.stringify(resultsCount))
+    localStorage.setItem("totalContainer", JSON.stringify(resultsTotal))
+   
   }
 
 

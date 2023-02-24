@@ -7,7 +7,8 @@ import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 
 
-const TopsContainer = ( {allProducts,
+const TopsContainer = ( {
+    allProducts,
 	setAllProducts,
 	countProducts,
 	setCountProducts,
@@ -24,7 +25,7 @@ const TopsContainer = ( {allProducts,
 
 var isRepeated = false
 
-    useEffect(() => {
+    /* useEffect(() => {
         if (!isRepeated) {
             isRepeated = true
             let productsQty= allProducts.length           
@@ -37,17 +38,17 @@ var isRepeated = false
                 onAddProduct(allProducts[i],false, false, isLast)
             }
         }
-    }, []);
+    }, []); */
 
     const onAddProduct = (product, isCartEvent, isAddedFromCartButton = false ,isLastElement = false) => {
-
+        console.log("Donde suma el +1???")
+        
         
         if(isCartEvent && product.selectedTalla === undefined) return alert("Debe elegir una talla")
 
         if (isCartEvent && !allProducts.find(item => item.id === product.id)){
-             
-            allProducts.push(product)
             
+            allProducts.push(product)
             return onAddProduct(product,isCartEvent)
         }
 
@@ -59,23 +60,25 @@ var isRepeated = false
 
 
         if (isLastElement && product.isAddedFromCartButton) {
-            console.log("Estoy entrando en el if??")
             sumando = +1
         }
 
         
 
-        if (allProducts.find(item => item.id === product.id)){
+        if ( isCartEvent && allProducts.find(item => item.id === product.id)){
             const products = allProducts.map(item =>
                 item.id === product.id
                     ? { ...item, quantity: item.quantity + sumando }
                     : item
             );
             setTotal(parseInt(total) + parseInt(product.price));
+            
             setCountProducts( countProducts + 1) ///Para que la burbuja cuente
-           
+            
             setAllProducts([...products])
-            return  updateLsCart();
+                
+            console.log("Segundo if: "+ String(setAllProducts([...products])))
+            return  ;
         }
 
 
@@ -84,7 +87,7 @@ var isRepeated = false
         setTotal(totalAccount);
         let productQty = isCartEvent? (countProducts + 1) : (countProducts + product.quantity)
         setCountProducts(productQty) 
-        return  updateLsCart();
+        return ;
 
     }    
         //setTotal(total + product.price * product.quantity);
