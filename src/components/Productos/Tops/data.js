@@ -103,13 +103,13 @@ export const productDataTops = [
       quantity: 0,
     },
     {
-      id: "9Topdecueroengomado",
+      id: "9Toptirascruzadas",
       imageurl:
-        "https://http2.mlstatic.com/D_NQ_NP_796976-MLA52751496665_122022-W.webp",
-      name: "Top de cuero engomado",
+        "https://jbonita.vteximg.com.br/arquivos/ids/216628-1280-1707/E8863309_1.jpg?v=637989289294330000",
+      name: "Top tiras cruzadas",
       price: "7300",
       description: "Top",
-      color: "black",
+      color: "blue-dark",
       IsTalla: "Talla",
       tallas: [ 3,4,5 ],
       quantity: 0,

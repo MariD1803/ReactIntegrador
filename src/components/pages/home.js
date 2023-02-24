@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CardsMove from "../Cards/CardsMove";
 import CardTitulo from "../Cards/CardTitulo";
@@ -17,6 +18,19 @@ const StyledDivAnimatedCards = styled.div`
 `;
 
 
+const StyledLink = styled(Link)`
+  font-size: 50px;
+    color: white !important;
+    position: absolute;
+    bottom: 18px;
+    background-color: rgba(0,0,0,0.25);
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+
+`
+
 const StyledButton = styled.button`
   width: 80px;
   background: none;
@@ -29,6 +43,105 @@ const StyledButton = styled.button`
   }
 `;
 
+
+const StyledDivImage= styled.div`
+    height: 600px;
+    width: 100%;
+    margin-bottom: 2rem;
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    @media (max-width: 1100px) {
+    height: 400px;
+  }
+    @media (max-width: 480px) {
+    height: 323px;
+  }
+`
+const StyledDivLinksContainer= styled.div`
+    height: 600px;
+    width: 100%;
+    margin-bottom: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+
+    @media (max-width: 1100px) {
+    height: 400px;
+  }
+    @media (max-width: 700px) {
+    height: 330px;
+  }
+    @media (max-width: 480px) {
+      height: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+`
+const StyledDivLinks= styled.div`
+  background-color: red;
+    height: 100%;
+    width: 25%;
+    position: relative;
+    border-radius: 16px;
+
+    @media (max-width: 480px) {
+      background-color: red;
+    height: 30%;
+    width: 70%;
+    }
+
+`
+
+const StyledDivLeftImage = styled.div `
+    position: absolute;
+    left: 10px;
+    bottom: 41px;
+    font-size: 60px;
+    font-style: italic;
+    color: white;
+
+    @media (max-width: 1100px) {
+      font-size: 50px;
+  }
+    @media (max-width: 780px) {
+      font-size: 35px;
+  }
+    @media (max-width: 480px) {
+      font-size: 20px;
+    bottom: 12px;
+
+  }
+
+`
+const StyledDivRigthImage = styled.div `
+    position: absolute;
+    bottom: 41px !important;
+    font-size: 60px;
+    font-style: italic;
+    color: white;
+    right: 24px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    @media (max-width: 1100px) {
+      font-size: 50px;
+      bottom: 3%;
+  }
+    @media (max-width: 780px) {
+      font-size: 40px;
+  }
+  @media (max-width: 480px) {
+    bottom: 3px !important;
+    right: 3px;
+    font-size: 20px
+  }
+
+`
 
 
 const Home = () => {
@@ -83,6 +196,21 @@ const Home = () => {
       </StyledDivAnimatedCards>
 
       <CardsMove></CardsMove>
+
+
+      <StyledDivImage className="imagen-home"> 
+        <StyledDivLeftImage>Este año renueva tus looks</StyledDivLeftImage>
+        <StyledDivRigthImage >Nueva colección</StyledDivRigthImage >
+      </StyledDivImage>
+
+
+      <StyledDivLinksContainer>
+        <StyledDivLinks className="imagen-home-top"> <StyledLink to="/tops">TOPS</StyledLink></StyledDivLinks>
+        <StyledDivLinks className="imagen-home-vestidos"><StyledLink to="/vestidos">VESTIDOS</StyledLink></StyledDivLinks>
+        <StyledDivLinks className="imagen-home-bikinis"><StyledLink to="/bikinis">VERANO</StyledLink></StyledDivLinks>
+
+
+      </StyledDivLinksContainer>
 
      
 

@@ -124,13 +124,13 @@ export const productDataVestidos = [
       quantity: 0,
     },
     {
-      id: "11Vestidocortomangaglobo",
+      id: "11Vestidoconmangavolados",
       imageurl:
-        "https://http2.mlstatic.com/D_NQ_NP_626844-MLA51623773242_092022-W.webp",
-      name: "Vestido corto manga globo",
+        "https://jbonita.vteximg.com.br/arquivos/ids/222772-1280-1707/B0766136_1.jpg?v=638025734581500000",
+      name: "Vestido con manga volados",
       price: "9000",
       description: "vestidos",
-      color: "red",
+      color: "fucsia",
       IsTalla: "Talla",
       tallas: [ 1,2 ],
       quantity: 0,

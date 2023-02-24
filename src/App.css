@@ -55,7 +55,7 @@ a {
 }
 
 h2 {
-  font-family: "cursive";
+  font-family: 'Roboto';
   font-size: 2.5vh;
 }
 
@@ -349,7 +349,7 @@ img {
 
 .titulo-producto-carrito {
 	font-size: 20px;
-  font-family: "cursive";
+  font-family: 'Roboto';
   padding: 1rem;
   text-align: initial;
   width: 100%;
@@ -361,6 +361,14 @@ img {
     color: white;
     cursor: default !important;
     border: none !important;
+}
+
+.css-162mkon {
+  display: none !important;
+}
+
+.margin-button-formulario {
+  margin: 0 0 0.6rem 0;
 }
 
 .space {
@@ -384,13 +392,13 @@ img {
 }
 
 .cantidad-producto-carrito {
-  font-family: "cursive";
+  font-family: 'Roboto';
   font-size: 17px;
 }
 
 .talla-carrito {
   font-size: 1rem;
-  font-family: "cursive";
+  font-family: 'Roboto';
   width: 100%;
   text-align: initial;
   padding: 0 0 0 1rem;
@@ -485,7 +493,7 @@ img {
 .cart-empty {
   padding: 25px;
   text-align: center;
-  font-family: "cursive";
+  font-family: 'Roboto';
   font-size: 20px;
 
 }
@@ -582,6 +590,42 @@ img {
   background: url(./utils//images//Nosotros/nosotros.png) top/cover no-repeat;
   
 }
+.imagen-home {
+  
+  background: url(./utils//images//Home/home.png) top/cover no-repeat;
+  
+}
+.imagen-home-top {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  background: url(./utils//images//Home/home-tops.png) top/cover no-repeat;
+  
+}
+.imagen-home-top:hover {
+  
+  background: url(./utils//images//Home/home-tops-hover.png) top/cover no-repeat;
+  
+}
+.imagen-home-vestidos {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  background: url(./utils//images//Home/home-vestidos.png) top/cover no-repeat;
+  
+}
+.imagen-home-vestidos:hover {
+  
+  background: url(./utils//images//Home/home-vestidos-hover.png) top/cover no-repeat;
+  
+}
+.imagen-home-bikinis {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  background: url(./utils//images//Home/home-bikinis.png) top/cover no-repeat;
+  
+}
+.imagen-home-bikinis:hover {
+  
+  background: url(./utils//images//Home/home-bikinis-hover.png) top/cover no-repeat;
+  
+}
+
 
 ul::-webkit-scrollbar {
   width: 12px;               
@@ -686,10 +730,20 @@ ul::-webkit-scrollbar-thumb {
 
 }
 @media (max-width: 480px) {
+
+  .imagen-home {
+  
+    background: url(./utils//images//Home/homeresponsive.png) top/cover no-repeat;
+    
+  }
    /* 
   body{
     width: 104%;
   } */
+  .div-principal{
+    margin: 19% 2% !important;
+  
+  }
 
   .button-cart-sumandsubs {
     font-size: 12px;
@@ -748,14 +802,21 @@ ul::-webkit-scrollbar-thumb {
     font-size: 16px;
     align-items: baseline;
   }
-}
-/* 
 
-@media (max-width: 343px) {
+  .p-formulario-registro {
+    width: 80%;
+    text-align: center;
+  }
+  
+}
+
+
+@media (max-width: 320px) {
    
-  body{
-    width: 45vh;
+  .position-aboslute-cart, .container-cart-products {
+    width: 320px;
   }
 
+ 
   
-} */
+}

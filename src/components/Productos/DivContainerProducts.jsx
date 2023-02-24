@@ -45,6 +45,10 @@ const StyledUl = styled.ul `
     width: 100%;
     padding: 3rem;
     margin: 0;
+
+    @media (max-width: 480px) {
+    padding: 3rem 1rem;
+  }
 `
 
 const StyledButton = styled(AccordionButton) `
@@ -52,7 +56,7 @@ const StyledButton = styled(AccordionButton) `
     width: 100%;
     background: none;
     font-size: 30px;
-    font-family: "cursive"; 
+    font-family: 'Roboto'; 
     justify-content: space-between;
     padding: 1rem;
     border: none;

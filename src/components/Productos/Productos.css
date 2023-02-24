@@ -8,8 +8,8 @@
   }
   
   .cardProduct .h3 {
-    font-family: "cursive";
-    font-size: 1.5vh;
+    font-family: 'Roboto';
+    font-size: 2vh;
   }
   .cartProductP {
     margin: 0;
@@ -52,6 +52,7 @@
 
   .product-button-talla {
     border: #b6b6b6b9 solid 1px;
+    height: max-content;
 
     
   }
@@ -69,4 +70,11 @@
   width: 20%;
   z-index: 1;
   color: white;
+}
+
+@media (max-width: 480px) {
+  .cardProduct .h3 {
+    font-family: 'Roboto';
+    font-size: 3vh;
+  }
 }

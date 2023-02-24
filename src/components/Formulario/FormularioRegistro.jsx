@@ -3,7 +3,6 @@ import {
     FormControl,
     FormLabel,
     FormErrorMessage,
-    Button,
     Input, 
     Select,
 } from '@chakra-ui/react'
@@ -15,10 +14,13 @@ import styled from 'styled-components';
 const StyledDivFormulario = styled.div`
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 80%;
   height: max-content;
-    width: 70%;
     gap: 10px;
+
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
 
  
 `;
@@ -27,11 +29,51 @@ const StyledDivCheckBox = styled.div`
   flex-direction: row;
     height: 20px;
     width: 100%;
+    margin: 2rem 0;
+    align-items: baseline;
+`;
+const StyledDivIngresar = styled.div`
+  display: flex;
+  flex-direction: row;
+    height: 20px;
+    width: 80%;
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1100px) {
+    width: 90%;
+  }
+    @media (max-width: 480px) {
+      margin: 3rem 0.5rem;
+  }
+
+`;
+const StyledDivButton = styled.div`
+  display: flex;
+  flex-direction: row;
+    width: 100%;
+    margin: 2rem 0;
+    width: 80%;
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1100px) {
+    width: 90%;
+  }
+    @media (max-width: 480px) {
+      margin: 6rem 0;
+  }
 `;
 
 const StyledForm = styled(Form) `
         box-sizing: border-box;
     width: 100%;
+    @media (max-width: 780px) {
+      padding-top: 4rem;
+    }
+`
+const StyledLink = styled(Link) `
+    text-decoration: underline !important;
 `
 const StyledFormik = styled(Formik) `
         box-sizing: border-box;
@@ -41,8 +83,11 @@ const StyledInputGrande = styled(Input) `
     margin: 0;
     font-family: inherit;
     font-size: inherit;
-    width: 70%;
+    width: 80%;
     line-height: inherit;
+    @media (max-width: 1100px) {
+    width: 90%;
+  }
 `
 const StyledInputPequeño = styled(Input) `
         margin: 0;
@@ -51,14 +96,39 @@ const StyledInputPequeño = styled(Input) `
     width: 100%;
     line-height: inherit;
 `
+const StyledFormControl = styled(FormControl) `
+    width: 50%;
+`
+const StyledSelect = styled(Select) `
+    width: 100%;
+   
+`
+const StyledFormLabel = styled(FormLabel) `
+    @media (max-width: 480px) {
+      height: 45px;
+    }
+   
+`
 const StyledInputCheckbox= styled.input `
        width: max-content;
     margin-right: 1rem;
 `
 const StyledButtonSubmit= styled.button `
     cursor: pointer;
-    width: 100px;
+    font-size: 0.9rem;
+    background: linear-gradient(90deg,#f7b9c6 ,var(--pink),#f7b9c6);
+    color: white;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: grey solid 2px;
 `
+
+
+let users = []
+let passwords = []
+
 
 const FormularioRegistro = () => {
 
@@ -104,12 +174,17 @@ const FormularioRegistro = () => {
         }
           return error
         }
+        
   return (
     <StyledFormik
-        initialValues={{ user: 'Nombre' }}
+        initialValues={{ user: '', password: '' }}
         onSubmit={(values, actions) => {
         setTimeout(() => {
           alert("Se guardo la información"+"\n"+"Usuario: "+JSON.stringify(values.user, null, 2))
+          users.push(values.user)
+          localStorage.setItem("users", JSON.stringify(users))
+          passwords.push(values.password)
+          localStorage.setItem("passwords", JSON.stringify(passwords))
           actions.setSubmitting(false)
         }, 1000)
       }}
@@ -118,9 +193,9 @@ const FormularioRegistro = () => {
         <StyledForm>
           <Field name='user' validate={validatePasswordAndName}>
             {({ field, form }) => (
-              <FormControl isInvalid={form.errors.user && form.touched.user}>
+              <FormControl className='margin-button-formulario' isInvalid={form.errors.user && form.touched.user}>
                 <FormLabel>Usuario</FormLabel>
-                <StyledInputGrande {...field} placeholder='Aqui va tu usuario' />
+                <StyledInputGrande {...field} placeholder='Aqui va tu usuario'/>
                 <FormErrorMessage>{form.errors.user}</FormErrorMessage>
               </FormControl>
             )}
@@ -128,9 +203,9 @@ const FormularioRegistro = () => {
           
           <Field name='password' validate={validatePasswordAndName}>
             {({ field, form }) => (
-              <FormControl isInvalid={form.errors.password && form.touched.password}>
+              <FormControl className='margin-button-formulario' isInvalid={form.errors.password && form.touched.password}>
                 <FormLabel>Contraseña</FormLabel>
-                <StyledInputGrande {...field} placeholder='Aqui va tu contraseña' />
+                <StyledInputGrande {...field} placeholder='Aqui va tu contraseña' type="password"/>
                 <FormErrorMessage>{form.errors.password}</FormErrorMessage>
               </FormControl>
             )}
@@ -138,26 +213,26 @@ const FormularioRegistro = () => {
           <StyledDivFormulario>
                 <Field name='name' validate={validateName}>
                     {({ field, form }) => (
-                    <FormControl isInvalid={form.errors.name && form.touched.name}>
+                    <StyledFormControl className='margin-button-formulario' isInvalid={form.errors.name && form.touched.name}>
                         <FormLabel>Nombre</FormLabel>
                         <StyledInputPequeño {...field} placeholder='Aqui va tu nombre' />
                         <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-                    </FormControl>
+                    </StyledFormControl>
                     )}
                 </Field>
                 <Field name='surname' validate={validateName}>
                     {({ field, form }) => (
-                    <FormControl isInvalid={form.errors.surname && form.touched.surname}>
+                    <StyledFormControl className='margin-button-formulario' isInvalid={form.errors.surname && form.touched.surname}>
                         <FormLabel>Apellido</FormLabel>
                         <StyledInputPequeño {...field} placeholder='Aqui va tu apellido' />
                         <FormErrorMessage>{form.errors.surname}</FormErrorMessage>
-                    </FormControl>
+                    </StyledFormControl>
                     )}
                 </Field>
           </StyledDivFormulario>
           <Field name='email' validate={validateEmail}>
             {({ field, form }) => (
-              <FormControl isInvalid={form.errors.email && form.touched.email}>
+              <FormControl className='margin-button-formulario' isInvalid={form.errors.email && form.touched.email}>
                 <FormLabel>Email</FormLabel>
                 <StyledInputGrande {...field} placeholder='Aqui va tu email' />
                 <FormErrorMessage>{form.errors.email}</FormErrorMessage>
@@ -166,7 +241,7 @@ const FormularioRegistro = () => {
           </Field>
           <Field name='cellphone' validate={validateCellphone}>
             {({ field, form }) => (
-              <FormControl isInvalid={form.errors.cellphone && form.touched.cellphone}>
+              <FormControl className='margin-button-formulario' isInvalid={form.errors.cellphone && form.touched.cellphone}>
                 <FormLabel>Teléfono</FormLabel>
                 <StyledInputGrande {...field} placeholder='Aqui va tu número celular' />
                 <FormErrorMessage>{form.errors.cellphone}</FormErrorMessage>
@@ -174,34 +249,46 @@ const FormularioRegistro = () => {
             )}
           </Field>
           <StyledDivFormulario>
-            <FormControl>
-                <FormLabel>Provincia</FormLabel>
-                <Select placeholder='Select country'>
+            <StyledFormControl className='margin-button-formulario'>
+                <StyledFormLabel>Provincia</StyledFormLabel>
+                <StyledSelect placeholder='Seleccione provincia'>
                     <option>CABA</option>
                     <option>Cordoba</option>
                     <option>Buenos Aires</option>
-                </Select>
-            </FormControl>
-            <FormControl>
-                <FormLabel isRequired>Condición frente al IVA</FormLabel>
-                <Select placeholder='Select country'>
+                </StyledSelect>
+            </StyledFormControl>
+            <StyledFormControl className='margin-button-formulario'> 
+                <StyledFormLabel isRequired>Condición frente al IVA</StyledFormLabel>
+                <StyledSelect placeholder='Seleccione condición'>
                     <option>Responsable Inscripto</option>
-                    <option>Consumidor Finañ</option>
+                    <option>Consumidor Final</option>
                     <option>Monotributista</option>
-                </Select>
-            </FormControl>
+                </StyledSelect>
+            </StyledFormControl>
             </StyledDivFormulario>
            
-            <StyledDivCheckBox><StyledInputCheckbox type="checkbox"></StyledInputCheckbox><p>Deseo recibir información sobre novedades y ofertas</p></StyledDivCheckBox>
-
-            <StyledButtonSubmit
-            mt={4}
-            colorScheme='teal'
-            isLoading={props.isSubmitting}
-            type='submit'
-          >
-            Submit
-          </StyledButtonSubmit>
+            <StyledDivCheckBox>
+              <StyledInputCheckbox type="checkbox"></StyledInputCheckbox>
+              <p className='p-formulario-registro'>Deseo recibir información sobre novedades y ofertas</p>
+            </StyledDivCheckBox>
+            <StyledDivCheckBox>
+              <StyledInputCheckbox type="checkbox"></StyledInputCheckbox>
+              <p className='p-formulario-registro'>He podido leer y entiendo la Política de los <StyledLink to="/about">Terminos y condiciones</StyledLink></p>
+            </StyledDivCheckBox>
+            <StyledDivButton>
+              <StyledButtonSubmit
+                mt={4}
+                colorScheme='teal'
+                isLoading={props.isSubmitting}
+                type='submit'
+              >
+               Submit
+              </StyledButtonSubmit>
+            </StyledDivButton>
+            <StyledDivIngresar>
+              <p className='p-formulario-registro'>¿Ya tienes cuenta? <StyledLink to="/ingresar">Ingresar</StyledLink></p>
+            </StyledDivIngresar>
+            
           
         </StyledForm>
       )}

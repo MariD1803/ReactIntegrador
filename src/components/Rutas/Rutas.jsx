@@ -52,6 +52,9 @@ const StyledDiv= styled.div `
     width: 360px;
     height: 200px;
   }
+  @media (max-width: 320px) {
+    width: 320px;
+  }
 `
 
 const StyledDivLinea = styled.div `

@@ -4,9 +4,7 @@ import styled from "styled-components";
 import { BsMailbox2, BsFillTelephoneInboundFill} from 'react-icons/bs';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { FiMapPin } from 'react-icons/fi';
-
 import {useLocalStorage} from "../../hooks/useLocalStorage.js"
-import { Link } from 'react-router-dom';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -36,6 +34,7 @@ const StyledSectionLeft = styled.section`
     justify-content: space-between;
   }
   @media (max-width: 480px) {
+    padding: 2rem 0 0 2rem;
     display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,13 +48,15 @@ const StyledSectionRight = styled.section`
   width: 70%;
 
   @media (max-width: 767px) {
+    
     width: 100%;
+    padding-bottom: 2rem;
   }
 `;
 
 const StyledP = styled.p `
     font-size: 20px;
-    font-family: "cursive";
+    font-family: 'Roboto';
     margin: 0;
     width: 70%;
     text-align: initial;
@@ -67,14 +68,18 @@ const StyledP = styled.p `
   }
     @media (max-width: 700px) {
     
-        font-size: 10px;
+        font-size: 14px;
+  }
+    @media (max-width: 480px) {
+    
+      width: 80%;
   }
 
   
 `
 const StyledPLeft = styled.p `
     font-size: 20px;
-    font-family: "cursive";
+    font-family: 'Roboto';
     margin: 0;
     width: 100%;
     text-align: initial;
@@ -86,14 +91,15 @@ const StyledPLeft = styled.p `
   }
     @media (max-width: 770px) {
         margin: 0;
-        font-size: 10px;
+        font-size: 12px;
+        width: 82%;
   }
 
   
 `
 const StyledPTitulo = styled.p `
     font-size: 24px;
-    font-family: "cursive";
+    font-family: 'Roboto';
     margin: 0 0 1rem 0;
     text-align: initial;
     display: flex;
@@ -109,7 +115,7 @@ const StyledPTitulo = styled.p `
   }
     @media (max-width: 780px) {
         width: 50%;
-        font-size: 12px;
+        font-size: 14px;
   }
 `
 const StyledDiv = styled.div `
@@ -124,7 +130,8 @@ const StyledDiv = styled.div `
 
   }
     @media (max-width: 480px) {
-    width: 100%;
+      width: 100%;
+
 
   }
 `
@@ -136,19 +143,29 @@ const StyledForm = styled.form  `
   width: 100%;
   align-items: center;
   padding: 3rem 1rem 0 1rem;
+  @media (max-width: 480px) {
+    
+    padding: 3rem 1rem 0 0rem;
+}
+
 `
 const StyledInput = styled.input `
   margin: 0 0 1rem 0;
   width: 70%;
   font-size: 18px;
   height: 40px;
+  border-radius: 10px;
   @media (max-width: 1200px) {
     
     font-size: 14px;
 }
   @media (max-width: 700px) {
   
-      font-size: 8px;
+      font-size: 10px;
+}
+  @media (max-width: 480px) {
+  
+    width: 80%;
 }
 &:focus{
     box-shadow: 1px 1px 20px 3px var(--pink);
@@ -165,7 +182,7 @@ const StyledButtonEnviar = styled.button `
     padding: 15px 30px;
     border-radius: 1rem;
     cursor: pointer;
-    border: grey solid 1px;
+    border: grey solid 2px;
     margin-top: 3rem;
 
 `
@@ -175,7 +192,8 @@ const StyledTextarea = styled.textarea `
   height: 200px;
     width: 70%;
     font-size: 20px;
-    font-family: "cursive";
+    font-family: 'Roboto';
+    border-radius: 10px;
   
     @media (max-width: 1200px) {
     
@@ -184,6 +202,10 @@ const StyledTextarea = styled.textarea `
     @media (max-width: 700px) {
     
         font-size: 10px;
+  }
+    @media (max-width: 480px) {
+    
+      width: 79%;
   }
 
  &:focus{
@@ -393,7 +415,7 @@ const RecargarPagina = () => {
 
           </StyledForm>      
           
-         <Link to="/contacto"><StyledButtonEnviar type='submit' onClick={()=>{onCleanForm(); RecargarPagina()}} className="button-contacto" > Enviar </StyledButtonEnviar> </Link>
+         <StyledButtonEnviar type='submit' onClick={()=>{onCleanForm(); RecargarPagina()}} className="button-contacto" >Enviar</StyledButtonEnviar> 
 
          
 

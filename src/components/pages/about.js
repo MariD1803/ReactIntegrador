@@ -23,7 +23,7 @@ const StyledSectionLeft = styled.section`
   align-items: center;
   width: 30%;
 
-  @media (max-width: 767px) {
+  @media (max-width: 780px) {
     width: 100%;
   }
 `;
@@ -35,6 +35,10 @@ const StyledUl = styled.ul`
   margin: 0;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 480px) {
+    padding: 3rem 1rem 3rem 0rem;
+  }
 `;
 
 const StyledButtonOptions = styled.button`
@@ -45,7 +49,7 @@ const StyledButtonOptions = styled.button`
   border-left: none;
   border-right: none;
   font-size: 20px ;
-  font-family: "cursive";
+  font-family: 'Roboto';
   &:focus {
     background-color: var(--pink);
   }
@@ -63,13 +67,14 @@ const StyledDivAbsolute = styled.button`
   top: 104px;
   }
   @media (max-width: 780px) {
-  top: 31%;
+    top: 35%;
+    width: 100vw;
+    height: 170%;
+  }
+  @media (max-width: 480px) {
+  top: 46%;
   width: 100vw;
-  }/* 
-  @media (max-width: 350px) {
-  top: 45%;
-  width: 100vw;
-  } */
+  }
 
  
 `;

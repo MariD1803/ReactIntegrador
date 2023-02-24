@@ -66,13 +66,13 @@ export const productDataBikinis = [
       quantity: 0,
     },
     {
-      id: "6Bikinidospiezascinturaalta",
+      id: "6Bikinidospiezasestampado",
       imageurl:
-        "https://http2.mlstatic.com/D_NQ_NP_731436-MLA52390556293_112022-O.webp",
-      name: "Bikini 2 piezas cintura alta",
+        "https://jbonita.vteximg.com.br/arquivos/ids/217142-1280-1707/93421152_1.jpg?v=638015696385030000",
+      name: "Bikini 2 piezas estampado",
       price: "6500",
       description: "bikinis",
-      color: "fucsia",       
+      color: "dark-blue",       
       IsTalla: "Talla",
       tallas: [ 3,4,5 ],
       quantity: 0,

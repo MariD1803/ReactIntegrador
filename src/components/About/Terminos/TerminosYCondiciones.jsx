@@ -10,12 +10,17 @@ const StyledDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;    
+    @media (max-width: 480px) {
+      height: 100%;
+      padding: 0px 1rem 0 0;
+    }
+
 
 `
 
 const StyledH2 = styled.h2 `
     font-size: 43px;
-    font-family: "cursive";
+    font-family: 'Roboto';
     margin: 2rem 0 3rem 0;
 
     @media (max-width: 1200px) {
@@ -30,10 +35,10 @@ const StyledH2 = styled.h2 `
 
 const StyledP = styled.p `
     font-size: 20px;
-    font-family: "cursive";
+    font-family: 'Roboto';
     margin: 0 0 1rem 0;
     width: 63%;
-    text-align: initial;
+    text-align: justify;
 
     @media (max-width: 2700px) {
     
@@ -45,12 +50,12 @@ const StyledP = styled.p `
   }
     @media (max-width: 700px) {
     
-        font-size: 10px;
+      width: 85%;
   }
 `
 const StyledPTitulo = styled.p `
     font-size: 24px;
-    font-family: "cursive";
+    font-family: 'Roboto';
     margin: 0 0 1rem 0;
     width: 63%;
     text-align: justify;
@@ -65,7 +70,7 @@ const StyledPTitulo = styled.p `
   }
     @media (max-width: 700px) {
     
-        font-size: 12px;
+      width: 85%;
   }
 `
 
