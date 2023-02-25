@@ -16,57 +16,59 @@ const TopsContainer = ( {allProducts,
         const [totalContainer, setTotalContainer] = useLocalStorage('totalContainer', localStorage.getItem('totalContainer'))
         const [countContainer, setCountContainer] = useLocalStorage('countContainer', localStorage.getItem('countContainer'))
          
-
-        
-
-
-    const onAddProduct = (product, isCartEvent, isAddedFromCartButton = false ,isLastElement = false) => {
-        
        
+        let bandera = true
+
+
+    const onAddProduct = (product, isCartEvent) => {
+        
 
         if(isCartEvent && product.selectedTalla === undefined) return alert("Debe elegir una talla")
-
-        if (isCartEvent && !allProducts.find(item => item.id === product.id)){
+       
+        if ((isCartEvent && !allProducts.find(item => item.id === product.id)) || (!allProducts.find(item => item.description === product.description))){ 
+            if (!allProducts.find(item => item.description === product.description)) {
+                countProducts = countProducts + 1
+            }           
+            bandera = false
+            console.log("Dentro del primer if "+bandera)
             if (allProducts.length >= 1) {
-                countProducts = countProducts             
-                product.quantity = 0
+                countProducts = countProducts      
                 allProducts.push(product)
             
                  return onAddProduct(product,isCartEvent)
             }
-            countTimes =0
+            product.quantity = 1
+            countTimes = 0
             countProducts = 1
-            product.quantity = 0
             allProducts.push(product)
             
             return onAddProduct(product,isCartEvent)
         }
 
-        if (isAddedFromCartButton){                 
-            product.isAddedFromCartButton = true
-        }
-
-        let sumando = isCartEvent ? 1 : 0
         
-        console.log("count: "+ countTimes)
+
+        let sumando = isCartEvent && bandera ? 1 : 0
+        
+        
         if (countTimes >= 1 ) {
-            console.log("Entro en este if???")
+            
             countProducts = countProducts + 1
         }
-       
+
         if ( isCartEvent && allProducts.find(item => item.id === product.id)){
-            
-            const products = allProducts.map(item =>
-                item.id === product.id
-                    ? { ...item, quantity: item.quantity + sumando }
+           
+            const products = allProducts.map(item =>item.id === product.id
+                    ?  { ...item, quantity: item.quantity + sumando }                    
                     : item
             );
+
             setTotal(parseInt(total) + parseInt(product.price));
             
             setCountProducts( countProducts) ///Para que la burbuja cuente
+            bandera = true
             
             setAllProducts([...products])
-            return;
+            return  ;
         }
 
 

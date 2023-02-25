@@ -18,68 +18,60 @@ const BottomsContainer = ( {allProducts,
          
 
     
-  let totalCon = JSON.parse(localStorage.getItem('totalContainer'))    
+
+  let bandera = true
 
 
-    const onAddProduct = (product, isCartEvent, isAddedFromCartButton = false ,isLastElement = false) => {
-        
-        let sumando = isCartEvent ? 1 : 0
+  const onAddProduct = (product, isCartEvent) => {
+     
 
-        
-
-        if(isCartEvent && product.selectedTalla === undefined) return alert("Debe elegir una talla")
-
-        if (isCartEvent && !allProducts.find(item => item.id === product.id)){
-            if (allProducts.length >= 1) {
-                countProducts = countProducts + 1            
-                product.quantity = 0
-                allProducts.push(product)
-            
-                 return onAddProduct(product,isCartEvent)
-            }
-            countTimes =0
-            countProducts = 1
-            total = 
-            console.log(product.price)
-            
-            allProducts.push(product)
-            
-            return onAddProduct(product,isCartEvent)
-        }
-
-        if (isAddedFromCartButton){                 
-            product.isAddedFromCartButton = true
-        }
-
-        
-        
-        console.log("count: "+ countTimes)
-        if (countTimes >= 1 ) {
-            console.log("Entro en este if???")
-            
-            countProducts = countProducts + 1
-        }
-       
-        if ( isCartEvent && allProducts.find(item => item.id === product.id)){
-            
-            const products = allProducts.map(item =>
-                item.id === product.id
-                    ? { ...item, quantity: item.quantity + sumando }
-                    : item
-            );
-            setTotal(parseInt(total) + parseInt(product.price));
-            
-            setCountProducts( countProducts) ///Para que la burbuja cuente
-            
-            setAllProducts([...products])
-            return;
-        }
-
+      if(isCartEvent && product.selectedTalla === undefined) return alert("Debe elegir una talla")
+     
+      if ((isCartEvent && !allProducts.find(item => item.id === product.id) || !allProducts.find(item => item.description === product.description))){            
+          bandera = false
+          console.log("Dentro del primer if "+bandera)
+          if (allProducts.length >= 1) {
+              countProducts = countProducts      
+              allProducts.push(product)
+          
+               return onAddProduct(product,isCartEvent)
+          }
+          product.quantity = 1
+          countTimes = 0
+          countProducts = 1
+          allProducts.push(product)
+          
+          return onAddProduct(product,isCartEvent)
+      }
 
       
 
-    }    
-        
+      let sumando = isCartEvent && bandera ? 1 : 0
+      
+      
+      if (countTimes >= 1 ) {
+          
+          countProducts = countProducts + 1
+      }
+
+      if ( isCartEvent && allProducts.find(item => item.id === product.id)){
+          const products = allProducts.map(item =>item.id === product.id
+                  ?  { ...item, quantity: item.quantity + sumando }                    
+                  : item
+          );
+
+          setTotal(parseInt(total) + parseInt(product.price));
+          
+          setCountProducts( countProducts) ///Para que la burbuja cuente
+          bandera = true
+          setAllProducts([...products])
+          return  ;
+      }
+
+
+    
+
+  }    
 
     const onSelectTalla = (item, numero )=> {        
         item.selectedTalla = numero

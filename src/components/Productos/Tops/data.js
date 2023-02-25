@@ -37,7 +37,7 @@ export const productDataTops = [
         "https://http2.mlstatic.com/D_NQ_NP_694696-MLA53116022414_012023-W.webp",
       name: "Top nudo delantero",
       price: "4900",
-      description: " Top",
+      description: "Top",
       color: "white",      
       IsTalla: "Talla",
       tallas: [ 1,2,3 ],   
