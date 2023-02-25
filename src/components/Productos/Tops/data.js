@@ -13,7 +13,7 @@ export const productDataTops = [
       pricebefore: "2500",
       colorbc: "pink",
       tallas: [ 1,2,3 ], 
-      quantity: 0,
+      quantity: 1,
       isAddedFromCartButton: false
     },
     {
@@ -28,7 +28,8 @@ export const productDataTops = [
       IsSale: "Nuevo",
       colorbc: "pink",
       tallas: [ 1,2,3,4 ],
-      quantity: 0,
+      quantity: 1,      
+      isAddedFromCartButton: false
     },
     {
       id: "3Topnudodelantero",
@@ -40,7 +41,8 @@ export const productDataTops = [
       color: "white",      
       IsTalla: "Talla",
       tallas: [ 1,2,3 ],   
-      quantity: 0,   
+      quantity: 1,       
+      isAddedFromCartButton: false  
     },
     
     {
@@ -53,7 +55,7 @@ export const productDataTops = [
       color: "black",      
       IsTalla: "Talla",
       tallas: [ 1,2, 3 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id:  "5Topestampado",
@@ -65,7 +67,7 @@ export const productDataTops = [
       color: "white",      
       IsTalla: "Talla",
       tallas: [ 2, 3, 4 , 5],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "6Tophombrodescubierto",
@@ -77,7 +79,7 @@ export const productDataTops = [
       color: "yellow",       
       IsTalla: "Talla",
       tallas: [ 1,2 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "7Remeraconfrunce",
@@ -88,7 +90,7 @@ export const productDataTops = [
       description: "Top",
       color: 'black',
       tallas: [1,2,3,4],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "8Remerarayada",
@@ -100,7 +102,7 @@ export const productDataTops = [
       color: "blue",
       IsTalla: "Talla",
       tallas: [ 4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "9Toptirascruzadas",
@@ -112,7 +114,7 @@ export const productDataTops = [
       color: "blue-dark",
       IsTalla: "Talla",
       tallas: [ 3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "10Topmangacorta",
@@ -124,7 +126,7 @@ export const productDataTops = [
       color: "nute",
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "11Topestilotrianguloretro",
@@ -136,7 +138,7 @@ export const productDataTops = [
       color: "orange",
       IsTalla: "Talla",
       tallas: [ 1,2 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "12Remerascortadealgodon",
@@ -148,7 +150,7 @@ export const productDataTops = [
       color: "pink",
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "13Remeramusculosa",
@@ -160,7 +162,7 @@ export const productDataTops = [
       color: "green",
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "14Topstrapless",
@@ -172,7 +174,7 @@ export const productDataTops = [
       color: "red",
       IsTalla: "Talla",
       tallas: [ 1,2,3 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id:"15Corsetbengalina",
@@ -184,7 +186,7 @@ export const productDataTops = [
       color: "fucsia",
       IsTalla: "Talla",
       tallas: [ 1,2,3,4 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "16Topdetiras",
@@ -196,6 +198,6 @@ export const productDataTops = [
       color: "red",
       IsTalla: "Talla",
       tallas: [ 1,2,3 ],
-      quantity: 0,
+      quantity: 1,
     },
   ];

@@ -45,16 +45,17 @@ export const Cart = ({
   updateLsCart,
   children, setActive,
   active, 
+  setCountTimes
 }) => {
 
   
-  let cartCont = localStorage.getItem('cartContainer')
   let countCon = localStorage.getItem('countContainer')
   let totalCon = JSON.parse(localStorage.getItem('totalContainer'))
   const onCleanCart = () => {
     setAllProducts([]);
     setTotal(0);
     setCountProducts(0);
+    setCountTimes(0)
     localStorage.removeItem("cartContainer");
     localStorage.removeItem("totalContainer");
     localStorage.removeItem("countContainer");

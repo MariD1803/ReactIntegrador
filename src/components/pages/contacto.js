@@ -5,6 +5,7 @@ import { BsMailbox2, BsFillTelephoneInboundFill} from 'react-icons/bs';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { FiMapPin } from 'react-icons/fi';
 import {useLocalStorage} from "../../hooks/useLocalStorage.js"
+import FooterDerechos from '../Footer/FooterDerechos';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -225,23 +226,35 @@ const StyledButton = styled.button`
     margin: 0;
   }
 `;
+
+const DivPositionAbsolute = styled.button`
+    position: absolute;
+    top: 110%;
+    width: 101%;
+    padding: 0;
+    border: none;
+`;
 const Contacto = () => {
 
     
   const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
-    const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
-    const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
-    const count = 0
-    const [quatityProducts, setQuantityProducts] = useState(0);    
-	const updateLsCart = () => {
-        localStorage.setItem("cartContainer", JSON.stringify(allProducts))
-    }
+  const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
+  const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
+  const count = 0
+  const [quatityProducts, setQuantityProducts] = useState(0);    
+const updateLsCart = () => {
+      localStorage.setItem("cartContainer", JSON.stringify(allProducts))
+  }
 
-    
-  const [active, setActive] = useState(false);
+  const [countTimes, setCountTimes] = useState(0);
+
+  function handleClick() {
+    setCountTimes(countTimes + 1);
+  }  
+const [active, setActive] = useState(false);
 
 
-  const closeToggle = () =>  setActive(false);
+const closeToggle = () =>  setActive(false);
   const onCleanForm = () => {
     
 	  localStorage.removeItem("nombre")
@@ -331,6 +344,7 @@ const RecargarPagina = () => {
 
   
   return (
+    <>
     <div>
         <Cart 
         setAllProducts={setAllProducts}
@@ -345,7 +359,9 @@ const RecargarPagina = () => {
         allProducts={allProducts}
         setActive={setActive}
         active={active}
-        closeToggle={closeToggle}
+        closeToggle={closeToggle}        
+        handleClick={handleClick}
+        setCountTimes={setCountTimes}
         
         
         > <StyledButton ></StyledButton></Cart>
@@ -424,6 +440,8 @@ const RecargarPagina = () => {
         </StyledContainer>
 
     </div>
+
+      <DivPositionAbsolute><FooterDerechos></FooterDerechos></DivPositionAbsolute> </>
   )
 }
 

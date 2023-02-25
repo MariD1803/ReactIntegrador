@@ -12,7 +12,7 @@ export const productDataVestidos = [
       colorbc: "pink",
       color: "black",
       tallas: [ 1,2,3 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "2VestidoescoteenV",
@@ -26,7 +26,7 @@ export const productDataVestidos = [
       IsSale: "Nuevo",      
       colorbc: "pink",
       tallas: [ 1,2,3 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "3Vestidoestilomoño",
@@ -38,7 +38,7 @@ export const productDataVestidos = [
       color: "white",      
       IsTalla: "Talla",
       tallas: [ 1,2,3],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "4Vestidomangacorta",
@@ -50,7 +50,7 @@ export const productDataVestidos = [
       color: "brown",      
       IsTalla: "Talla",
       tallas: [ 1,2, 3, 4, 5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "5Vestidolargodelino",
@@ -62,7 +62,7 @@ export const productDataVestidos = [
       color: "nute",      
       IsTalla: "Talla",
       tallas: [ 3, 4 , 5],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "6Vestidodoblefrunce",
@@ -74,7 +74,7 @@ export const productDataVestidos = [
       color: "fucsia",       
       IsTalla: "Talla",
       tallas: [ 1,2,3 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "7Vestidolargotipocloque",
@@ -85,7 +85,7 @@ export const productDataVestidos = [
       description: "vestidos",
       color: 'brown',
       tallas: [ 1,2,3,4,5],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "8Vestidoplayerodeencaje",
@@ -97,7 +97,7 @@ export const productDataVestidos = [
       color: "white",
       IsTalla: "Talla",
       tallas: [ 2,3,4 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "9Vestidocrusado",
@@ -109,7 +109,7 @@ export const productDataVestidos = [
       color: "black",
       IsTalla: "Talla",
       tallas: [ 2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "10Vestidolargocrusado",
@@ -121,7 +121,7 @@ export const productDataVestidos = [
       color: "blue-dark",
       IsTalla: "Talla",
       tallas: [ 3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "11Vestidoconmangavolados",
@@ -133,7 +133,7 @@ export const productDataVestidos = [
       color: "fucsia",
       IsTalla: "Talla",
       tallas: [ 1,2 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "12Vestidodelino",
@@ -145,6 +145,6 @@ export const productDataVestidos = [
       color: "blue-sky",
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
   ];

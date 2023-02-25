@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Cart from "../Cart/Cart";
 import FormularioRegistro from "../Formulario/FormularioRegistro";
 import { FcShop, FcUnlock, FcShipped } from "react-icons/fc";
+import FooterDerechos from "../Footer/FooterDerechos";
 
 const StyledButton = styled.button`
   width: 80px;
@@ -136,22 +137,35 @@ const StyledDivLinea = styled.div `
     }
 `
 
+const DivPositionAbsolute = styled.button`
+    position: absolute;
+    top: 100%;
+    width: 101%;
+    padding: 0;
+    border: none;
+`;
+
+
 
 const Registro = ( ) => {
-    const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
-    const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
-    const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
-    const count = 0
-    const [quatityProducts, setQuantityProducts] = useState(0);    
-	const updateLsCart = () => {
-        localStorage.setItem("cartContainer", JSON.stringify(allProducts))
-    }
+  const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
+  const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
+  const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
+  const count = 0
+  const [quatityProducts, setQuantityProducts] = useState(0);    
+const updateLsCart = () => {
+      localStorage.setItem("cartContainer", JSON.stringify(allProducts))
+  }
 
-    
-  const [active, setActive] = useState(false);
+  const [countTimes, setCountTimes] = useState(0);
+
+  function handleClick() {
+    setCountTimes(countTimes + 1);
+  }  
+const [active, setActive] = useState(false);
 
 
-  const closeToggle = () =>  setActive(false);
+const closeToggle = () =>  setActive(false);
     
  
         
@@ -171,7 +185,9 @@ const Registro = ( ) => {
         allProducts={allProducts}
         setActive={setActive}
         active={active}
-        closeToggle={closeToggle}
+        closeToggle={closeToggle}        
+        handleClick={handleClick}
+        setCountTimes={setCountTimes}
         
         
         > <StyledButton ></StyledButton></Cart>
@@ -196,6 +212,8 @@ const Registro = ( ) => {
             <StyledSectionRight>
                 <FormularioRegistro></FormularioRegistro>
             </StyledSectionRight></StyledDivContainerFormulario>
+
+            <DivPositionAbsolute><FooterDerechos></FooterDerechos></DivPositionAbsolute>
         </div>
         
     )

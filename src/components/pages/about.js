@@ -5,6 +5,7 @@ import Cart from "../Cart/Cart";
 import PreguntasFrecuentes from "../About/PreguntasFrecuentes/PreguntasFrecuentes";
 import TerminosYCondiciones from "../About/Terminos/TerminosYCondiciones";
 import CambiosODevoluciones from "../About/Cambios/CambiosODevoluciones";
+import FooterDerechos from "../Footer/FooterDerechos";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -90,6 +91,15 @@ const StyledButton = styled.button`
     margin: 0;
   }
 `;
+const DivPositionAbsolute = styled.button`
+    position: absolute;
+    top: 126%;
+    width: 101%;
+    padding: 0;
+    border: none;
+`;
+
+
 const About = () => {
 
   
@@ -118,24 +128,29 @@ const About = () => {
 
   
   const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
-    const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
-    const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
-    const count = 0
-    const [quatityProducts, setQuantityProducts] = useState(0);    
-	const updateLsCart = () => {
-        localStorage.setItem("cartContainer", JSON.stringify(allProducts))
-    }
+  const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
+  const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
+  const count = 0
+  const [quatityProducts, setQuantityProducts] = useState(0);    
+const updateLsCart = () => {
+      localStorage.setItem("cartContainer", JSON.stringify(allProducts))
+  }
 
-    
-  const [active, setActive] = useState(false);
+  const [countTimes, setCountTimes] = useState(0);
+
+  function handleClick() {
+    setCountTimes(countTimes + 1);
+  }  
+const [active, setActive] = useState(false);
 
 
-  const closeToggle = () =>  setActive(false);
+const closeToggle = () =>  setActive(false);
     
   
 
 
   return (
+    <>
     <div>
       <Cart 
         setAllProducts={setAllProducts}
@@ -150,7 +165,9 @@ const About = () => {
         allProducts={allProducts}
         setActive={setActive}
         active={active}
-        closeToggle={closeToggle}
+        closeToggle={closeToggle}        
+        handleClick={handleClick}
+        setCountTimes={setCountTimes}
         
         
         > <StyledButton ></StyledButton></Cart>
@@ -180,7 +197,10 @@ const About = () => {
           </StyledUl>
         </StyledSectionLeft>
       </StyledContainer>
+
+      
     </div>
+    <DivPositionAbsolute><FooterDerechos></FooterDerechos></DivPositionAbsolute></>
   );
 };
 

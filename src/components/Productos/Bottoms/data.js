@@ -27,7 +27,7 @@ export const productDataBottoms = [
       IsSale: "Nuevo",      
       colorbc: "pink",
       tallas: [ 2,3,4],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "3Faldaconcortelateral",
@@ -41,7 +41,7 @@ export const productDataBottoms = [
       IsSale: "Nuevo",      
       colorbc: "pink",
       tallas: [ 1,2 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "4Faldadejeans",
@@ -53,7 +53,7 @@ export const productDataBottoms = [
       color: "white",      
       IsTalla: "Talla",
       tallas: [ 4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "5Faldashortdejeans",
@@ -65,7 +65,7 @@ export const productDataBottoms = [
       color: "jean",      
       IsTalla: "Talla",
       tallas: [ 1,2,3,4 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "6Shortjeansengomado",
@@ -77,7 +77,7 @@ export const productDataBottoms = [
       color: "black",      
       IsTalla: "Talla",
       tallas: [ 1,2, 3, 4 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "7Shortsemicuero",
@@ -89,7 +89,7 @@ export const productDataBottoms = [
       color: "black",      
       IsTalla: "Talla",
       tallas: [ 1,2 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "8Shortestampadodelino",
@@ -101,7 +101,7 @@ export const productDataBottoms = [
       color: "white",      
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "9Bermudalarga",
@@ -113,7 +113,7 @@ export const productDataBottoms = [
       color: "black",      
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "10Shortdefibrana",
@@ -125,7 +125,7 @@ export const productDataBottoms = [
       color: "brown",      
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "11Pantalonbaggy",
@@ -137,7 +137,7 @@ export const productDataBottoms = [
       color: "brown",      
       IsTalla: "Talla",
       tallas: [ 3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "12Pantaloncuerinatiroalto",
@@ -149,7 +149,7 @@ export const productDataBottoms = [
       color: "black",      
       IsTalla: "Talla",
       tallas: [ 1,2 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "13Joggercasual",
@@ -161,7 +161,7 @@ export const productDataBottoms = [
       color: "pink",      
       IsTalla: "Talla",
       tallas: [ 1,2,3,4 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "14Pantalonpalazzo",
@@ -173,7 +173,7 @@ export const productDataBottoms = [
       color: "black",      
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "15Jeanconroturas",
@@ -185,7 +185,7 @@ export const productDataBottoms = [
       color: "jean",      
       IsTalla: "Talla",
       tallas: [ 1,2,3],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "16Pantalonpalazzotiroalto",
@@ -197,6 +197,6 @@ export const productDataBottoms = [
       color: "orange",      
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
   ];

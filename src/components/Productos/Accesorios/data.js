@@ -11,8 +11,8 @@ export const productDataAccesorios = [
       pricebefore: "2000",
       colorbc: "pink",
       color: "blue-dark",
-      tallas: [],
-      quantity: 0,
+      tallas: [1,2],
+      quantity: 1,
     },
     {
       id: "2Sombreroplayero",
@@ -24,8 +24,8 @@ export const productDataAccesorios = [
       color: "brown",      
       IsSale: "Nuevo",
       colorbc: "pink",
-      tallas: [],
-      quantity: 0,
+      tallas: [1,2],
+      quantity: 1,
     },
     {
       id: "3Pareoplayero",
@@ -37,7 +37,7 @@ export const productDataAccesorios = [
       color: "red",      
       IsTalla: "Talla",
       tallas: [ 1,2,3, 4 , 5],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "4Camisonkimonoplayero",
@@ -49,7 +49,7 @@ export const productDataAccesorios = [
       color: "pink",       
       IsTalla: "Talla",
       tallas: [ 1,2,3,4,5 ],
-      quantity: 0,
+      quantity: 1,
     },
     
     {
@@ -61,7 +61,7 @@ export const productDataAccesorios = [
       description: "accesorios",
       color: "white",      
       tallas: [ 1,2,3],
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: "6Remeradetulconmariposas",
@@ -72,6 +72,6 @@ export const productDataAccesorios = [
       description: "accesorios",
       color: "jean",
       tallas: [ 1,2,3,4],
-      quantity: 0,
+      quantity: 1,
     },
   ];

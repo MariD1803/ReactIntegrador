@@ -104,7 +104,7 @@ export const responsive = {
       price: "$3000",
       description: "accesorios",
       color: 'brown',
-      tallas: [],
+      tallas: [1,2],
       idTalla: 107,
     },
     {

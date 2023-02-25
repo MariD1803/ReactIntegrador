@@ -4,6 +4,7 @@ import TopsContainer from "../Productos/Tops/TopsContainer"
 import "../Productos/Productos.css"
 import  Cart from "../Cart/Cart"
 import styled from "styled-components"
+import Footer from "../Footer/Footer"
 
 
 const StyledButton = styled.button`
@@ -28,7 +29,11 @@ const Tops = ( ) => {
         localStorage.setItem("cartContainer", JSON.stringify(allProducts))
     }
 
-    
+    const [countTimes, setCountTimes] = useState(0);
+
+    function handleClick() {
+      setCountTimes(countTimes + 1);
+    }  
   const [active, setActive] = useState(false);
 
 
@@ -52,7 +57,9 @@ const Tops = ( ) => {
         allProducts={allProducts}
         setActive={setActive}
         active={active}
-        closeToggle={closeToggle}
+        closeToggle={closeToggle}        
+        handleClick={handleClick}
+        setCountTimes={setCountTimes}
         
         
         > <StyledButton ></StyledButton></Cart>
@@ -61,7 +68,8 @@ const Tops = ( ) => {
             
             <DivContainerProducts section="Tops">
 
-            <TopsContainer allProducts={allProducts}
+            <TopsContainer 
+            allProducts={allProducts}
             setAllProducts={setAllProducts}
             total={total}
             setTotal={setTotal}
@@ -71,10 +79,12 @@ const Tops = ( ) => {
             quatityProducts={quatityProducts}
             setQuantityProducts={setQuantityProducts}
             updateLsCart={updateLsCart}
-
+            handleClick={handleClick}
+            countTimes={countTimes}
             ></TopsContainer>
 
             </DivContainerProducts>
+            <Footer></Footer>
         </div>
         
         </>

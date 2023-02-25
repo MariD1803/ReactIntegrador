@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components";
 import Cart from "../Cart/Cart";
+import FooterDerechos from "../Footer/FooterDerechos";
 import FormularioIngreso from "../Formulario/FormularioIngreso";
 
 const StyledButton = styled.button`
@@ -57,20 +58,24 @@ const StyledDivCenter = styled.div `
 `
 
 const Ingresar = ( ) => {
-    const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
-    const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
-    const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
-    const count = 0
-    const [quatityProducts, setQuantityProducts] = useState(0);    
-	const updateLsCart = () => {
-        localStorage.setItem("cartContainer", JSON.stringify(allProducts))
-    }
+  const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
+  const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
+  const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
+  const count = 0
+  const [quatityProducts, setQuantityProducts] = useState(0);    
+const updateLsCart = () => {
+      localStorage.setItem("cartContainer", JSON.stringify(allProducts))
+  }
 
-    
-  const [active, setActive] = useState(false);
+  const [countTimes, setCountTimes] = useState(0);
+
+  function handleClick() {
+    setCountTimes(countTimes + 1);
+  }  
+const [active, setActive] = useState(false);
 
 
-  const closeToggle = () =>  setActive(false);
+const closeToggle = () =>  setActive(false);
     
  
         
@@ -90,7 +95,9 @@ const Ingresar = ( ) => {
         allProducts={allProducts}
         setActive={setActive}
         active={active}
-        closeToggle={closeToggle}
+        closeToggle={closeToggle}        
+        handleClick={handleClick}
+        setCountTimes={setCountTimes}
         
         
         > <StyledButton ></StyledButton></Cart>
@@ -104,6 +111,7 @@ const Ingresar = ( ) => {
               </StyledDivContainerTitulo>
             </StyledDivCenter>
             <FormularioIngreso/>
+            <FooterDerechos></FooterDerechos>
         </div>
         
     )

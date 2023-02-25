@@ -10,193 +10,75 @@ const AccesoriosContainer = ( {allProducts,
 	countProducts,
 	setCountProducts,
 	total,
-	setTotal,}) => {
+	setTotal, 
+    handleClick, countTimes}) => {
+        const [cartContainer, setCart] = useLocalStorage('cartContainer', localStorage.getItem('cartContainer'))
+        const [totalContainer, setTotalContainer] = useLocalStorage('totalContainer', localStorage.getItem('totalContainer'))
+        const [countContainer, setCountContainer] = useLocalStorage('countContainer', localStorage.getItem('countContainer'))
+         
 
-       /*  const [cartContainer, setCart] = useLocalStorage('cartContainer', localStorage.getItem('cartContainer'))
-        const updateLsCart = () => {
-            console.log("allProducts LSCart:"+allProducts)
-            localStorage.setItem("cartContainer", JSON.stringify(allProducts))
-        }
-
-    const onAddProduct = (product, isCartEvent) => {
-
-        let sumando = 0
-        if(isCartEvent){
-            sumando = 1
-        }
         
-        if((product.selectedTalla !== undefined && isCartEvent) || !isCartEvent){
-            if (allProducts.find(item => item.id === product.id)) {  //Comparo si mi producto ya existe, entonces le agrego mas cantidad
-                const products = allProducts.map(item =>
-                    item.id === product.id
-                        ? { ...item, quantity: item.quantity + sumando }
-                        : item
-                );
-                setTotal(parseInt(total) + parseInt(product.price ));
-                setCountProducts( countProducts + 1) ///Para que la burbuja cuente
-                setAllProducts([...products])
-                return  updateLsCart();
-            }
-            setTotal(total + product.price * product.quantity);
-		    setCountProducts(countProducts + product.quantity);   ///Para que la burbuja cuente
-		    setAllProducts([...allProducts, product]);
-            updateLsCart()
+
+
+    const onAddProduct = (product, isCartEvent, isAddedFromCartButton = false ,isLastElement = false) => {
+        
+       
+
+        if(isCartEvent && product.selectedTalla === undefined) return alert("Debe elegir una talla")
+
+        if (isCartEvent && !allProducts.find(item => item.id === product.id)){
+            if (allProducts.length >= 1) {
+                countProducts = countProducts                
+                product.quantity = 0
+                allProducts.push(product)
             
-        }  else {
-            alert("Debe elegir una talla");
+                 return onAddProduct(product,isCartEvent)
+            }
+            countTimes =0
+            countProducts = 1
+            product.quantity = 0
+            allProducts.push(product)
+            
+            return onAddProduct(product,isCartEvent)
         }
+
+        if (isAddedFromCartButton){                 
+            product.isAddedFromCartButton = true
+        }
+
+        let sumando = isCartEvent ? 1 : 0
         
+        console.log("count: "+ countTimes)
+        if (countTimes >= 1 ) {
+            console.log("Entro en este if???")
+            countProducts = countProducts + 1
+        }
+       
+        if ( isCartEvent && allProducts.find(item => item.id === product.id)){
+            
+            const products = allProducts.map(item =>
+                item.id === product.id
+                    ? { ...item, quantity: item.quantity + sumando }
+                    : item
+            );
+            setTotal(parseInt(total) + parseInt(product.price));
+            
+            setCountProducts( countProducts) ///Para que la burbuja cuente
+            
+            setAllProducts([...products])
+            return;
+        }
+
+
+      
+
+    }    
         
-    }
-
-    const reloadCart = () =>{
-        let cartContainer = JSON.parse(localStorage.getItem("cartContainer"))
-        cartContainer.map(item=> onAddProduct(item, false))
-    }
-
-    window.addEventListener("load", () => {
-        reloadCart()
-    })
-
 
     const onSelectTalla = (item, numero )=> {        
         item.selectedTalla = numero
         
     }
-
-    
-    const productos = productDataAccesorios.map((item) => (
-            
-          <Productos
-          bc={item.color}
-          name={item.name}
-          url={item.imageurl}
-          price={item.price}
-          description={item.description}
-          IsTalla={item.IsTalla}
-          itemcolorbc={item.colorbc}
-          IsSale={item.IsSale}
-          signo={item.signo}
-          pricebefore={item.pricebefore}
-        >
-             <p className="p-buttons">                                
-                {
-                item.tallas.map((numero) => {                
-                return <button className="product-button-talla" onClick={() => onSelectTalla(item, numero)}>{numero}</button> || []}
-                )}
-            </p>
-
-            <button className="cart-button"  onClick={() =>{ onAddProduct(item, true); setCart(allProducts)}} ><IconCart className="cartProductP" ></IconCart></button> */
-            const [cartContainer, setCart] = useLocalStorage('cartContainer', localStorage.getItem('cartContainer'))
-            const [totalContainer, setTotalContainer] = useLocalStorage('totalContainer', localStorage.getItem('totalContainer'))
-            const [countContainer, setCountContainer] = useLocalStorage('countContainer', localStorage.getItem('countContainer'))
-            const updateLsCart = () => {
-                localStorage.setItem("cartContainer", JSON.stringify(allProducts))
-                localStorage.setItem("totalContainer", JSON.stringify(total))
-                localStorage.setItem("countContainer", JSON.stringify(countContainer))
-            }
-    
-    var isRepeated = false
-    
-        useEffect(() => {
-            if (!isRepeated) {
-                isRepeated = true
-                let productsQty= allProducts.length           
-                for (let i in allProducts){                
-                    let isLast = false
-                    if (i === productsQty - 1  ){
-                        
-                        isLast = true
-                    }
-                    onAddProduct(allProducts[i],false, false, isLast)
-                }
-            }
-        }, []);
-    
-        const onAddProduct = (product, isCartEvent, isAddedFromCartButton = false ,isLastElement = false) => {
-    
-            
-            if(isCartEvent && product.selectedTalla === undefined) return alert("Debe elegir una talla")
-    
-            if (isCartEvent && !allProducts.find(item => item.id === product.id)){
-                 
-                allProducts.push(product)
-                
-                return onAddProduct(product,isCartEvent)
-            }
-    
-            if (isAddedFromCartButton){                 
-                product.isAddedFromCartButton = true
-            }
-    
-            let sumando = isCartEvent ? 1 : 0
-    
-    
-            if (isLastElement && product.isAddedFromCartButton) {
-                console.log("Estoy entrando en el if??")
-                sumando = +1
-            }
-    
-            
-    
-            if (allProducts.find(item => item.id === product.id)){
-                const products = allProducts.map(item =>
-                    item.id === product.id
-                        ? { ...item, quantity: item.quantity + sumando }
-                        : item
-                );
-                setTotal(parseInt(total) + parseInt(product.price));
-                setCountProducts( countProducts + 1) ///Para que la burbuja cuente
-               
-                setAllProducts([...products])
-                return  updateLsCart();
-            }
-    
-    
-            console.log("Alguna vez entra aqui???")
-            let totalAccount = isCartEvent? parseInt(total) + parseInt(product.price) : parseInt(total) + product.price * product.quantity
-            setTotal(totalAccount);
-            let productQty = isCartEvent? (countProducts + 1) : (countProducts + product.quantity)
-            setCountProducts(productQty) 
-            return  updateLsCart();
-    
-        }    
-            //setTotal(total + product.price * product.quantity);
-            //setCountProducts( countProducts + product.quantity) ///Para que la burbuja cuente
-            //setAllProducts([...allProducts, product]);
-            //return updateLsCart()
-        
-        /*
-            if((product.selectedTalla !== undefined && isCartEvent) || !isCartEvent){
-                if (allProducts.find(item => item.id === product.id)) {  //Comparo si mi producto ya existe, entonces le agrego mas cantidad
-                    const products = allProducts.map(item =>
-                        item.id === product.id
-                            ? { ...item, quantity: item.quantity + sumando }
-                            : item
-                    );
-                    setTotal(parseInt(total) + parseInt(product.price));
-                    setCountProducts( countProducts + 1) ///Para que la burbuja cuente
-                    setAllProducts([...products])
-                    return  updateLsCart();
-                }
-                console.log("Total:"+total)
-                setTotal(total + product.price * product.quantity);
-                setCountProducts(countProducts + product.quantity);   ///Para que la burbuja cuente
-                setAllProducts([...allProducts, product]);
-                updateLsCart()
-                
-            }  else {
-                alert("Debe elegir una talla");
-            }
-            
-            
-        }
-        */
-    
-        const onSelectTalla = (item, numero )=> {        
-            item.selectedTalla = numero
-            
-        }
     
     
         const productos = productDataAccesorios.map((item) => (
@@ -220,7 +102,7 @@ const AccesoriosContainer = ( {allProducts,
                     )}
                 </div>
     
-                <button className="cart-button"  onClick={() =>{ onAddProduct(item, true, true); setCart(allProducts); setTotalContainer(total); setCountContainer(countProducts)}} ><IconCart className="cartProductP" ></IconCart></button>
+                <button className="cart-button"  onClick={() =>{ handleClick(); onAddProduct(item, true, true); setCart(allProducts); setTotalContainer(total); setCountContainer(countProducts)}} ><IconCart className="cartProductP" ></IconCart></button>
         
             </Productos>
     ));
@@ -229,7 +111,9 @@ const AccesoriosContainer = ( {allProducts,
             {productos}
             <div  className="hola"
                 
-                >{JSON.stringify(cartContainer)}</div>
+                >{JSON.stringify(cartContainer)}
+                {JSON.stringify(totalContainer)}
+                {JSON.stringify(countContainer)}</div>
             
         </div>
         
