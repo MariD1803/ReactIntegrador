@@ -1,5 +1,15 @@
+import { useDisclosure } from "@chakra-ui/react";
 import React, { useState } from "react";
 import styled from "styled-components";
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  Button
+} from '@chakra-ui/react'
 
 
 const StyledContainerIcons = styled.div`
@@ -34,6 +44,46 @@ const StyledContainerCart = styled.div`
     width: 70px;
   }
 `;
+const StyledAlertDialog = styled(AlertDialog)`
+  z-index: 1000;
+
+  
+`;
+const StyledAlertDialogContent = styled(AlertDialogContent)`
+  z-index: 1000;
+
+  
+`;
+const StyledButtonAlert = styled(Button)`
+  border-radius: 10px;
+  background-image: linear-gradient(to left,  #f7b9c6 , var(--pink),  #f7b9c6 ); 
+  color: white;
+  font-weight: 800;
+  border: grey solid 1px;
+
+  @media (max-width: 700px) {
+    font-size: 14px;
+  }
+
+  
+`;
+const StyledDivContent = styled.div`
+  height: 100%;
+    z-index: 1000;
+    background: white;
+    width: 52%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+
+    @media (max-width: 700px) {
+      width: 70%;
+    }
+
+  
+`;
 
 export const Cart = ({
   allProducts,
@@ -46,8 +96,9 @@ export const Cart = ({
   children, setActive,
   active, 
   setCountTimes, 
-  isRefreshPage
 }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef = React.useRef()
 
   
   let countCon = localStorage.getItem('countContainer') || 0
@@ -60,6 +111,17 @@ export const Cart = ({
     localStorage.removeItem("cartContainer");
     localStorage.removeItem("totalContainer");
     localStorage.removeItem("countContainer");
+  };
+  const onCleanCartButtonCompra = () => {
+    
+    setAllProducts([]);
+    setTotal(0);
+    setCountProducts(0);
+    setCountTimes(0)
+    localStorage.removeItem("cartContainer");
+    localStorage.removeItem("totalContainer");
+    localStorage.removeItem("countContainer");
+    alert("¡Su compra se realizó con éxito!")
   };
 
   const onDeleteProduct = (product) => {
@@ -199,6 +261,42 @@ export const Cart = ({
                 <h3>Total:</h3>
                 <span className="total-pagar">${totalCon}</span>
               </div>
+
+              <button className="btn-clear-buy" onClick={onOpen}>
+                Comprar
+              </button>
+              <StyledAlertDialog
+                isOpen={isOpen}
+                leastDestructiveRef={cancelRef}
+                onClose={onClose}
+              >
+                <AlertDialogOverlay className="position-fixed-cart">
+                  <StyledAlertDialogContent className="position-aboslute-alert">
+                    <StyledDivContent>
+                    <AlertDialogHeader fontSize='lg' fontWeight='bold' className="titulo-producto-carrito">
+                      Continuar con la Compra
+                    </AlertDialogHeader>
+
+                    <AlertDialogBody className="titulo-producto-carrito">
+                      Estas seguro de continuar con esta acción?
+                    </AlertDialogBody>
+
+                    <AlertDialogFooter>
+                      <StyledButtonAlert ref={cancelRef} onClick={onClose}>
+                        Cancelar
+                      </StyledButtonAlert>
+                      <StyledButtonAlert colorScheme='red' onClick={()=>{ onClose(); onCleanCartButtonCompra()}} ml={3}>
+                        Comprar
+                      </StyledButtonAlert>
+                    </AlertDialogFooter>
+
+
+                    </StyledDivContent>
+                  </StyledAlertDialogContent>
+                </AlertDialogOverlay>
+              </StyledAlertDialog>
+
+
 
               <button className="btn-clear-all" onClick={onCleanCart}>
                 Vaciar Carrito
