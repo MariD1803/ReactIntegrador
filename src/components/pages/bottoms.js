@@ -17,8 +17,10 @@ const StyledButton = styled.button`
     margin: 0;
   }
 `;
-const Bottoms = ( ) => {
 
+
+const Bottoms = ( ) => {
+  localStorage.setItem("fromUrl", window.location)
   const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
   const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
   const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);

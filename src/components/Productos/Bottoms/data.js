@@ -12,7 +12,7 @@ export const productDataBottoms = [
       colorbc: "pink",
       color: "black",
       tallas: [ 1,2,3 ],
-      quantity: 0,
+      quantity: 1,
     },
     
     {

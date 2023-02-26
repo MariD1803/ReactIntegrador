@@ -1,82 +1,57 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { productDataBottoms } from "./data";
 import Productos from "../Productos";
 import { IconCart } from "../../Navbar/iconos/Iconos";
-import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 
 
-const BottomsContainer = ( {allProducts,
-	setAllProducts,
-	countProducts,
-	setCountProducts,
-	total,
-	setTotal,handleClick, countTimes}) => {
-        const [cartContainer, setCart] = useLocalStorage('cartContainer', localStorage.getItem('cartContainer'))
-        const [totalContainer, setTotalContainer] = useLocalStorage('totalContainer', localStorage.getItem('totalContainer'))
-        const [countContainer, setCountContainer] = useLocalStorage('countContainer', localStorage.getItem('countContainer'))
-         
-
+const BottomsContainer = ( 
+    {allProducts,
+        setAllProducts}) => {
+            
+             
+        let countCon = localStorage.getItem('countContainer') || 0
+        let totalCon = JSON.parse(localStorage.getItem('totalContainer')) || 0
     
-
-  let bandera = true
-
-
-  const onAddProduct = (product, isCartEvent) => {
-     
-
-      if(isCartEvent && product.selectedTalla === undefined) return alert("Debe elegir una talla")
-     
-      if ((isCartEvent && !allProducts.find(item => item.id === product.id) || !allProducts.find(item => item.description === product.description))){            
-          bandera = false
-          console.log("Dentro del primer if "+bandera)
-          if (allProducts.length >= 1) {
-              countProducts = countProducts      
-              allProducts.push(product)
-          
-               return onAddProduct(product,isCartEvent)
-          }
-          product.quantity = 1
-          countTimes = 0
-          countProducts = 1
-          allProducts.push(product)
-          
-          return onAddProduct(product,isCartEvent)
-      }
-
-      
-
-      let sumando = isCartEvent && bandera ? 1 : 0
-      
-      
-      if (countTimes >= 1 ) {
-          
-          countProducts = countProducts + 1
-      }
-
-      if ( isCartEvent && allProducts.find(item => item.id === product.id)){
-          const products = allProducts.map(item =>item.id === product.id
-                  ?  { ...item, quantity: item.quantity + sumando }                    
-                  : item
-          );
-
-          setTotal(parseInt(total) + parseInt(product.price));
-          
-          setCountProducts( countProducts) ///Para que la burbuja cuente
-          bandera = true
-          setAllProducts([...products])
-          return  ;
-      }
-
-
+        const onAddProduct = product => {
+            let isProductAdded = allProducts.find(item => item.id === product.id)
+            if (isProductAdded ) {
+                let products = allProducts
+                for(let item of products){
+                    if (item.id === product.id){
+                        item.quantity++
+                        break
+                    }
+                }
+                let resultsCount =  parseInt(countCon) + 1
+                let resultsTotal =  parseInt(totalCon) +  parseInt(product.price)
+                localStorage.setItem("countContainer", JSON.stringify(resultsCount))
+                localStorage.setItem("totalContainer", JSON.stringify(resultsTotal))
+                setAllProducts([...products]);
+                updateCartStorage()
+                return
+            }
+            product.quantity = 0
+            allProducts.push(product)
+            onAddProduct(product)
+            let resultsCount =  parseInt(countCon) + 1
+            let resultsTotal =  parseInt(totalCon) +  parseInt(product.price)
+            localStorage.setItem("countContainer", JSON.stringify(resultsCount))
+            localStorage.setItem("totalContainer", JSON.stringify(resultsTotal))
     
-
-  }    
-
-    const onSelectTalla = (item, numero )=> {        
-        item.selectedTalla = numero
+           
+        };
         
-    }
+        const updateCartStorage = () => {
+            localStorage.removeItem("cartContainer")
+            localStorage.setItem("cartContainer",JSON.stringify(allProducts))
+        }
+    
+        const onSelectTalla = (item, numero )=> {        
+            item.selectedTalla = numero
+            
+        }
+    
 
 
     const productos = productDataBottoms.map((item) => (
@@ -100,16 +75,12 @@ const BottomsContainer = ( {allProducts,
                 )}
             </div>
 
-            <button className="cart-button"  onClick={() =>{ handleClick(); onAddProduct(item, true, true); setCart(allProducts); setTotalContainer(total); setCountContainer(countProducts)}} ><IconCart className="cartProductP" ></IconCart></button>
+            <button className="cart-button"  onClick={() => onAddProduct(item)} ><IconCart className="cartProductP" ></IconCart></button>
         </Productos>
     ));
     return (
         <div className="TopsContainer">
-           <div  className="hola"
-                
-                >{JSON.stringify(cartContainer)}
-                {JSON.stringify(totalContainer)}
-                {JSON.stringify(countContainer)}</div>
+           
             {productos}
             
         </div>

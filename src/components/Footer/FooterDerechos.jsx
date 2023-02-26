@@ -39,7 +39,7 @@ const FooterDerechos = () => {
     <div><StyledFooterContainerItems>
 
     <StyledPIcons>© 2023 ¡HEY!STORE&CO - Todos Los Derechos Reservados</StyledPIcons>
-    <StyledDivFooterRigth><StyledPIcons>Developed whit</StyledPIcons><StyledDivFooterInside><FaReact/><TbBrandJavascript/></StyledDivFooterInside> </StyledDivFooterRigth>
+    <StyledDivFooterRigth><StyledPIcons>Developed with</StyledPIcons><StyledDivFooterInside><FaReact/><TbBrandJavascript/></StyledDivFooterInside> </StyledDivFooterRigth>
 
 
   </StyledFooterContainerItems></div>

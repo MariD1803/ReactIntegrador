@@ -19,12 +19,21 @@ const StyledButton = styled.button`
   }
 `;
 
+let isRefreshPage = false
+
 const Tops = ( ) => {
-    const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
-    const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
-    const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
-    const count = 0
-    const [quatityProducts, setQuantityProducts] = useState(0);    
+  if (localStorage.getItem("fromUrl") === window.location.href){
+    isRefreshPage = true
+  } else {
+    localStorage.setItem("fromUrl", window.location.href)
+  }
+
+
+  const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer")) || []);
+  const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
+  const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
+  const count = 0
+  const [quatityProducts, setQuantityProducts] = useState(0);    
 	const updateLsCart = () => {
         localStorage.setItem("cartContainer", JSON.stringify(allProducts))
     }
@@ -60,6 +69,7 @@ const Tops = ( ) => {
         closeToggle={closeToggle}        
         handleClick={handleClick}
         setCountTimes={setCountTimes}
+        isRefreshPage={isRefreshPage}
         
         
         > <StyledButton ></StyledButton></Cart>

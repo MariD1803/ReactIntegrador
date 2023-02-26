@@ -45,12 +45,13 @@ export const Cart = ({
   updateLsCart,
   children, setActive,
   active, 
-  setCountTimes
+  setCountTimes, 
+  isRefreshPage
 }) => {
 
   
-  let countCon = localStorage.getItem('countContainer')
-  let totalCon = JSON.parse(localStorage.getItem('totalContainer'))
+  let countCon = localStorage.getItem('countContainer') || 0
+  let totalCon = JSON.parse(localStorage.getItem('totalContainer')) || 0
   const onCleanCart = () => {
     setAllProducts([]);
     setTotal(0);
@@ -117,7 +118,7 @@ export const Cart = ({
         <div>
           <div onClick={() =>setActive(!active)}>{children}</div>
           <div className="count-products">
-            <span id="contador-productos">{countProducts}</span>
+            <span id="contador-productos">{countCon}</span>
           </div>
         </div>
 
@@ -196,7 +197,7 @@ export const Cart = ({
 
               <div className="cart-total">
                 <h3>Total:</h3>
-                <span className="total-pagar">${total}</span>
+                <span className="total-pagar">${totalCon}</span>
               </div>
 
               <button className="btn-clear-all" onClick={onCleanCart}>
