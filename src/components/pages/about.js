@@ -99,9 +99,6 @@ const StyledDivHeight = styled.div`
     height: 1800px;
   }
   @media (max-width: 768px) {
-    height: 1400px;
-  }
-  @media (max-width: 480px) {
     height: 1800px;
   }
 `;
