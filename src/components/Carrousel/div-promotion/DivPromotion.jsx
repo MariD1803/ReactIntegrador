@@ -18,6 +18,10 @@ const StyledPromotionMove = styled.div `
     display: flex;
     width: 400%;
     height: 100%;
+
+    @media (max-width: 480px) {
+        width: 600%;
+    }
     
 `
 const DivPromotion = ( props) => {
