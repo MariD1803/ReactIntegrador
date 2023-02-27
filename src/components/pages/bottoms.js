@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import DivContainerProducts from "../Productos/DivContainerProducts"
-import BottomsContainer from "../Productos/Bottoms/BottomsContainer"
+import ProductContainer from "../Productos/ProductsContainer"
 import "../Productos/Productos.css"
 import  Cart from "../Cart/Cart"
 import styled from "styled-components"
 import Footer from "../Footer/Footer"
+import { productDataBottoms } from "../Productos/Bottoms/data";
+
 
 const StyledButton = styled.button`
   width: 80px;
@@ -18,32 +20,56 @@ const StyledButton = styled.button`
   }
 `;
 
+const ITEMS_PER_PAGE = 6;
+
 
 const Bottoms = ( ) => {
-  localStorage.setItem("fromUrl", window.location)
-  const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
+
+  const [datosFromData, setdatosFromData] = useState(productDataBottoms);
+  const [items, setItems] = useState([...productDataBottoms].splice(0, ITEMS_PER_PAGE ))
+  const [currentPage, setCurrentPage] = useState(0);
+
+  
+  const nextHandler = () => {
+    const totalElementos = datosFromData.length;
+    const nextPage = currentPage + 1;
+    const firstIndex = nextPage * ITEMS_PER_PAGE
+    if (firstIndex >= totalElementos) return;
+    setItems([...datosFromData].splice(firstIndex, ITEMS_PER_PAGE ))
+    setCurrentPage(nextPage)
+  }
+  const prevHandler = () => {
+    const prevPage = currentPage - 1
+    if (prevPage < 0) return; 
+    const firstIndex = prevPage * ITEMS_PER_PAGE
+    setItems([...datosFromData].splice(firstIndex, ITEMS_PER_PAGE ))
+    setCurrentPage(prevPage)
+  }
+
+  const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer")) || []);
   const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
   const [countProducts, setCountProducts] = useState(JSON.parse(localStorage.getItem("countContainer"))|| 0);
   const count = 0
   const [quatityProducts, setQuantityProducts] = useState(0);    
-const updateLsCart = () => {
-      localStorage.setItem("cartContainer", JSON.stringify(allProducts))
-  }
+	const updateLsCart = () => {
+        localStorage.setItem("cartContainer", JSON.stringify(allProducts))
+    }
 
-  const [countTimes, setCountTimes] = useState(0);
+    const [countTimes, setCountTimes] = useState(0);
 
-  function handleClick() {
-    setCountTimes(countTimes + 1);
-  }  
-const [active, setActive] = useState(false);
+    function handleClick() {
+      setCountTimes(countTimes + 1);
+    }  
+  const [active, setActive] = useState(false);
 
 
-const closeToggle = () =>  setActive(false);
+  const closeToggle = () =>  setActive(false);
     
     return (
 
-        <>
         
+        
+        <>
         <Cart 
         setAllProducts={setAllProducts}
         total={total}
@@ -63,11 +89,12 @@ const closeToggle = () =>  setActive(false);
         
         
         > <StyledButton ></StyledButton></Cart>
-        <div className="div-principal">
+
+        <div className="div-principal" onClick={closeToggle}>
             
             <DivContainerProducts section="Bottoms">
 
-            <BottomsContainer 
+            <ProductContainer 
             allProducts={allProducts}
             setAllProducts={setAllProducts}
             total={total}
@@ -79,15 +106,20 @@ const closeToggle = () =>  setActive(false);
             setQuantityProducts={setQuantityProducts}
             updateLsCart={updateLsCart}
             handleClick={handleClick}
-            countTimes={countTimes}></BottomsContainer>
+            countTimes={countTimes}
+            prevHandler={prevHandler}
+            nextHandler={nextHandler}
+            currentPage={currentPage}
+            productData={items}
+            ></ProductContainer>
 
             </DivContainerProducts>
+            <Footer></Footer>
         </div>
-        <Footer></Footer>
+        
         </>
         
     )
 }
 
 export default Bottoms
-

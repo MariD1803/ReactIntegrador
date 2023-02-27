@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import DivContainerProducts from "../Productos/DivContainerProducts"
-import TopsContainer from "../Productos/Tops/TopsContainer"
+import ProductContainer from "../Productos/ProductsContainer"
 import "../Productos/Productos.css"
 import  Cart from "../Cart/Cart"
 import styled from "styled-components"
 import Footer from "../Footer/Footer"
+import { productDataTops } from "../Productos/Tops/data";
 
 
 const StyledButton = styled.button`
@@ -19,15 +20,31 @@ const StyledButton = styled.button`
   }
 `;
 
-let isRefreshPage = false
+const ITEMS_PER_PAGE = 6;
+
 
 const Tops = ( ) => {
-  if (localStorage.getItem("fromUrl") === window.location.href){
-    isRefreshPage = true
-  } else {
-    localStorage.setItem("fromUrl", window.location.href)
-  }
 
+  const [datosFromData, setdatosFromData] = useState(productDataTops);
+  const [items, setItems] = useState([...productDataTops].splice(0, ITEMS_PER_PAGE ))
+  const [currentPage, setCurrentPage] = useState(0);
+
+  
+  const nextHandler = () => {
+    const totalElementos = datosFromData.length;
+    const nextPage = currentPage + 1;
+    const firstIndex = nextPage * ITEMS_PER_PAGE
+    if (firstIndex >= totalElementos) return;
+    setItems([...datosFromData].splice(firstIndex, ITEMS_PER_PAGE ))
+    setCurrentPage(nextPage)
+  }
+  const prevHandler = () => {
+    const prevPage = currentPage - 1
+    if (prevPage < 0) return; 
+    const firstIndex = prevPage * ITEMS_PER_PAGE
+    setItems([...datosFromData].splice(firstIndex, ITEMS_PER_PAGE ))
+    setCurrentPage(prevPage)
+  }
 
   const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer")) || []);
   const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
@@ -69,7 +86,6 @@ const Tops = ( ) => {
         closeToggle={closeToggle}        
         handleClick={handleClick}
         setCountTimes={setCountTimes}
-        isRefreshPage={isRefreshPage}
         
         
         > <StyledButton ></StyledButton></Cart>
@@ -78,7 +94,7 @@ const Tops = ( ) => {
             
             <DivContainerProducts section="Tops">
 
-            <TopsContainer 
+            <ProductContainer 
             allProducts={allProducts}
             setAllProducts={setAllProducts}
             total={total}
@@ -91,7 +107,11 @@ const Tops = ( ) => {
             updateLsCart={updateLsCart}
             handleClick={handleClick}
             countTimes={countTimes}
-            ></TopsContainer>
+            prevHandler={prevHandler}
+            nextHandler={nextHandler}
+            currentPage={currentPage}
+            productData={items}
+            ></ProductContainer>
 
             </DivContainerProducts>
             <Footer></Footer>

@@ -1,15 +1,10 @@
-import React from "react"
-import { productDataBottoms } from "./data";
-import Productos from "../Productos";
-import { IconCart } from "../../Navbar/iconos/Iconos";
+import React, { useState } from 'react'
+import { IconCart } from '../Navbar/iconos/Iconos';
+import Productos from '../Productos/Productos';
 
-
-
-const BottomsContainer = ( 
-    {allProducts,
-        setAllProducts}) => {
-            
-             
+const Wraper = (props) => 
+    {
+        const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer")) || []);    
         let countCon = localStorage.getItem('countContainer') || 0
         let totalCon = JSON.parse(localStorage.getItem('totalContainer')) || 0
     
@@ -51,23 +46,20 @@ const BottomsContainer = (
             item.selectedTalla = numero
             
         }
-    
-
-
-    const productos = productDataBottoms.map((item) => (
-        
-          <Productos key={item.id}
-          bc={item.color}
-          name={item.name}
-          url={item.imageurl}
-          price={item.price}
-          pricebefore={item.pricebefore}
-          description={item.description}
-          IsTalla={item.IsTalla}
-          itemcolorbc={item.colorbc}
-          IsSale={item.IsSale}
-          signo={item.signo}
-        > 
+    const productos = props.items.map((item, index) => (
+        <li key={item.id+1}>
+            <Productos key={item.id}
+            bc={item.color}
+            name={item.name}
+            url={item.imageurl}
+            price={item.price}
+            pricebefore={item.pricebefore}
+            description={item.description}
+            IsTalla={item.IsTalla}
+            itemcolorbc={item.colorbc}
+            IsSale={item.IsSale}
+            signo={item.signo}
+            > 
             <div className="p-buttons">                                
                 {
                 item.tallas.map((numero) => {                
@@ -77,15 +69,27 @@ const BottomsContainer = (
 
             <button className="cart-button"  onClick={() => onAddProduct(item)} ><IconCart className="cartProductP" ></IconCart></button>
         </Productos>
-    ));
-    return (
-        <div className="TopsContainer">
+      </li>
+  ));
+
+    
+
+  return (
+    <div className="TopsContainer">
+        <h1>Página: {props.currentPage}</h1>
+
+        <button onClick={props.prevHandler}>Prev</button>
+        <button onClick={props.nextHandler}>Next</button>
+
+        <ul>
            
+            
             {productos}
             
-        </div>
-        
-    )
+        </ul>
+
+    </div>
+  )
 }
 
-export default BottomsContainer
+export default Wraper
