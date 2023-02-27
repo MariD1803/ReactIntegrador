@@ -234,7 +234,7 @@ h2 {
     z-index: 999;
     width: 100vw;
     height: 367vh;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.90);
     animation: opacity-html 0.2s linear;
   
 }
@@ -753,14 +753,15 @@ ul::-webkit-scrollbar-thumb {
     height: 230vh;
   }
 
+  
   html {
-    width: 102%;;
+    width: 100%;;
   }
   
 
 
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .imagen-nosotros {
   
     background: url(./utils//images//Nosotros/nosotros1.png) center/cover no-repeat;
@@ -768,6 +769,11 @@ ul::-webkit-scrollbar-thumb {
   }
 
   .position-fixed-cart{
+    height: 300vh;
+  }
+
+  .position-aboslute-top {
+
     height: 300vh;
   }
 
@@ -787,6 +793,10 @@ ul::-webkit-scrollbar-thumb {
   .div-principal{
     margin: 19% 2% !important;
   
+  }
+  
+  html {
+    width: 102%;;
   }
 
   .button-cart-sumandsubs {
@@ -810,6 +820,10 @@ ul::-webkit-scrollbar-thumb {
 
   
   .position-fixed-cart{
+    height: 380vh;
+  }
+  .position-aboslute-top {
+
     height: 380vh;
   }
 

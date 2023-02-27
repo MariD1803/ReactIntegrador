@@ -85,7 +85,7 @@ const StyledPleft = styled.p `
     margin-bottom: 1rem;
     text-align: justify;
 
-    @media (max-width: 780px) {
+    @media (max-width: 700px) {
       width: 86vw; 
 }
     @media (max-width: 480px) {

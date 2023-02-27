@@ -25,6 +25,11 @@ const StyledSectionLeft = styled.section`
   padding: 3rem 0 0 5rem;
   align-items: flex-start;
 
+  @media (max-width: 1100px) {
+    
+  padding: 3rem 0 0 1rem;
+  width: 40%;
+  }
   @media (max-width: 767px) {
     
   padding: 2rem 0 0 3rem;
@@ -120,13 +125,21 @@ const StyledPTitulo = styled.p `
   }
 `
 const StyledDiv = styled.div `
-   
+   width: 100%;
+   display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    align-content: center;    
+    align-items: flex-start;
+
   
-    @media (max-width: 770px) {
+    @media (max-width: 740px) {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    
+    align-items: center;
     width: 48%;
 
   }
@@ -231,6 +244,9 @@ const DivHeigth = styled.div`
     height: 800px;
   @media (min-width: 2560px) {
     height: 1300px;
+  }  
+  @media (max-width: 480px) {
+    height: 1000px;
   }  
 `;
 const Contacto = () => {
