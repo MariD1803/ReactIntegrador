@@ -122,6 +122,7 @@ const StyledPTitulo = styled.p `
     @media (max-width: 780px) {
         width: 50%;
         font-size: 14px;
+        margin: 0;
   }
 `
 const StyledDiv = styled.div `

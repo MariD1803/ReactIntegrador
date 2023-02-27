@@ -17,6 +17,7 @@ import About from "../pages/about";
 import Contacto from "../pages/contacto";
 import Ingresar from "../pages/ingresar";
 import FooterDerechos from "../Footer/FooterDerechos";
+import Calzado from "../pages/calzado";
 
 const StyledP = styled.p `
   font-size: 30px;
@@ -204,6 +205,7 @@ const Rutas = () => {
             <Route  path='registro' element={<Registro />}></Route>
             <Route  path='ingresar' element={<Ingresar />}></Route>
             <Route  path='tops' element={<Tops />}></Route>
+            <Route  path='calzado' element={<Calzado />}></Route>
             <Route  path='bottoms' element={<Bottoms />}></Route>
             <Route  path='accesorios' element={<Accesorios />}></Route>
             <Route  path='bikinis' element={<Bikinis />}></Route>

@@ -5,7 +5,7 @@ import "../Productos/Productos.css"
 import  Cart from "../Cart/Cart"
 import styled from "styled-components"
 import Footer from "../Footer/Footer"
-import { productDataTops } from "../Productos/Tops/data";
+import { productDataCalzado } from "../Productos/Calzado/data";
 
 
 const StyledButton = styled.button`
@@ -24,10 +24,10 @@ const ITEMS_PER_PAGE = window.window.innerWidth >= 1400 ? 8 : 4
 
 console.log(window.innerWidth)
 
-const Tops = ( ) => {
+const Calzado = ( ) => {
 
-  const [datosFromData, setdatosFromData] = useState(productDataTops);
-  const [items, setItems] = useState([...productDataTops].splice(0, ITEMS_PER_PAGE ))
+  const [datosFromData, setdatosFromData] = useState(productDataCalzado);
+  const [items, setItems] = useState([...productDataCalzado].splice(0, ITEMS_PER_PAGE ))
   const [currentPage, setCurrentPage] = useState(0);
 
   
@@ -93,7 +93,7 @@ const Tops = ( ) => {
 
         <div className="div-principal" onClick={closeToggle}>
             
-            <DivContainerProducts section="Tops"  talla1="1" talla2="2" talla3="3" talla4="4" talla5="5">
+            <DivContainerProducts section="Calzado" talla1="36" talla2="37" talla3="38" talla4="39" talla5="40" >
 
             <ProductContainer 
             allProducts={allProducts}
@@ -123,4 +123,4 @@ const Tops = ( ) => {
     )
 }
 
-export default Tops
+export default Calzado

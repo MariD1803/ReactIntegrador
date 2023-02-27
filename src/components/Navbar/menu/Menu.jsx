@@ -299,7 +299,7 @@ const StyledMenu = (props) => {
 
           <StyledDivContainer>
             <StyledUl>
-            <StyledLink className={props.className}>SALE</StyledLink>
+            <Link to="/calzado"><StyledLink className={props.className}>CALZADO</StyledLink></Link>
             </StyledUl>
           </StyledDivContainer>
 
@@ -365,9 +365,10 @@ const StyledMenu = (props) => {
 
                   <AccordionItem>
                     <AccordionButtonStyled>
+                    <Link to="/calzado" onClick={closeToggle}> 
                       <Box as="span" flex="1" textAlign="left">
-                        SALE
-                      </Box>
+                        CALZADO
+                      </Box></Link>
                     </AccordionButtonStyled>
                     <AccordionPanel pb={4}>                      
                     </AccordionPanel>

@@ -92,7 +92,7 @@ const Vestidos = ( ) => {
 
         <div className="div-principal" onClick={closeToggle}>
             
-            <DivContainerProducts section="Vestidos">
+            <DivContainerProducts section="Vestidos"  talla1="1" talla2="2" talla3="3" talla4="4" talla5="5">
 
             <ProductContainer 
             allProducts={allProducts}

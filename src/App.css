@@ -123,6 +123,12 @@ h2 {
 .background-blue-dark {
   background-color: #020235;
 }
+.background-purple {
+  background-color: #220349;
+}
+.background-blue-electric {
+  background-color: blue;
+}
 
 .gradient-color{ 
   height:70px;

@@ -126,11 +126,11 @@ const DivContainerProducts = (props) => {
                   <AccordionIcon />
                 </StyledButton>
               <StyledAccordionPanel pb={4}>
-               <StyledButtonSize>1</StyledButtonSize>
-               <StyledButtonSize>2</StyledButtonSize>
-               <StyledButtonSize>3</StyledButtonSize>
-               <StyledButtonSize>4</StyledButtonSize>
-               <StyledButtonSize>5</StyledButtonSize>
+               <StyledButtonSize>{props.talla1}</StyledButtonSize>
+               <StyledButtonSize>{props.talla2}</StyledButtonSize>
+               <StyledButtonSize>{props.talla3}</StyledButtonSize>
+               <StyledButtonSize>{props.talla4}</StyledButtonSize>
+               <StyledButtonSize>{props.talla5}</StyledButtonSize>
               </StyledAccordionPanel>
             </AccordionItem>
             <AccordionItem>
