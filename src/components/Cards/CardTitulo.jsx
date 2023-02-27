@@ -8,7 +8,7 @@ font-size: 4vh;
 text-align: center;
 
 @media (max-width: 480px) {
-    font-size: 5vh;
+    font-size: 4vh;
 }
 `
 
@@ -19,6 +19,7 @@ const StyledDivCont = styled.div `
     padding: 1rem;
     margin: 2rem 0;    
     justify-content: center;
+    background-color: pink;
 
     @media (max-width: 480px) {
     margin: 1rem 0; 

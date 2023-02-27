@@ -13,7 +13,7 @@ const StyledP = styled.p `
   font-size: 20px;  
 
   @media (max-width: 2700px) {
-    font-size: 12px; 
+    font-size: 14px; 
   }
 
 `

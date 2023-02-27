@@ -12,15 +12,25 @@ const StyledFooterContainerItems = styled.div  `
     background-color: var(--pink);
     justify-content: space-around;
     position: absolute;
-    width: 100%;
+    width: 102%;
 
-    
+   
+    @media (max-width: 500px) {
+    flex-direction: column;
+  }
 
 
 `
 const StyledPIcons = styled.p  `
   font-size: 20px;
   margin: 0;
+
+  @media (max-width: 800px) {
+    font-size: 13px;
+  }
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
 
 `
 const StyledDivFooterRigth = styled.div  `
@@ -29,6 +39,11 @@ const StyledDivFooterRigth = styled.div  `
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+
+    @media (max-width: 500px) {
+      
+    width: 100%;
+    }
 `
 const StyledDivFooterInside = styled.div  `    
     display: flex;
@@ -36,6 +51,10 @@ const StyledDivFooterInside = styled.div  `
     justify-content: space-evenly;
     width: 40%;
     font-size: 42px;
+
+    @media (max-width: 500px) {
+    font-size: 20px;
+  }
 
 `
 const FooterDerechos = () => {

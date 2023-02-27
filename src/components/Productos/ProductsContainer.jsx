@@ -2,6 +2,7 @@ import React from "react"
 import Productos from "./Productos";
 import { IconCart } from "../Navbar/iconos/Iconos";
 import styled from "styled-components";
+import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 
 const StyledDivContainerAll = styled.div `
     display: flex;
@@ -19,11 +20,33 @@ const StyledUl = styled.ul `
     padding: 0;
     flex-wrap: wrap;
     padding: 1rem;
+    justify-content: center;
 
 
 `
 const StyledLiProducts = styled.li `
     list-style: none;
+
+
+`
+const StyledDivPagination = styled.div `
+        width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+
+
+`
+const StyledButtonPagination = styled.button `
+    border-radius: 100%;
+    border: grey solid 2px;
+    background: pink;
+    color: white;
+    font-weight: 800;
+
 
 
 `
@@ -105,23 +128,26 @@ const ProductContainer = ({allProducts,
     ));
     return (
         <StyledDivContainerAll>
-        <div className="TopsContainer">
-           
-
-           <StyledUl> 
-            {productos}</StyledUl>
-
+            <div className="TopsContainer">
             
 
-            
+            <StyledUl> 
+                {productos}</StyledUl>
 
+                
+
+                
+
+                
+            </div>
             
-        </div>
-        <h1>Página: {currentPage}</h1>
-           
-        <button onClick={prevHandler}>Anterior</button>
-         <button onClick={nextHandler}>Siguiente</button>
-         </StyledDivContainerAll>
+            
+            <StyledDivPagination>
+                <StyledButtonPagination onClick={prevHandler}><GrFormPrevious className="button-pagination"/></StyledButtonPagination>
+                <h5>Página: {currentPage}</h5>
+                <StyledButtonPagination onClick={nextHandler}><GrFormNext className="button-pagination"/></StyledButtonPagination>
+            </StyledDivPagination>
+        </StyledDivContainerAll>
         
         
     )

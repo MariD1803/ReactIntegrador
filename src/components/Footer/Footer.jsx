@@ -16,6 +16,10 @@ const DivStyledFooter = styled.div  `
     margin-bottom: 3rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
 
+    @media (max-width: 800px) {
+      font-size: 24px;
+    }
+
 `
 const DivStyledFooterContainer = styled.div  `
     width: 90%;
@@ -30,10 +34,14 @@ const DivStyledFooterContainer = styled.div  `
     flex-direction: row;
     font-size: 60px;
 
+    @media (max-width: 800px) {
+      font-size: 50px;
+    }
+
 `
 
 const StyledContainerIcons = styled.div  `
-  width: 30%;
+  width: 31%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,6 +50,12 @@ const StyledPIcons = styled.p  `
   font-size: 20px;
   margin: 0;
 
+  @media (max-width: 800px) {
+    font-size: 13px;
+  }
+  @media (max-width: 500px) {
+    font-size: 9px;
+  }
 `
 
 

@@ -1,13 +1,3 @@
-
-
-@font-face {
-  font-family: "cursiva";
-  src: url(../src/utils/assets/fonts/OleoScriptSwashCaps-Bold.ttf);    
-}
-
-
-
-
 :root {
   --xlarge:45px;
   --large: 36px;
@@ -30,9 +20,14 @@
 
 }
 
+
 html {
-  overflow-x: hidden;
+  font-family: 'Roboto';
 }
+
+
+
+
 
 
 html::-webkit-scrollbar {
@@ -72,7 +67,9 @@ h2 {
   opacity: 1 !important;
 }
   
-
+.height-page {
+  height: 1600px;
+}
   
 
 .background-red {
@@ -163,6 +160,8 @@ h2 {
 }
 
 
+
+
 .position-relative {
   position: relative;
   align-items: center;
@@ -234,7 +233,7 @@ h2 {
     right: 0;
     z-index: 999;
     width: 100vw;
-    height: 500vh;
+    height: 367vh;
     background-color: rgba(0, 0, 0, 0.75);
     animation: opacity-html 0.2s linear;
   
@@ -278,6 +277,11 @@ h2 {
 
   TODA ESTA PARTE ES PARA EL CARRITO
 --------------------------------------------------------------------------------------------------- */
+
+.button-pagination {
+  color: white;
+  font-weight: 800;
+}
 
 .cart-button {
   position: absolute;
@@ -745,6 +749,14 @@ ul::-webkit-scrollbar-thumb {
     width: 100%;
     height: 600px;
   }
+  .position-fixed-cart{
+    height: 230vh;
+  }
+
+  html {
+    width: 102%;;
+  }
+  
 
 
 }
@@ -754,6 +766,11 @@ ul::-webkit-scrollbar-thumb {
     background: url(./utils//images//Nosotros/nosotros1.png) center/cover no-repeat;
     
   }
+
+  .position-fixed-cart{
+    height: 300vh;
+  }
+
 
 }
 @media (max-width: 480px) {
@@ -789,6 +806,11 @@ ul::-webkit-scrollbar-thumb {
 
   .font-style2{
     font-size: 33px; 
+  }
+
+  
+  .position-fixed-cart{
+    height: 380vh;
   }
 
   .card {

@@ -229,6 +229,9 @@ const StyledButton = styled.button`
 
 const DivHeigth = styled.div`
     height: 800px;
+  @media (min-width: 2560px) {
+    height: 1300px;
+  }  
 `;
 const Contacto = () => {
 

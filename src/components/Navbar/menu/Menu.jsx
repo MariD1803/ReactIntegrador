@@ -178,7 +178,7 @@ const StyledUl = styled.ul`
     padding: 2rem;
     width: 42%;
     height: 100vh;
-    top: 3px;
+    top: 2px;
     background-color: white;
     color: black;
     display: flex;

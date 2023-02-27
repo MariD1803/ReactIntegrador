@@ -69,12 +69,12 @@ const StyledDivAbsolute = styled.button`
   top: 104px;
   }
   @media (max-width: 780px) {
-    top: 35%;
+    top: 40%;
     width: 100vw;
     height: 170%;
   }
-  @media (max-width: 480px) {
-  top: 46%;
+  @media (max-width: 425px) {
+  top: 55%;
   width: 100vw;
   }
 
@@ -92,8 +92,15 @@ const StyledButton = styled.button`
     margin: 0;
   }
 `;
-const StyledDivHeight = styled.button`
-    height: 1200px;
+const StyledDivHeight = styled.div`
+    height: 1300px;
+
+  @media (min-width: 2500px) {
+    height: 1800px;
+  }
+  @media (max-width: 768px) {
+    height: 1400px;
+  }
 `;
 
 
@@ -147,7 +154,7 @@ const closeToggle = () =>  setActive(false);
 
 
   return (
-    <div>
+    <StyledDivHeight>
       <Cart 
         setAllProducts={setAllProducts}
         total={total}
@@ -197,7 +204,7 @@ const closeToggle = () =>  setActive(false);
       </StyledContainer>
 
       
-    </div>
+    </StyledDivHeight>
   );
 };
 

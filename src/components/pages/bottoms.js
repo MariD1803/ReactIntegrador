@@ -20,8 +20,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const ITEMS_PER_PAGE = 6;
-
+const ITEMS_PER_PAGE = window.window.innerWidth >= 1400 ? 8 : 4
 
 const Bottoms = ( ) => {
 
@@ -109,7 +108,7 @@ const Bottoms = ( ) => {
             countTimes={countTimes}
             prevHandler={prevHandler}
             nextHandler={nextHandler}
-            currentPage={currentPage}
+            currentPage={currentPage + 1}
             productData={items}
             ></ProductContainer>
 

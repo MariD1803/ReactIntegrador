@@ -20,7 +20,7 @@ const StyledDivAnimatedCards = styled.div`
 
 
 const StyledLink = styled(Link)`
-  font-size: 50px;
+  font-size: 45px;
     color: white !important;
     position: absolute;
     bottom: 18px;
@@ -29,6 +29,13 @@ const StyledLink = styled(Link)`
     text-align: center;
     font-weight: 600;
     cursor: pointer;
+
+    @media (max-width: 800px) {
+      font-size: 30px;
+    }
+    @media (max-width: 480px) {
+      font-size: 50px;
+    }
 
 `
 
@@ -129,14 +136,14 @@ const StyledDivRigthImage = styled.div `
     text-orientation: mixed;
 
     @media (max-width: 1100px) {
-      font-size: 50px;
+      font-size: 45px;
       bottom: 3%;
   }
     @media (max-width: 780px) {
       font-size: 40px;
   }
   @media (max-width: 480px) {
-    bottom: 3px !important;
+    bottom: 19px !important;
     right: 3px;
     font-size: 20px
   }
