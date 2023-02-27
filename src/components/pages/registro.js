@@ -137,14 +137,16 @@ const StyledDivLinea = styled.div `
     }
 `
 
-const DivPositionAbsolute = styled.button`
-    position: absolute;
-    top: 100%;
-    width: 101%;
-    padding: 0;
-    border: none;
-`;
+const StyledDivheight = styled.div `
+    height: 800px;
 
+    @media (max-width: 780px) {
+      height: 1100px;
+    }
+    @media (max-width: 480px) {
+      height: 1300px;
+    }
+`
 
 
 const Registro = ( ) => {
@@ -170,7 +172,7 @@ const closeToggle = () =>  setActive(false);
  
         
     return (
-        <div>
+        <StyledDivheight>
 
         <Cart 
         setAllProducts={setAllProducts}
@@ -213,8 +215,8 @@ const closeToggle = () =>  setActive(false);
                 <FormularioRegistro></FormularioRegistro>
             </StyledSectionRight></StyledDivContainerFormulario>
 
-            <DivPositionAbsolute><FooterDerechos></FooterDerechos></DivPositionAbsolute>
-        </div>
+            
+        </StyledDivheight>
         
     )
 }

@@ -56,6 +56,9 @@ const StyledDivCenter = styled.div `
     padding: 3rem 0 0 0;
   }
 `
+const StyledDivheight = styled.div `
+    height: 800px;
+`
 
 const Ingresar = ( ) => {
   const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
@@ -80,7 +83,7 @@ const closeToggle = () =>  setActive(false);
  
         
     return (
-        <div>
+        <StyledDivheight>
 
         <Cart 
         setAllProducts={setAllProducts}
@@ -111,8 +114,8 @@ const closeToggle = () =>  setActive(false);
               </StyledDivContainerTitulo>
             </StyledDivCenter>
             <FormularioIngreso/>
-            <FooterDerechos></FooterDerechos>
-        </div>
+            
+        </StyledDivheight>
         
     )
 }

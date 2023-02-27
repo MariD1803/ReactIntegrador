@@ -16,6 +16,7 @@ import styled from "styled-components";
 import About from "../pages/about";
 import Contacto from "../pages/contacto";
 import Ingresar from "../pages/ingresar";
+import FooterDerechos from "../Footer/FooterDerechos";
 
 const StyledP = styled.p `
   font-size: 30px;
@@ -211,6 +212,7 @@ const Rutas = () => {
             <Route  path='contacto' element={<Contacto />}></Route>
         </Routes>
       </Router>
+      <FooterDerechos></FooterDerechos>
     </div>
   );
 };

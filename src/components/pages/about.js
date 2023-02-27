@@ -5,12 +5,12 @@ import Cart from "../Cart/Cart";
 import PreguntasFrecuentes from "../About/PreguntasFrecuentes/PreguntasFrecuentes";
 import TerminosYCondiciones from "../About/Terminos/TerminosYCondiciones";
 import CambiosODevoluciones from "../About/Cambios/CambiosODevoluciones";
-import FooterDerechos from "../Footer/FooterDerechos";
 
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 1200px;
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -32,6 +32,7 @@ const StyledSectionLeft = styled.section`
 
 const StyledUl = styled.ul`
   width: 100%;
+  height: 100%;
   padding: 3rem 0 3rem 1rem;
   margin: 0;
   display: flex;
@@ -91,12 +92,8 @@ const StyledButton = styled.button`
     margin: 0;
   }
 `;
-const DivPositionAbsolute = styled.button`
-    position: absolute;
-    top: 126%;
-    width: 101%;
-    padding: 0;
-    border: none;
+const StyledDivHeight = styled.button`
+    height: 1200px;
 `;
 
 
@@ -150,7 +147,6 @@ const closeToggle = () =>  setActive(false);
 
 
   return (
-    <>
     <div>
       <Cart 
         setAllProducts={setAllProducts}
@@ -170,7 +166,9 @@ const closeToggle = () =>  setActive(false);
         setCountTimes={setCountTimes}
         
         
-        > <StyledButton ></StyledButton></Cart>
+        > 
+        <StyledButton ></StyledButton>
+        </Cart>
       <StyledContainer>
         <StyledSectionLeft>
           <StyledUl>
@@ -200,7 +198,6 @@ const closeToggle = () =>  setActive(false);
 
       
     </div>
-    <DivPositionAbsolute><FooterDerechos></FooterDerechos></DivPositionAbsolute></>
   );
 };
 

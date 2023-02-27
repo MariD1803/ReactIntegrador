@@ -81,7 +81,7 @@ export const productDataVestidos = [
       imageurl:
         "https://http2.mlstatic.com/D_NQ_NP_945563-MLA53443832771_012023-W.webp",
       name: "Vestido largo tipo cloque",
-      price: "$38.99",
+      price: "7500",
       description: "vestidos",
       color: 'brown',
       tallas: [ 1,2,3,4,5],

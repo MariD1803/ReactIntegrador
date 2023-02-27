@@ -140,7 +140,7 @@ const StyledDiv = styled.div `
 const StyledForm = styled.form  `
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height:  100%;
   width: 100%;
   align-items: center;
   padding: 3rem 1rem 0 1rem;
@@ -227,12 +227,8 @@ const StyledButton = styled.button`
   }
 `;
 
-const DivPositionAbsolute = styled.button`
-    position: absolute;
-    top: 110%;
-    width: 101%;
-    padding: 0;
-    border: none;
+const DivHeigth = styled.div`
+    height: 800px;
 `;
 const Contacto = () => {
 
@@ -344,8 +340,7 @@ const RecargarPagina = () => {
 
   
   return (
-    <>
-    <div>
+    <DivHeigth>
         <Cart 
         setAllProducts={setAllProducts}
         total={total}
@@ -439,9 +434,9 @@ const RecargarPagina = () => {
          
         </StyledContainer>
 
-    </div>
+    </DivHeigth>
 
-      <DivPositionAbsolute><FooterDerechos></FooterDerechos></DivPositionAbsolute> </>
+    
   )
 }
 

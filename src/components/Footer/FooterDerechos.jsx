@@ -11,6 +11,10 @@ const StyledFooterContainerItems = styled.div  `
     flex-direction: row;
     background-color: var(--pink);
     justify-content: space-around;
+    position: absolute;
+    width: 100%;
+
+    
 
 
 `

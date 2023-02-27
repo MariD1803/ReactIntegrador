@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { BsCreditCard2BackFill } from "react-icons/bs";
 import { FcMoneyTransfer, FcTwoSmartphones } from "react-icons/fc";
-import FooterDerechos from './FooterDerechos';
 
 
 const DivStyledFooter = styled.div  `
@@ -62,7 +61,6 @@ const Footer = () => {
 
       </DivStyledFooter>
 
-      <FooterDerechos></FooterDerechos>
 
         
     </div>
