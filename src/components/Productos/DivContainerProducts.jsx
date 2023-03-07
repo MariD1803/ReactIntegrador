@@ -111,6 +111,10 @@ const StyledAccordionPanel = styled(AccordionPanel)`
 
 
 const DivContainerProducts = (props) => {
+
+
+
+  
   return (
     <StyledContainer>
       <StyledSectionLeft>
@@ -126,11 +130,10 @@ const DivContainerProducts = (props) => {
                   <AccordionIcon />
                 </StyledButton>
               <StyledAccordionPanel pb={4}>
-               <StyledButtonSize>{props.talla1}</StyledButtonSize>
-               <StyledButtonSize>{props.talla2}</StyledButtonSize>
-               <StyledButtonSize>{props.talla3}</StyledButtonSize>
-               <StyledButtonSize>{props.talla4}</StyledButtonSize>
-               <StyledButtonSize>{props.talla5}</StyledButtonSize>
+              {
+                props.tallas.map((talla) => {                
+                return <StyledButtonSize onClick={()=> props.filterTalla(talla)} key={talla}  >{talla}</StyledButtonSize> || []}
+                )}
               </StyledAccordionPanel>
             </AccordionItem>
             <AccordionItem>
@@ -164,7 +167,9 @@ const DivContainerProducts = (props) => {
           </Accordion>
         </StyledUl>
       </StyledSectionLeft>
-      <StyledSectionRight>{props.children}</StyledSectionRight>
+      <StyledSectionRight>
+        
+        {props.children}</StyledSectionRight>
     </StyledContainer>
   );
 };

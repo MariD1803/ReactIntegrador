@@ -127,6 +127,7 @@ const ProductContainer = ({allProducts,
         </StyledLiProducts>
     ));
     return (
+        
         <StyledDivContainerAll>
             <div className="TopsContainer">
             

@@ -22,28 +22,49 @@ const StyledButton = styled.button`
 
 const ITEMS_PER_PAGE = window.window.innerWidth >= 1400 ? 8 : 4
 
-console.log(window.innerWidth)
+
 
 const Calzado = ( ) => {
 
-  const [datosFromData, setdatosFromData] = useState(productDataCalzado);
   const [items, setItems] = useState([...productDataCalzado].splice(0, ITEMS_PER_PAGE ))
+  const [products, setProducts] = useState(productDataCalzado)
   const [currentPage, setCurrentPage] = useState(0);
 
   
+  const tallas = [36,37,38,39,40] 
+
+  /* Comentario para los profes, esto realmente no logré que funcione del todo bien, por la páginación. Tengo entendido se debe hacer con la parte de backend  */
+
+  const filterTalla = (numero) => {
+    console.log(numero)
+    let productosFiltrados = []
+    for (let product of products){
+      for (let tallaProducto of product.tallas){
+        if (tallaProducto === numero){
+          productosFiltrados.push(product)
+          break
+        }
+      }
+    }
+    setItems([...productosFiltrados].splice(0, ITEMS_PER_PAGE ))
+    localStorage.setItem("productsContainerTops", JSON.stringify(productosFiltrados))
+    
+  }
+
+
   const nextHandler = () => {
-    const totalElementos = datosFromData.length;
+    const totalElementos = products.length;
     const nextPage = currentPage + 1;
     const firstIndex = nextPage * ITEMS_PER_PAGE
     if (firstIndex >= totalElementos) return;
-    setItems([...datosFromData].splice(firstIndex, ITEMS_PER_PAGE ))
+    setItems([...products].splice(firstIndex, ITEMS_PER_PAGE ))
     setCurrentPage(nextPage)
   }
   const prevHandler = () => {
     const prevPage = currentPage - 1
     if (prevPage < 0) return; 
     const firstIndex = prevPage * ITEMS_PER_PAGE
-    setItems([...datosFromData].splice(firstIndex, ITEMS_PER_PAGE ))
+    setItems([...products].splice(firstIndex, ITEMS_PER_PAGE ))
     setCurrentPage(prevPage)
   }
 
@@ -93,7 +114,7 @@ const Calzado = ( ) => {
 
         <div className="div-principal" onClick={closeToggle}>
             
-            <DivContainerProducts section="Calzado" talla1="36" talla2="37" talla3="38" talla4="39" talla5="40" >
+          <DivContainerProducts section="Calzado"  tallas={tallas} filterTalla={filterTalla}>
 
             <ProductContainer 
             allProducts={allProducts}
