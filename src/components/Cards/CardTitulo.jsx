@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const StyledH2 = styled.h2 `
 font-family: 'Roboto';
-font-size: 4vh;
+font-size: 5vh;
 text-align: center;
 
 @media (max-width: 480px) {

@@ -111,6 +111,7 @@ const StyledDivLeftImage = styled.div `
     font-size: 60px;
     font-style: italic;
     color: white;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 
     @media (max-width: 1100px) {
       font-size: 50px;
@@ -134,6 +135,7 @@ const StyledDivRigthImage = styled.div `
     right: 24px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 
     @media (max-width: 1100px) {
       font-size: 45px;

@@ -20,13 +20,9 @@ const StyledH2PromotionContainer = styled.h2 `
     align-items: center;
     display: flex;
     justify-content: center;
-
-    @media (max-width: 2700px) {
-    font-size: 1.3vw; 
-    }
+    margin: 0 10px;
     @media (max-width: 480px) {
-    font-size: 2.1vw;
-    margin-top: 0.5rem;
+    font-size: 1.8vw;
     }
 
 

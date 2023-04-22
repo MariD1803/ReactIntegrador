@@ -70,6 +70,14 @@ h2 {
 .height-page {
   height: 1600px;
 }
+
+.button-desactive {
+  cursor: auto;
+}
+.button-active {
+  cursor: pointer;
+
+}
   
 
 .background-red {
@@ -88,7 +96,7 @@ h2 {
   background-color: rgb(85, 136, 85);
 }
 .background-grey {
-  background-color: grey;
+  background-color: grey !important;
 }
 .background-yellow {
   background-color: yellow;
@@ -729,6 +737,15 @@ ul::-webkit-scrollbar-thumb {
 
 
 }
+
+@media (max-width: 1400px) {
+  
+  .carouselheight {
+    width: 100%;
+    height: 800px;
+  }
+}
+
 @media (max-width: 1100px) {
  
 
@@ -751,10 +768,6 @@ ul::-webkit-scrollbar-thumb {
     font-size: 18px;
   }
 
-  .carouselheight {
-    width: 100%;
-    height: 600px;
-  }
   .position-fixed-cart{
     height: 230vh;
   }

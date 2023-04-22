@@ -30,6 +30,16 @@ const Bottoms = ( ) => {
 
   
   const tallas = [1,2,3,4,5] 
+  
+  const color = products.map(colores => colores =  colores.color)
+
+  let colores = color.filter(function (
+    elemento,
+    indice,
+    arreglo
+  ) {
+    return arreglo.indexOf(elemento) === indice;
+  });
 
   /* Comentario para los profes, esto realmente no logré que funcione del todo bien, por la páginación. Tengo entendido se debe hacer con la parte de backend  */
 
@@ -50,21 +60,50 @@ const Bottoms = ( ) => {
   }
 
 
+ 
+  const filterColor = (color) => {
+    let productosFiltrados = []
+    for (let product of products){
+      
+        if (product.color === color){
+          console.log(productosFiltrados)
+          productosFiltrados.push(product)
+        
+        
+      }
+    }
+    setItems([...productosFiltrados].splice(0, ITEMS_PER_PAGE ))
+    
+    console.log(productosFiltrados)
+    localStorage.setItem("productsContainerTops", JSON.stringify(productosFiltrados))
+    
+  }
   const nextHandler = () => {
+    
+    document.querySelector('.boton-next').style.cursor = "pointer"
+    document.querySelector('.boton-next').style.backgroundColor = "pink"
     const totalElementos = products.length;
     const nextPage = currentPage + 1;
     const firstIndex = nextPage * ITEMS_PER_PAGE
-    if (firstIndex >= totalElementos) return;
+    if (firstIndex >= totalElementos) {
+      document.querySelector('.boton-next').style.backgroundColor = "transparent"
+      document.querySelector('.boton-next').style.cursor = "auto"
+      return 
+    };
     setItems([...products].splice(firstIndex, ITEMS_PER_PAGE ))
     setCurrentPage(nextPage)
   }
   const prevHandler = () => {
+    
+    document.querySelector('.boton-next').style.backgroundColor = "pink"
+    document.querySelector('.boton-next').style.cursor = "pointer"
     const prevPage = currentPage - 1
     if (prevPage < 0) return; 
     const firstIndex = prevPage * ITEMS_PER_PAGE
     setItems([...products].splice(firstIndex, ITEMS_PER_PAGE ))
     setCurrentPage(prevPage)
   }
+
 
   const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer")) || []);
   const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
@@ -112,7 +151,7 @@ const Bottoms = ( ) => {
 
         <div className="div-principal" onClick={closeToggle}>
             
-        <DivContainerProducts section="Bottoms"  tallas={tallas} filterTalla={filterTalla}>
+        <DivContainerProducts section="Bottoms"  tallas={tallas} filterTalla={filterTalla} colores={colores} filterColor={filterColor}>
 
             <ProductContainer 
             allProducts={allProducts}

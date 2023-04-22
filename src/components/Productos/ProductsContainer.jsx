@@ -54,7 +54,7 @@ const StyledButtonPagination = styled.button `
 
 
 const ProductContainer = ({allProducts,
-	setAllProducts, currentPage, prevHandler, nextHandler,productData}) => {
+	setAllProducts, currentPage, prevHandler, nextHandler,productData, products}) => {
         
           
     let countCon = localStorage.getItem('countContainer') || 0
@@ -99,6 +99,8 @@ const ProductContainer = ({allProducts,
         item.selectedTalla = numero
         
     }
+
+    
 
 
     const productos = productData.map((item) => (
@@ -146,7 +148,7 @@ const ProductContainer = ({allProducts,
             <StyledDivPagination>
                 <StyledButtonPagination onClick={prevHandler}><GrFormPrevious className="button-pagination"/></StyledButtonPagination>
                 <h5>Página: {currentPage}</h5>
-                <StyledButtonPagination onClick={nextHandler}><GrFormNext className="button-pagination"/></StyledButtonPagination>
+                <StyledButtonPagination onClick={nextHandler} className="boton-next" ><GrFormNext className="button-pagination"  /></StyledButtonPagination>
             </StyledDivPagination>
         </StyledDivContainerAll>
         

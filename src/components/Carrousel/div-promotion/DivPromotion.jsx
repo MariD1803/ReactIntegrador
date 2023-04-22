@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPromotion = styled.div `
-    height: 42px;
+    height: 30px;
     overflow: hidden; 
     width: 100%;
 

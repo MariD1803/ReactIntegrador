@@ -144,22 +144,10 @@ const DivContainerProducts = (props) => {
                   <AccordionIcon />
                 </StyledButton>
               <StyledAccordionPanel pb={4}>
-              <StyledButtonColor  className={"background-black"} >  </StyledButtonColor>
-              <StyledButtonColor  className={"background-red"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-white"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-jean"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-nute"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-green"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-grey"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-red-wine"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-pink"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-yellow"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-brown"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-blue"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-orange"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-fucsia"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-blue-sky"}>  </StyledButtonColor>
-              <StyledButtonColor  className={"background-blue-dark"}>  </StyledButtonColor>
+              {
+                props.colores.map((color) => {                
+                return <StyledButtonColor  className={`background-${color}`} onClick={()=> props.filterColor(color)} key={color}  ></StyledButtonColor> || []}
+                )}
               </StyledAccordionPanel>
             </AccordionItem>
 
