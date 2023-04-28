@@ -136,16 +136,18 @@ export const Cart = ({
 
   const onDeleteProduct = (product) => {
     const results = allProducts.filter((item) => item.id !== product.id); // Todos los productos distintos del que estoy clickeando
-    alert("Desea eliminar el producto?");
-    setTotal(total - product.price * product.quantity);
-    setCountProducts(countProducts - product.quantity);
-    delete product.selectedTalla;
-    setAllProducts(results)
-    let resultsCount = countCon - product.quantity
-    let resultsTotal = totalCon - (product.price * product.quantity)
-    localStorage.setItem("cartContainer", JSON.stringify(results))
-    localStorage.setItem("countContainer", JSON.stringify(resultsCount))
-    localStorage.setItem("totalContainer", JSON.stringify(resultsTotal))
+    let isConfirmed = window.confirm("Desea eliminar el producto?")
+    if (isConfirmed){        
+      setTotal(total - product.price * product.quantity);
+      setCountProducts(countProducts - product.quantity);
+      delete product.selectedTalla;
+      setAllProducts(results)
+      let resultsCount = countCon - product.quantity
+      let resultsTotal = totalCon - (product.price * product.quantity)
+      localStorage.setItem("cartContainer", JSON.stringify(results))
+      localStorage.setItem("countContainer", JSON.stringify(resultsCount))
+      localStorage.setItem("totalContainer", JSON.stringify(resultsTotal))
+    }
   };
 
   const [count, setCount] = useState(0);

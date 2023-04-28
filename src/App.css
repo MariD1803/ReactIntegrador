@@ -251,7 +251,7 @@ h2 {
   right: 0;
   background-color: #fff;
   width: 600px;
-  z-index: 5;
+  z-index: 100;
   box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
   border-radius: 10px;
 }
@@ -329,7 +329,7 @@ img {
     right: 0;
     background-color: #fff;
     width: 600px;
-    z-index: 5;
+    z-index: 100;
     box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
     border-radius: 10px;
 }

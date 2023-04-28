@@ -137,7 +137,7 @@ const StyledDivHover = styled.div`
   width: 100%;
   height: 800px;
   padding: 1rem;
-  z-index: 3;
+  z-index: 100;
   animation: slider-menu 0.7s linear;
 
   @media (max-width: 2700px) {
