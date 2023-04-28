@@ -10,6 +10,7 @@ import {
   AlertDialogOverlay,
   Button
 } from '@chakra-ui/react'
+import ButtonDelete from "./ButtonDelete";
 
 const StyledModal = styled(AlertDialogOverlay) `
 
@@ -66,8 +67,9 @@ const StyledButtonAlert = styled(Button)`
   border-radius: 10px;
   background-image: linear-gradient(to left,  #f7b9c6 , var(--pink),  #f7b9c6 ); 
   color: white;
-  font-weight: 800;
-  border: grey solid 1px;
+  font-weight: 600;
+  border: grey solid 1px;  
+  text-shadow: 0 0 3px #838383, 0 0 5px #555555;
 
   @media (max-width: 700px) {
     font-size: 14px;
@@ -304,12 +306,9 @@ export const Cart = ({
                 </StyledModal>
               </StyledAlertDialog>
 
+              <ButtonDelete onCleanCart={onCleanCart}></ButtonDelete>
 
-
-              <button className="btn-clear-all" onClick={onCleanCart}>
-                Vaciar Carrito 
-              </button>
-              
+                    
               </div>
               </div>
             </>

@@ -118,12 +118,12 @@ const DivContainerProducts = (props) => {
   return (
     <StyledContainer>
       <StyledSectionLeft>
-        <h2 className="h2">Colección - {props.section}</h2>
+        <h2 className="h2-left">Colección - {props.section}</h2>
         <StyledUl>
           <Accordion allowToggle>
 
           <AccordionItem>
-                <StyledButton>
+                <StyledButton className="buttons-left">
                   <Box as="span" flex="1" textAlign="left">
                    Talla
                   </Box>
@@ -137,7 +137,7 @@ const DivContainerProducts = (props) => {
               </StyledAccordionPanel>
             </AccordionItem>
             <AccordionItem>
-                <StyledButton>
+                <StyledButton className="buttons-left">
                   <Box as="span" flex="1" textAlign="left">
                     Color
                   </Box>

@@ -32,7 +32,7 @@ const StyledInputGrande = styled(Input) `
   }
 `
 const StyledFormik = styled(Formik) `
-        box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
 `
 const StyledDivIngresar = styled.div`

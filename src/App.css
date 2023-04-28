@@ -27,23 +27,6 @@ html {
 
 
 
-
-
-
-html::-webkit-scrollbar {
-  width: 12px;               
-}
-
-html::-webkit-scrollbar-track {
-  background: white;       
-}
-
-html::-webkit-scrollbar-thumb {
-  background-color: var(--hoverpink);    
-  border-radius: 20px;     
-  height: 8px; 
-}
-
 a {
   text-decoration: none !important;
   color: black !important;
@@ -768,9 +751,6 @@ ul::-webkit-scrollbar-thumb {
     font-size: 18px;
   }
 
-  .position-fixed-cart{
-    height: 230vh;
-  }
 
   
   html {
@@ -788,7 +768,7 @@ ul::-webkit-scrollbar-thumb {
   }
 
   .position-fixed-cart{
-    height: 300vh;
+    height: 550vh;
   }
 
   .position-aboslute-top {
@@ -834,7 +814,6 @@ ul::-webkit-scrollbar-thumb {
 
   
   .position-fixed-cart{
-    height: 380vh;
     right: -21px;
     width: 140%;
   }

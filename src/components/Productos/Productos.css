@@ -72,9 +72,23 @@
   color: white;
 }
 
+
 @media (max-width: 1400px) {
   .cardProduct .h3 {
     font-family: 'Roboto';
     font-size: 3vh;
+  }
+}
+@media (max-width: 780px) {
+  .h2-left {
+    font-size: 1.5rem !important;
+  }
+  .buttons-left {
+    font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 450px) {
+  .h2-left {
+    font-size: 2rem !important;
   }
 }

@@ -56,6 +56,7 @@
 
 .react-multiple-carousel__arrow {
   background-color: var(--hoverpink) !important;
+  z-index: 4 !important;
 }
 .react-multiple-carousel__arrow:hover {
   background-color: var(--pink) !important;
