@@ -5,7 +5,6 @@ import { BsMailbox2, BsFillTelephoneInboundFill} from 'react-icons/bs';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { FiMapPin } from 'react-icons/fi';
 import {useLocalStorage} from "../../hooks/useLocalStorage.js"
-import FooterDerechos from '../Footer/FooterDerechos';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -19,11 +18,11 @@ const StyledContainer = styled.div`
 `;
 
 const StyledSectionLeft = styled.section`
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  padding: 3rem 0 0 5rem;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 2rem 0px 0px 5rem;
+    align-items: flex-start;
 
   @media (max-width: 1100px) {
     
@@ -89,7 +88,6 @@ const StyledPLeft = styled.p `
     margin: 0;
     width: 100%;
     text-align: initial;
-    margin: 0 0 3rem 0 ;
   
     @media (max-width: 1200px) {
     
@@ -104,9 +102,9 @@ const StyledPLeft = styled.p `
   
 `
 const StyledPTitulo = styled.p `
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Roboto';
-    margin: 0 0 1rem 0;
+    margin: 0;
     text-align: initial;
     display: flex;
     flex-direction: row;
@@ -117,7 +115,7 @@ const StyledPTitulo = styled.p `
    
     @media (max-width: 1200px) {
     
-      font-size: 20px;
+      font-size: 18px;
   }
     @media (max-width: 780px) {
         width: 50%;
@@ -131,7 +129,9 @@ const StyledDiv = styled.div `
     flex-direction: row;    
     justify-content: center;
     align-content: center;    
-    align-items: flex-start;
+    align-items: center;
+    height: 15%;
+    gap: 10px;
 
   
     @media (max-width: 740px) {

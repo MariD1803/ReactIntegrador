@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Cart from "../Cart/Cart";
 import FormularioRegistro from "../Formulario/FormularioRegistro";
 import { FcShop, FcUnlock, FcShipped } from "react-icons/fc";
-import FooterDerechos from "../Footer/FooterDerechos";
 
 const StyledButton = styled.button`
   width: 80px;

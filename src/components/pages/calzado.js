@@ -27,7 +27,7 @@ const ITEMS_PER_PAGE = window.window.innerWidth >= 1400 ? 8 : 4
 const Calzado = ( ) => {
 
   const [items, setItems] = useState([...productDataCalzado].splice(0, ITEMS_PER_PAGE ))
-  const [products, setProducts] = useState(productDataCalzado)
+  const [products] = useState(productDataCalzado)
   const [currentPage, setCurrentPage] = useState(0);
 
   
@@ -41,7 +41,6 @@ const Calzado = ( ) => {
   ) {
     return arreglo.indexOf(elemento) === indice;
   });
-  /* Comentario para los profes, esto realmente no logré que funcione del todo bien, por la páginación. Tengo entendido se debe hacer con la parte de backend  */
 
   const filterTalla = (numero) => {
     console.log(numero)

@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components";
 import Cart from "../Cart/Cart";
-import FooterDerechos from "../Footer/FooterDerechos";
 import FormularioIngreso from "../Formulario/FormularioIngreso";
 
 const StyledButton = styled.button`

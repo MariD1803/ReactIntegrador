@@ -39,7 +39,7 @@ const StyledUl = styled.ul`
   flex-direction: column;
 
   @media (max-width: 480px) {
-    padding: 3rem 1rem 3rem 0rem;
+    padding: 3rem 0rem 3rem 0rem;
   }
 `;
 
@@ -52,6 +52,7 @@ const StyledButtonOptions = styled.button`
   border-right: none;
   font-size: 20px ;
   font-family: 'Roboto';
+  z-index: 9;
   &:focus {
     background-color: var(--pink);
   }

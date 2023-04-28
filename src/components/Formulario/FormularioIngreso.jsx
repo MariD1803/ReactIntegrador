@@ -4,8 +4,6 @@ import {
     FormLabel,
     FormErrorMessage,
     Input, 
-    Select,
-    Button
 } from '@chakra-ui/react'
 import { Field, Form, Formik } from 'formik';
 import { Link } from 'react-router-dom';

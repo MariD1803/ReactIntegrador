@@ -11,6 +11,14 @@ import {
   Button
 } from '@chakra-ui/react'
 
+const StyledModal = styled(AlertDialogOverlay) `
+
+  @media (max-width: 425px) {
+    width: 105vw !important;
+  }
+`
+ 
+
 
 const StyledContainerIcons = styled.div`
   position: absolute;
@@ -270,7 +278,7 @@ export const Cart = ({
                 leastDestructiveRef={cancelRef}
                 onClose={onClose}
               >
-                <AlertDialogOverlay className="position-fixed-cart">
+                <StyledModal className="position-fixed-cart">
                   <StyledAlertDialogContent className="position-aboslute-alert">
                     <StyledDivContent>
                     <AlertDialogHeader fontSize='lg' fontWeight='bold' className="titulo-producto-carrito">
@@ -278,7 +286,7 @@ export const Cart = ({
                     </AlertDialogHeader>
 
                     <AlertDialogBody className="titulo-producto-carrito">
-                      Estas seguro de continuar con esta acción?
+                      ¿Estas seguro de continuar con esta acción?
                     </AlertDialogBody>
 
                     <AlertDialogFooter>
@@ -293,14 +301,15 @@ export const Cart = ({
 
                     </StyledDivContent>
                   </StyledAlertDialogContent>
-                </AlertDialogOverlay>
+                </StyledModal>
               </StyledAlertDialog>
 
 
 
               <button className="btn-clear-all" onClick={onCleanCart}>
-                Vaciar Carrito
+                Vaciar Carrito 
               </button>
+              
               </div>
               </div>
             </>

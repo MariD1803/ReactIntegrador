@@ -805,19 +805,14 @@ ul::-webkit-scrollbar-thumb {
     background: url(./utils//images//Home/homeresponsive.png) top/cover no-repeat;
     
   }
-   /* 
-  body{
-    width: 104%;
-  } */
+   
+  html{
+    width: 105%;
+  }
   .div-principal{
     margin: 19% 2% !important;
   
   }
-  
-  html {
-    width: 102%;;
-  }
-
   .button-cart-sumandsubs {
     font-size: 12px;
   }
@@ -840,10 +835,18 @@ ul::-webkit-scrollbar-thumb {
   
   .position-fixed-cart{
     height: 380vh;
+    right: -21px;
+    width: 140%;
   }
   .position-aboslute-top {
 
     height: 380vh;
+    right: -21px;
+    width: 105%;
+  }
+
+  .count-products{
+    right: 8px;
   }
 
   .card {

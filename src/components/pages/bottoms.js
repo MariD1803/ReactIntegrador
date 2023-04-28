@@ -25,7 +25,7 @@ const ITEMS_PER_PAGE = window.window.innerWidth >= 1400 ? 8 : 4
 const Bottoms = ( ) => {
 
   const [items, setItems] = useState([...productDataBottoms].splice(0, ITEMS_PER_PAGE ))
-  const [products, setProducts] = useState(productDataBottoms)
+  const [products] = useState(productDataBottoms)
   const [currentPage, setCurrentPage] = useState(0);
 
   

@@ -9,11 +9,15 @@ const StyledDiv = styled.div`
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;    
+    justify-content: flex-start;   
+    @media (max-width: 780px) {
+      margin-top: 15%;
+    }
+ 
 
     @media (max-width: 480px) {
       height: 100%;
-      padding: 0px 1rem 0 0;
+      padding: 0px 0 0 1rem;
     }
 
 `

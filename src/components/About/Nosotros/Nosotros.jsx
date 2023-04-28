@@ -10,9 +10,14 @@ const StyledDivNosotros = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 
+    @media (max-width: 780px) {
+      margin-top: 15%;
+    }
+
     @media (max-width: 480px) {
       height: 100%;
-      padding: 0px 1rem 0 0;
+      padding: 0px 0 0 1rem;
+      margin: 0;
     }
    
     

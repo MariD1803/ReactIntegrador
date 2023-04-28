@@ -27,7 +27,7 @@ const ITEMS_PER_PAGE = window.window.innerWidth >= 1400 ? 8 : 4
 const Tops = ( ) => {
   
   const [items, setItems] = useState([...productDataTops].splice(0, ITEMS_PER_PAGE ))
-  const [products, setProducts] = useState(productDataTops)
+  const [products] = useState(productDataTops)
   const [currentPage, setCurrentPage] = useState(0);
 
   
@@ -46,7 +46,6 @@ const Tops = ( ) => {
   /* Comentario para los profes, esto realmente no logré que funcione del todo bien, por la páginación. Tengo entendido se debe hacer con la parte de backend  */
 
   const filterTalla = (numero) => {
-    console.log(numero)
     let productosFiltrados = []
     for (let product of products){
       for (let tallaProducto of product.tallas){
@@ -66,15 +65,12 @@ const Tops = ( ) => {
     for (let product of products){
       
         if (product.color === color){
-          console.log(productosFiltrados)
           productosFiltrados.push(product)
         
         
       }
     }
     setItems([...productosFiltrados].splice(0, ITEMS_PER_PAGE ))
-    
-    console.log(productosFiltrados)
     localStorage.setItem("productsContainerTops", JSON.stringify(productosFiltrados))
     
   }
