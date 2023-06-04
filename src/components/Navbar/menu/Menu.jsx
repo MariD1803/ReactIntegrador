@@ -249,6 +249,17 @@ const StyledMenu = (props) => {
   
   const closeToggle = () =>  setIsToggle(false);
 
+  const cerrarLogin = () => {
+    document.getElementById("toggleLogin").style.display ="none" 
+    document.getElementById("toggleCart").classList.remove("position-fixed-cart")
+    document.getElementById("toggleCart").classList.add("hidden-cart")   
+    document.getElementById("cart-products").classList.remove("container-cart-products")
+    document.getElementById("cart-products").classList.add("hidden-cart")   
+    document.getElementById("toggleCart").style.display ="none"   
+    document.getElementById("toggleMenu").style.display ="block"         
+  }
+
+
   return (
     <>
       
@@ -318,11 +329,11 @@ const StyledMenu = (props) => {
         </StyledDivResponsive>
 
         {/* Aca se vuelve el menú hamburguesa   */}
-        <StyledButton onClick={handleClick}>
+        <StyledButton onClick={()=> {handleClick(); cerrarLogin()}}>
           <AiOutlineMenu style={fontStyle} />
         </StyledButton>
         {isToggle && (
-          <StyledDiv>
+          <StyledDiv id="toggleMenu">
             <StyledUl>
               <StyledUlActive>
                 <AccordionStyled allowMultiple>

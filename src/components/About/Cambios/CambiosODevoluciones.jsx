@@ -18,6 +18,7 @@ const StyledDiv = styled.div`
     @media (max-width: 480px) {
       height: 100%;
       padding: 0px 0 0 1rem;
+      margin-top: 0;
     }
 
 `

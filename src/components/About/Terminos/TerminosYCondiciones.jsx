@@ -17,6 +17,7 @@ const StyledDiv = styled.div`
     @media (max-width: 480px) {
       height: 100%;
       padding: 0px 0 0 1rem;
+      margin-top: 0;
     }
 
 
@@ -33,6 +34,11 @@ const StyledH2 = styled.h2 `
   }
     @media (max-width: 700px) {
       font-size: 24px;
+    
+}
+    @media (max-width: 480px) {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
     
 }
 `

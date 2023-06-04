@@ -113,13 +113,23 @@ const Rutas = () => {
 
   const [isToggleLogin, setIsToggleLogin] = useState(false)
   const handleClickLogin = () => {
-    setIsToggleLogin((prevState) => (prevState ? false : true));
+    setIsToggleLogin((prevState) => (prevState ? false : true)) 
   };
+
   
   const closeToggleLogin = () =>  setIsToggleLogin(false);
-
-  isToggleLogin ? document.body.parentElement.style.overflow="hidden" : document.body.parentElement.style.overflow="auto"
   
+  const cerrarCart = () => {
+    document.getElementById("toggleCart").classList.remove("position-fixed-cart")
+    document.getElementById("toggleCart").classList.add("hidden-cart")   
+    document.getElementById("cart-products").classList.remove("container-cart-products")
+    document.getElementById("cart-products").classList.add("hidden-cart")   
+    document.getElementById("toggleCart").style.display ="none"   
+    document.getElementById("toggleLogin").style.display ="block"
+    
+    document.getElementById("toggleMenu").style.display ="none"          
+  
+  }
 
 
   return (
@@ -128,13 +138,13 @@ const Rutas = () => {
         <Navbar className="color-blue">
           <StyledP>¡Siguenos!</StyledP>
           <Div>
-            <StyledButton  onClick={()=>{handleClickLogin()}}>
+            <StyledButton >
               <IconFacebook
                 className="font-style-up"
                 url="https://www.facebook.com/"
               ></IconFacebook>
             </StyledButton>
-            <StyledButton  onClick={()=>{handleClickLogin()}}>
+            <StyledButton >
               <IconInstagram
                 className="font-style-up"
                 url="https://www.instagram.com/"
@@ -144,20 +154,20 @@ const Rutas = () => {
           </Div>
         </Navbar>
         <Navbar className="gradient-color">
-          <StyledButton  onClick={closeToggleLogin}> 
-            <StyledMenu className="fontStyleTitle" as="span"></StyledMenu>
+          <StyledButton  > 
+            <StyledMenu  className="fontStyleTitle" as="span"></StyledMenu>
           </StyledButton>
           <StyledButton  onClick={()=>{closeToggleLogin()}}>
             <Logo />
           </StyledButton>
           <Div>
-          <StyledButton  onClick={()=>{handleClickLogin()}}>
+          <StyledButton  onClick={()=>{handleClickLogin();cerrarCart()}}>
             <IconLogin  
               className="font-style2"
             ></IconLogin>            
           </StyledButton>
             {isToggleLogin && 
-                  <StyledDiv>
+                  <StyledDiv id="toggleLogin">
                       <StyledDivContainer>
 
                       <Link to="/registro"> 

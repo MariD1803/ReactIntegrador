@@ -184,24 +184,37 @@ export const Cart = ({
 
 
   active ? document.body.parentElement.style.overflow="hidden" : document.body.parentElement.style.overflow="auto"
+ 
+
+  const cerrarLogin = () => {
+    
+    document.getElementById("toggleCart").style.display = "block"  
+        
+    document.getElementById("toggleMenu").style.display ="none"     
+    document.getElementById("toggleLogin").style.display ="none"    
+    document.getElementById("cart-products").classList.remove("hidden-cart")   
+    document.getElementById("cart-products").classList.add("container-cart-products")  
+    document.getElementById("toggleCart").classList.remove("hidden-cart")    
+    document.getElementById("toggleCart").classList.add("position-fixed-cart")
+  }
 
 
   return (
     <>
       <StyledContainerIcons>
         <div>
-          <div onClick={() =>setActive(!active)}>{children}</div>
+          <div onClick={() =>{setActive(!active); cerrarLogin(); }}>{children}</div>
           <div className="count-products">
             <span id="contador-productos">{countCon}</span>
           </div>
         </div>
 
-        <div
+        <div id="cart-products"
           className={`container-cart-products ${active ? "" : "hidden-cart"}`}
         > 
           {allProducts.length ? ( // Si mi carrito no está vacio muestra mi <p>
             <>
-              <div className="position-fixed-cart" >
+              <div id="toggleCart" className={`abrir-carro ${active ? "position-fixed-cart" : "hidden-cart"}`}>
                 <div className="position-aboslute-cart" >
               <div className="row-product">
                 {allProducts.map((product) => (
