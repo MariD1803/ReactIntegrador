@@ -40,12 +40,14 @@ const StyledDiv= styled.div `
   background-color: white;
   position: absolute;
   z-index: 999;
-  top: 0;
+  top: 103px;
   right: 0;
   width: 600px;
   height: 260px;
   box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;  
+  border-bottom-right-radius: 10px;
 
   @media (max-width: 1100px) {
     width: 500px;
@@ -116,7 +118,7 @@ const Rutas = () => {
   
   const closeToggleLogin = () =>  setIsToggleLogin(false);
 
-  
+  isToggleLogin ? document.body.parentElement.style.overflow="hidden" : document.body.parentElement.style.overflow="auto"
   
 
 
@@ -155,8 +157,6 @@ const Rutas = () => {
             ></IconLogin>            
           </StyledButton>
             {isToggleLogin && 
-              <div className="position-aboslute-top">
-                <div>
                   <StyledDiv>
                       <StyledDivContainer>
 
@@ -183,12 +183,6 @@ const Rutas = () => {
 
 
                   </StyledDiv>
-
-
-                </div>
-
-
-              </div>
             }
             <StyledButton  onClick={closeToggleLogin}> 
 

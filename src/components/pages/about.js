@@ -75,7 +75,7 @@ const StyledDivAbsolute = styled.button`
     height: 170%;
   }
   @media (max-width: 425px) {
-  top: 55%;
+  top: 45%;
   width: 100vw;
   }
 

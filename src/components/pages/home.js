@@ -153,7 +153,7 @@ const StyledDivRigthImage = styled.div `
 `
 
 
-const Home = () => {
+const Home = ({isToggleLogin}) => {
   
   const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem("cartContainer"))|| []);
   const [total, setTotal] = useState(JSON.parse(localStorage.getItem("totalContainer"))|| 0);
@@ -175,7 +175,7 @@ const [active, setActive] = useState(false);
 const closeToggle = () =>  setActive(false);
 
   return (
-    <div>
+    <div  className="div-body">
         <Cart 
         setAllProducts={setAllProducts}
         total={total}

@@ -183,7 +183,7 @@ export const Cart = ({
   }
 
 
-
+  active ? document.body.parentElement.style.overflow="hidden" : document.body.parentElement.style.overflow="auto"
 
 
   return (
