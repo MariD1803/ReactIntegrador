@@ -27,11 +27,11 @@ export const responsive = {
     {
       id: "1Bikinidospiezas",
       imageurl:
-      'https://naifargb2b.vtexassets.com/arquivos/ids/177974-500-auto?v=1761567603&width=500&height=auto&aspect=true',
+      'https://res.cloudinary.com/dvjmjujc0/image/upload/v1692992050/bikini2cruzado_jtlclq.webp',
       name: "Bikini 2 piezas",
       price: "$4200",
       description: "bikinis",
-      color: "black",      
+      color: "white",      
       IsTalla: "Talla",
       tallas: [ 1,2,3 ], 
       idTalla: 101,
@@ -39,11 +39,11 @@ export const responsive = {
     {
       id: "2VestidoescoteenV",
       imageurl:
-        "https://jbonita.vteximg.com.br/arquivos/ids/229676-1280-1707/E9496136_1.jpg?v=638049016079470000",
+        "https://res.cloudinary.com/dvjmjujc0/image/upload/v1692991351/vestidoenv_fi6ty7.webp",
       name: "Vestido escote en V",
       price: "$3700",
       description: "vestidos",
-      color: "red-wine",      
+      color: "black",      
       IsTalla: "Talla",
       tallas: [ 1,2,3 ],
       idTalla: 102,

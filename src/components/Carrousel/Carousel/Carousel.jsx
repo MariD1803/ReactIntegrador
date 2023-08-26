@@ -12,7 +12,6 @@ import styled from 'styled-components';
 const StyledDivContent = styled.div `
     display: flex;
     justify-content: center;
-    background: url(${prop => prop.url}) top/cover ;
     
 `
 
@@ -79,7 +78,7 @@ function CarouselContainer(args) {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <StyledDivContent url = {item.src1} ><img src={item.src} alt={item.altText} className="carouselheight"/></StyledDivContent>
+        <StyledDivContent ><img src={item.src} alt={item.altText} /></StyledDivContent>
         <CarouselCaption captionText=""
         />
       </CarouselItem>

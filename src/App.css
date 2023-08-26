@@ -156,7 +156,29 @@ h2 {
   width: 100%;
 }
 
+.footer-navbar{
+  background-color: #fceaed;
+opacity: 1;
+background: linear-gradient(135deg, #f7b9c655 25%, transparent 25%) -22px 0/ 44px 44px, linear-gradient(225deg, #f7b9c6 25%, transparent 25%) -22px 0/ 44px 44px, linear-gradient(315deg, #f7b9c655 25%, transparent 25%) 0px 0/ 44px 44px, linear-gradient(45deg, #f7b9c6 25%, #fceaed 25%) 0px 0/ 44px 44px;
+  position: absolute;
+  bottom: 0;
+  top: 150;
+  right: 150;
+  width: 100%;
+  color: transparent;
+}
 
+.top-navbar{
+  background-color: #fceaed;
+opacity: 1;
+background: linear-gradient(135deg, #f7b9c655 25%, transparent 25%) -22px 0/ 44px 44px, linear-gradient(225deg, #f7b9c6 25%, transparent 25%) -22px 0/ 44px 44px, linear-gradient(315deg, #f7b9c655 25%, transparent 25%) 0px 0/ 44px 44px, linear-gradient(45deg, #f7b9c6 25%, #fceaed 25%) 0px 0/ 44px 44px;
+  position: absolute;
+  bottom: 150;
+  top: 0;
+  right: 150;
+  width: 100%;
+  color: transparent;
+}
 
 
 .position-relative {
@@ -452,7 +474,7 @@ img {
 
 .row-product {
   height: 300px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 /* Main */
@@ -614,6 +636,7 @@ img {
   align-items: center;
 }
 .imagen-navbar {
+  margin-top: 50px;
   transition: 0.5s;
   height: 100%;
   width: 450px;
@@ -762,7 +785,7 @@ ul::-webkit-scrollbar-thumb {
 
   
   html {
-    width: 100%;;
+    width: 102% !important;
   }
   
 

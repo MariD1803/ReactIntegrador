@@ -17,11 +17,11 @@ export const productDataVestidos = [
     {
       id: "2VestidoescoteenV",
       imageurl:
-        "https://jbonita.vteximg.com.br/arquivos/ids/229676-1280-1707/E9496136_1.jpg?v=638049016079470000",
+        "https://res.cloudinary.com/dvjmjujc0/image/upload/v1692991351/vestidoenv_fi6ty7.webp",
       name: "Vestido escote en V",
       price: "3700",
       description: " vestidos",
-      color: "red-wine",      
+      color: "black",      
       IsTalla: "Talla",
       IsSale: "Nuevo",      
       colorbc: "pink",
@@ -124,13 +124,13 @@ export const productDataVestidos = [
       quantity: 1,
     },
     {
-      id: "11Vestidoconmangavolados",
+      id: "11Vestidoconmangalarga",
       imageurl:
-        "https://jbonita.vteximg.com.br/arquivos/ids/222772-1280-1707/B0766136_1.jpg?v=638025734581500000",
-      name: "Vestido con manga volados",
+        "https://res.cloudinary.com/dvjmjujc0/image/upload/v1692991800/vestidomangalarga_f3lbo0.webp",
+      name: "Vestido manga larga",
       price: "9000",
       description: "vestidos",
-      color: "fucsia",
+      color: "brown",
       IsTalla: "Talla",
       tallas: [ 1,2 ],
       quantity: 1,

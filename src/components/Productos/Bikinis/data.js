@@ -19,11 +19,11 @@ export const productDataBikinis = [
     {
       id: "2Bikinidospiezastirascruzadas",
       imageurl:
-      'https://naifargb2b.vtexassets.com/arquivos/ids/177974-500-auto?v=1761567603&width=500&height=auto&aspect=true',
+      'https://res.cloudinary.com/dvjmjujc0/image/upload/v1692992050/bikini2cruzado_jtlclq.webp',
       name: "Bikini 2 piezas tiras cruzadas",
       price: "4200",
       description: "bikinis",
-      color: "black",      
+      color: "white",      
       IsSale: "Nuevo",
       colorbc: "pink",
       tallas: [ 1,2 ], 
@@ -68,11 +68,11 @@ export const productDataBikinis = [
     {
       id: "6Bikinidospiezasestampado",
       imageurl:
-        "https://jbonita.vteximg.com.br/arquivos/ids/217142-1280-1707/93421152_1.jpg?v=638015696385030000",
+        "https://res.cloudinary.com/dvjmjujc0/image/upload/v1692992757/bikiniestampado_unvdk4.webp",
       name: "Bikini 2 piezas estampado",
       price: "6500",
       description: "bikinis",
-      color: "dark-blue",       
+      color: "black",       
       IsTalla: "Talla",
       tallas: [ 3,4,5 ],
       quantity: 1,

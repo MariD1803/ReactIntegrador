@@ -9,11 +9,13 @@ const StyledFooterContainerItems = styled.div  `
     height: 70px;
     display: flex;
     flex-direction: row;
-    background-color: var(--pink);
+    /* background-color: var(--pink); */
+background: linear-gradient(135deg, #f7b9c655 25%, transparent 25%) -22px 0/ 44px 44px, linear-gradient(225deg, #f7b9c6 25%, transparent 25%) -22px 0/ 44px 44px, linear-gradient(315deg, #f7b9c655 25%, transparent 25%) 0px 0/ 44px 44px, linear-gradient(45deg, #f7b9c6 25%, #f397a9 25%) 0px 0/ 44px 44px;
     justify-content: space-around;
     position: absolute;
     width: 102%;
-
+    color: white !important;
+    font-weight: 600;
    
     @media (max-width: 500px) {
     flex-direction: column;

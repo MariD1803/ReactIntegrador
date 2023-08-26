@@ -105,13 +105,13 @@ export const productDataTops = [
       quantity: 1,
     },
     {
-      id: "9Toptirascruzadas",
+      id: "9SueterRayas",
       imageurl:
-        "https://jbonita.vteximg.com.br/arquivos/ids/216628-1280-1707/E8863309_1.jpg?v=637989289294330000",
-      name: "Top tiras cruzadas",
+        "https://res.cloudinary.com/dvjmjujc0/image/upload/v1692989228/samples/outdoor-woman.jpg",
+      name: "Sueter de Rayas",
       price: "7300",
       description: "Top",
-      color: "blue-dark",
+      color: "brown",
       IsTalla: "Talla",
       tallas: [ 3,4,5 ],
       quantity: 1,

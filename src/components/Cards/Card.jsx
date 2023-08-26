@@ -10,7 +10,7 @@ const StyledDivCard = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 2px;
+    border-radius: 5px;
 `
 
 const Card = ( props) => {

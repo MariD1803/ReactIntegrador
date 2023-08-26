@@ -2,11 +2,11 @@ export const productDataCalzado = [
     {
       id: "1Sandaliasbajas",
       imageurl:
-      'https://jbonita.vteximg.com.br/arquivos/ids/230341-1280-1707/C151Z366_2.jpg?v=638102690215400000',
+      'https://res.cloudinary.com/dvjmjujc0/image/upload/v1692994670/sandaliabaja_oxkylg.webp',
       name: "Sandalias bajas",
       price: "5000",
       description: "Calzado",
-      color: "grey",
+      color: "black",
       IsTalla: "Talla",
       IsSale: "Sale",
       signo: "$",
@@ -18,25 +18,25 @@ export const productDataCalzado = [
     {
         id: "2Sandaliasdetirasyhebilla",
         imageurl:
-        'https://jbonita.vteximg.com.br/arquivos/ids/230156-1280-1707/C131Z301_2.jpg?v=638097315751100000',
+        'https://res.cloudinary.com/dvjmjujc0/image/upload/v1692994834/sandaliahebilla_zzqbbm.webp',
         name: "Sandalias de tiras y hebilla",
         price: "7800",
         description: "Calzado",
         IsTalla: "Talla",
         IsSale: "Nuevo",      
         colorbc: "pink",
-        color: "white",
+        color: "orange",
         tallas: [ 36,37,38,39],
         quantity: 1,
       },
       {
         id: "3Sandaliasbajasconhebilla",
         imageurl:
-        'https://jbonita.vteximg.com.br/arquivos/ids/230000-1280-1707/C152Z335_2.jpg?v=638097308438270000',
+        'https://res.cloudinary.com/dvjmjujc0/image/upload/v1692994951/sandaliahebillasola_fpi2kg.webp',
         name: "Sandalias bajas con hebilla",
         price: "4600",
         description: "Calzado",       
-        color: "brown",
+        color: "yellow",
         IsTalla: "Talla",
         tallas: [ 38,39, 40],
         quantity: 1,
@@ -44,11 +44,11 @@ export const productDataCalzado = [
       {
         id: "4Zapatillasconplataforma",
       imageurl:
-        "https://jbonita.vteximg.com.br/arquivos/ids/230483-1280-1707/C009Z1B0_2.jpg?v=638108733384270000",
+        "https://res.cloudinary.com/dvjmjujc0/image/upload/v1692995137/zapatillasplataforma_qi7gjm.webp",
       name: "Zapatillas con plataforma",
       price: "10000",
       description: "Calzado",
-      color: "white",      
+      color: "brown",      
       IsTalla: "Talla",
       tallas: [ 36,37,38,39], 
       quantity: 1,
@@ -56,11 +56,11 @@ export const productDataCalzado = [
       {
         id: "5Zapatillasdelona",
       imageurl:
-        "https://jbonita.vteximg.com.br/arquivos/ids/204474-1280-1707/C002Z101_2.jpg?v=637680173609800000",
+        "https://res.cloudinary.com/dvjmjujc0/image/upload/v1692995382/zapatillaslona_cumg4f.webp",
       name: "Zapatillas de lona",
       price: "6000",
       description: "Calzado",
-      color: "white",      
+      color: "red-wine",      
       IsTalla: "Talla",
       tallas: [ 37,38,39, 40], 
       quantity: 1,

@@ -94,7 +94,7 @@ const StyledDiv = styled.div`
   -ms-flex-direction: column;
   position: absolute;
   left: 0%;
-  width: 100%;
+  width: 102%;
   flex-direction: column;
 `;
 
@@ -131,7 +131,7 @@ const StyledDivHover = styled.div`
   justify-content: space-around;
   flex-direction: row;
   position: absolute;
-  background-color: white;
+  background: linear-gradient(180deg, rgba(247,185,198,1) 0%,rgba(243,151,169,1) 35%, rgba(247,255,255,1) 100%);
   top: 140px;
   left: 0px;
   width: 100%;
@@ -140,9 +140,11 @@ const StyledDivHover = styled.div`
   z-index: 100;
   animation: slider-menu 0.7s linear;
 
+ 
+
+
   @media (max-width: 2700px) {
     top: 103px;    
-    border-bottom: 2px grey solid;
   }
 `;
 
@@ -194,6 +196,9 @@ const StyledUl = styled.ul`
     width: 100%;
     padding: 0;
     padding-top: 7rem;
+    overflow-y: hidden;
+    
+  background: linear-gradient(180deg, rgba(247,185,198,1) 0%,rgba(243,151,169,1) 35%, rgba(247,255,255,1) 100%);
   }
 `;
 
@@ -216,16 +221,16 @@ const StyledUlActive = styled.ul`
 const StyledLink = styled.div`
   list-style: none;
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
   &:hover {
-    color: black;
+    color: white;
   }
 `;
 const StyledLi = styled.li`
 width: 100%;
   list-style: none;
-  color: black;
+  color: white;
   transition: 0s;
   text-align: initial;
   &:hover {
@@ -237,7 +242,10 @@ width: 100%;
   @media (max-width: 480px) {
     font-size: 22px;
     margin: 0 0 1rem 0;
+    color: black;
   }
+
+
 `;
 
 const StyledMenu = (props) => {
@@ -275,7 +283,8 @@ const StyledMenu = (props) => {
             </StyledDivContainer>
 
             {displayed && (
-              <StyledDivHover>
+              <StyledDivHover >
+              <div class="top-navbar">footer</div>
                 <StyledDivMenu>
                   <StyledLink>
                     <Link to="/tops" style={fontBold} > <StyledLi
@@ -304,6 +313,7 @@ const StyledMenu = (props) => {
                 <div className="position-relative">
                   <div  className="imagen-navbar"  alt="IMAGEN" />
                 </div>
+                <div class="footer-navbar">footer</div>
               </StyledDivHover>
             )}
           </StyledUlActive>
@@ -336,6 +346,8 @@ const StyledMenu = (props) => {
           <StyledDiv id="toggleMenu">
             <StyledUl>
               <StyledUlActive>
+              
+          <div class="top-navbar">footer</div>
                 <AccordionStyled allowMultiple>
                   <AccordionItem>
                     <AccordionButtonStyled>
@@ -406,11 +418,15 @@ const StyledMenu = (props) => {
                     <AccordionPanel pb={4}>                      
                     </AccordionPanel>
                   </AccordionItem>
-
+          
+                
+            <div class="footer-navbar">footer</div>
                 </AccordionStyled>
               </StyledUlActive>
+              
 
             </StyledUl>
+            
           </StyledDiv>
         )}
       </div>

@@ -221,3 +221,19 @@
     100%{margin-left: -300%;}
   }
   
+
+
+  @property --gradient-start {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false;
+  }
+  
+  @property --gradient-end {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false;
+  }
+  
+
+  
